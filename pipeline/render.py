@@ -275,7 +275,7 @@ def gemini_background(q, out_png):
     body = {"contents": [{"parts": [{"text": gemini_prompt(q)}]}],
             "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "9:16"}}}
     try:
-        r = requests.post(url, params={"key": key}, json=body, timeout=120)
+        r = requests.post(url, headers={"x-goog-api-key": key}, json=body, timeout=120)
         r.raise_for_status()
         parts = r.json()["candidates"][0]["content"]["parts"]
         data = next(p["inlineData"]["data"] for p in parts if "inlineData" in p)
