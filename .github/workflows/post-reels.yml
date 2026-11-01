@@ -1,0 +1,101 @@
+name: Post Antarnaad reels
+
+on:
+  schedule:
+    # 5 minutes before each IST slot (cron is UTC; GitHub often starts a few minutes late)
+    # Mon–Fri  07:40 10:50 12:50 18:40 20:50 IST
+    - cron: "5 2 * * 1-5"
+    - cron: "15 5 * * 1-5"
+    - cron: "15 7 * * 1-5"
+    - cron: "5 13 * * 1-5"
+    - cron: "15 15 * * 1-5"
+    # Sat–Sun  08:40 11:10 13:20 17:40 21:10 IST
+    - cron: "5 3 * * 0,6"
+    - cron: "35 5 * * 0,6"
+    - cron: "45 7 * * 0,6"
+    - cron: "5 12 * * 0,6"
+    - cron: "35 15 * * 0,6"
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Slot 1–5 (leave empty for the slot due now)"
+        required: false
+      date:
+        description: "Date YYYY-MM-DD (default today, IST)"
+        required: false
+      dry_run:
+        description: "Render only, do not post"
+        type: boolean
+        default: true
+      preview_day:
+        description: "Render all 5 reels for this date and attach them (no posting)"
+        required: false
+
+concurrency:
+  group: antarnaad-post
+  cancel-in-progress: false
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Asia/Kolkata
+      ANTARNAAD_FONT_DIR: ${{ github.workspace }}/fonts
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      YT_PRIVACY: ${{ vars.YT_PRIVACY || 'public' }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      ANTARNAAD_VOICE_HI: ${{ vars.ANTARNAAD_VOICE_HI || 'hi-IN-MadhurNeural' }}
+      ANTARNAAD_VOICE_EN: ${{ vars.ANTARNAAD_VOICE_EN || 'en-IN-PrabhatNeural' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: System packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg libfribidi0 libharfbuzz0b >/dev/null
+
+      - name: Python packages
+        run: pip install -q -r requirements.txt
+
+      - name: Fonts (Poppins, OFL — covers English and Hindi)
+        run: |
+          mkdir -p fonts
+          for w in Bold Medium; do
+            [ -f fonts/Poppins-$w.ttf ] || curl -fsSL -o fonts/Poppins-$w.ttf \
+              https://github.com/google/fonts/raw/main/ofl/poppins/Poppins-$w.ttf
+          done
+          python -c "from PIL import features; assert features.check('raqm'), 'raqm missing: Hindi text would render wrongly'"
+
+      - name: Preview a whole day
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.preview_day != '' }}
+        run: python pipeline/run_slot.py --preview "${{ inputs.preview_day }}"
+
+      - name: Render and post
+        if: ${{ github.event_name == 'schedule' || inputs.preview_day == '' }}
+        run: |
+          ARGS=""
+          [ -n "${{ inputs.slot }}" ] && ARGS="$ARGS --slot ${{ inputs.slot }}"
+          [ -n "${{ inputs.date }}" ] && ARGS="$ARGS --date ${{ inputs.date }}"
+          [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          python pipeline/run_slot.py $ARGS
+
+      - name: Keep the reels for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reels-${{ github.run_id }}
+          path: |
+            out/*.mp4
+            out/*.json
+          if-no-files-found: ignore
+          retention-days: 7

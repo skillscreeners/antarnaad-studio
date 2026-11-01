@@ -1,0 +1,6 @@
+out/
+fonts/
+__pycache__/
+client_secret*.json
+*token*.json
+.env
