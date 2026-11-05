@@ -411,7 +411,7 @@ def openverse_background(q, out_png):
             query = pool[(seed + k) % len(pool)]
             r = requests.get("https://api.openverse.org/v1/images/", headers=ua, timeout=30,
                              params={"q": query, "license": "cc0,pdm", "category": "photograph",
-                                     "page_size": 30, "mature": "false", "excluded_source": "rawpixel"})
+                                     "page_size": 20, "mature": "false", "excluded_source": "rawpixel"})
             r.raise_for_status()
             hits = [h for h in r.json().get("results", [])
                     if min(h.get("width") or 0, h.get("height") or 0) >= 1000 and h.get("url")]
