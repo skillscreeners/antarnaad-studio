@@ -52,7 +52,7 @@ def post(mp4, meta):
         with open(summary, "a", encoding="utf-8") as f:
             f.write(f"### {meta['file']}\n\n**{meta['youtube']['title']}**\n\n" +
                     "".join(f"- {k}: {v}\n" for k, v in results.items()) + "\n")
-    return not failed
+    return not failed, results
 
 def main():
     ap = argparse.ArgumentParser()
@@ -60,6 +60,7 @@ def main():
     ap.add_argument("--date")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--preview")
+    ap.add_argument("--force", action="store_true", help="post even if this slot is already marked posted")
     a = ap.parse_args()
     now = dt.datetime.now(plan.IST)
     if a.preview:
@@ -70,10 +71,18 @@ def main():
     slot = a.slot or plan.slot_now(now)
     if not slot:
         print(f"No slot due at {now:%H:%M} IST; nothing to do."); return
+    track = bool(os.environ.get("GITHUB_TOKEN") and os.environ.get("GITHUB_REPOSITORY")) and not a.dry_run
+    if track:
+        import due
+        if due.is_posted(date, slot) and not a.force:
+            print(f"Slot {slot} on {date} is already posted; nothing to do."); return
     mp4, meta = build(date, slot)
     if a.dry_run:
         print("dry run: not posted"); return
-    if not post(mp4, meta):
+    ok, results = post(mp4, meta)
+    if track and str(results.get("youtube", "")).startswith("https://"):
+        due.mark_posted(date, slot, os.environ.get("GITHUB_SHA", ""))
+    if not ok:
         sys.exit(1)
 
 if __name__ == "__main__":

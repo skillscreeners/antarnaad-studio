@@ -1,21 +1,11 @@
 name: Post Antarnaad reels
-# schedule (re)registered 2026-11-04
 
 on:
   schedule:
-    # 5 minutes before each IST slot (cron is UTC; GitHub often starts a few minutes late)
-    # Mon–Fri  07:40 10:50 12:50 18:40 20:50 IST
-    - cron: "5 2 * * 1-5"
-    - cron: "15 5 * * 1-5"
-    - cron: "15 7 * * 1-5"
-    - cron: "5 13 * * 1-5"
-    - cron: "15 15 * * 1-5"
-    # Sat–Sun  08:40 11:10 13:20 17:40 21:10 IST
-    - cron: "5 3 * * 0,6"
-    - cron: "35 5 * * 0,6"
-    - cron: "45 7 * * 0,6"
-    - cron: "5 12 * * 0,6"
-    - cron: "35 15 * * 0,6"
+    # GitHub delays and drops scheduled runs, so check every 10 minutes during posting hours
+    # (02:00–16:59 UTC = 07:30–22:29 IST). The "check" job posts only when a slot is due
+    # and not yet marked posted (git tag posted-YYYY-MM-DD-sN), so nothing posts twice.
+    - cron: "*/10 2-16 * * *"
   workflow_dispatch:
     inputs:
       slot:
@@ -32,12 +22,34 @@ on:
         description: "Render all 5 reels for this date and attach them (no posting)"
         required: false
 
-concurrency:
-  group: antarnaad-post
-  cancel-in-progress: false
+permissions:
+  contents: write   # create posted-* tags
+  actions: read
 
 jobs:
+  check:
+    if: ${{ github.event_name == 'schedule' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      slot: ${{ steps.due.outputs.slot }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            pipeline
+            data
+      - id: due
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 pipeline/due.py
+
   reel:
+    needs: check
+    if: ${{ always() && (github.event_name == 'workflow_dispatch' || needs.check.outputs.slot != '') }}
+    concurrency:
+      group: antarnaad-post
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
@@ -52,6 +64,7 @@ jobs:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       ANTARNAAD_VOICE_HI: ${{ vars.ANTARNAAD_VOICE_HI || 'hi-IN-MadhurNeural' }}
       ANTARNAAD_VOICE_EN: ${{ vars.ANTARNAAD_VOICE_EN || 'en-IN-PrabhatNeural' }}
+      GITHUB_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
 
@@ -85,6 +98,7 @@ jobs:
         if: ${{ github.event_name == 'schedule' || inputs.preview_day == '' }}
         run: |
           ARGS=""
+          [ -n "${{ needs.check.outputs.slot }}" ] && ARGS="$ARGS --slot ${{ needs.check.outputs.slot }}"
           [ -n "${{ inputs.slot }}" ] && ARGS="$ARGS --slot ${{ inputs.slot }}"
           [ -n "${{ inputs.date }}" ] && ARGS="$ARGS --date ${{ inputs.date }}"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
