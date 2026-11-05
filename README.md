@@ -1,6 +1,6 @@
 # Antarnaad Studio
 
-Posts 5 narrated motivational reels a day to YouTube Shorts ([@antarnaadin](https://www.youtube.com/@antarnaadin))
+Posts 10 narrated motivational reels a day (weekday 08:40 and 10:10 slots are work-motivation reels) to YouTube Shorts ([@antarnaadin](https://www.youtube.com/@antarnaadin))
 and Instagram Reels (@antarnaadin) using GitHub Actions. Nothing runs on your computer.
 
 Each run renders one reel just before its slot: a verified quote from `data/quote_bank.json`, an Indian
@@ -66,7 +66,8 @@ Settings → Secrets and variables → Actions:
 |---|---|
 | `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` | from step 2.4 |
 | `IG_USER_ID`, `IG_ACCESS_TOKEN` | from step 3.4 |
-| `GEMINI_API_KEY` | from step 4 (optional) |
+| `PEXELS_API_KEY` | free key from pexels.com/api (recommended: real stock-video backgrounds) |
+| `GEMINI_API_KEY` | from step 4 (optional: photorealistic AI images when no stock clip fits) |
 
 | Variable (optional) | Default |
 |---|---|

@@ -28,33 +28,46 @@ def slot_langs(day_index):
     """Odd slots Hindi, even slots English (5 + 5 a day)."""
     return {s: ("hi" if s % 2 == 1 else "en") for s in SLOTS}
 
+WORK_SLOTS = {2, 3}   # weekdays 08:40 (English) and 10:10 (Hindi): work motivation for the start of the day
+
+def slot_pool(date, slot):
+    """(language, theme) pool a slot draws from."""
+    lang = slot_langs(0)[slot]
+    theme = "work" if (slot in WORK_SLOTS and date.weekday() < 5) else "life"
+    return lang, theme
+
 def _bank():
     return json.load(open(os.path.join(ROOT, "data", "quote_bank.json"), encoding="utf-8"))
 
-def _nth(pool, n):
-    """n-th quote of an endless sequence of shuffled cycles through pool."""
-    cycle, pos = divmod(n, len(pool))
+def _nth(pool, n, key):
+    """n-th quote of a fixed shuffled rotation through pool: each quote waits a full lap before repeating.
+    New quotes added to the bank slot into the rotation automatically."""
     order = sorted(pool, key=lambda q: q["id"])
-    random.Random(f"antarnaad-{pool[0]['lang']}-{cycle}").shuffle(order)
-    return order[pos]
+    random.Random(f"antarnaad-{key}").shuffle(order)
+    return order[n % len(order)]
+
+def _uses_before(date, slot, key):
+    """How many times pool `key` was used from EPOCH up to (not including) this slot."""
+    n = 0
+    for k in range(max(0, (date - EPOCH).days)):
+        day = EPOCH + dt.timedelta(days=k)
+        n += sum(1 for s in SLOTS if slot_pool(day, s) == key)
+    n += sum(1 for s in SLOTS if s < slot and slot_pool(date, s) == key)
+    return n
 
 def quote_for(date, slot):
     date = dt.date.fromisoformat(date) if isinstance(date, str) else date
-    d = (date - EPOCH).days
     trending = json.load(open(os.path.join(ROOT, "data", "trending.json"), encoding="utf-8"))
     if slot == NEWS_SLOT and date.isoformat() in trending:
         q = dict(trending[date.isoformat()])
         q.setdefault("lang", "en")
     else:
-        bank = _bank()
-        lang = slot_langs(d)[slot]
-        pool = [q for q in bank if q["lang"] == lang]
-        # how many quotes of this language were used before this slot, counting from EPOCH
-        before = sum(list(slot_langs(k).values()).count(lang) for k in range(max(0, d)))
-        before += [slot_langs(d)[s] for s in range(1, slot)].count(lang)
-        q = dict(_nth(pool, before))
-    q.update(slot=slot, pillar=PILLARS[slot], mood=MOODS[slot] if not (MOODS[slot] == "raga" and q["lang"] != "hi") else "gentle",
-             scene=q.get("scene", SCENES[slot]), date=date.isoformat())
+        key = slot_pool(date, slot)
+        pool = [q for q in _bank() if (q["lang"], q.get("theme", "life")) == key]
+        q = dict(_nth(pool, _uses_before(date, slot, key), f"{key[0]}-{key[1]}"))
+    pillar = "Work Motivation" if q.get("theme") == "work" and slot in WORK_SLOTS else PILLARS[slot]
+    mood = MOODS[slot] if not (MOODS[slot] == "raga" and q["lang"] != "hi") else "gentle"
+    q.update(slot=slot, pillar=pillar, mood=mood, scene=q.get("scene", SCENES[slot]), date=date.isoformat())
     return q
 
 def post_time(date, slot):

@@ -18,7 +18,8 @@
    "#Kabir",
    "#KabirKeDohe",
    "#Patience"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "kabir-bura",
@@ -39,7 +40,8 @@
    "#Kabir",
    "#SelfImprovement",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-dhaga",
@@ -60,7 +62,8 @@
    "#Rahim",
    "#Relationships",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tulsi-meethe",
@@ -81,7 +84,8 @@
    "#Tulsidas",
    "#KindWords",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "gita-2-47",
@@ -100,7 +104,8 @@
    "#BhagavadGita",
    "#Karma",
    "#Suvichar"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "vivek-arise",
@@ -121,7 +126,8 @@
    "#SwamiVivekananda",
    "#Suvichar",
    "#SuccessMindset"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "vivek-one-idea",
@@ -143,7 +149,8 @@
    "#SwamiVivekananda",
    "#Focus",
    "#SuccessMindset"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tagore-mind-fear",
@@ -164,7 +171,8 @@
    "#RabindranathTagore",
    "#ProudIndian",
    "#Gitanjali"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tagore-faith-bird",
@@ -185,7 +193,8 @@
    "#RabindranathTagore",
    "#Faith",
    "#Hope"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tagore-stars",
@@ -206,7 +215,8 @@
    "#RabindranathTagore",
    "#LifeQuotes",
    "#GoodThoughts"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "gandhi-will",
@@ -227,7 +237,8 @@
    "#MahatmaGandhi",
    "#Willpower",
    "#NeverGiveUp"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "aurelius-be-one",
@@ -248,7 +259,8 @@
    "#MarcusAurelius",
    "#Stoicism",
    "#LifeLessons"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "aurelius-thoughts",
@@ -268,7 +280,8 @@
    "#MarcusAurelius",
    "#Mindset",
    "#Stoicism"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "seneca-long",
@@ -288,7 +301,8 @@
    "#Seneca",
    "#Stoicism",
    "#TimeManagement"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "epictetus-power",
@@ -309,7 +323,8 @@
    "#Epictetus",
    "#Stoicism",
    "#Calm"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "laozi-step",
@@ -330,7 +345,8 @@
    "#LaoTzu",
    "#StartToday",
    "#Motivation"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "franklin-done",
@@ -350,7 +366,8 @@
    "#BenjaminFranklin",
    "#Action",
    "#Discipline"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "emerson-trust",
@@ -370,7 +387,8 @@
    "#Emerson",
    "#SelfBelief",
    "#Confidence"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "keller-optimism",
@@ -390,7 +408,8 @@
    "#HelenKeller",
    "#Optimism",
    "#PositiveVibes"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "aristotle-swallow",
@@ -411,7 +430,8 @@
    "#Aristotle",
    "#Consistency",
    "#Habits"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "kabir-kaal",
@@ -432,7 +452,8 @@
    "#Kabir",
    "#KabirKeDohe",
    "#HindiMotivation"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "kabir-vani",
@@ -452,7 +473,8 @@
    "#Kabir",
    "#KindWords",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-sai",
@@ -472,7 +494,8 @@
    "#Kabir",
    "#Contentment",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-jati",
@@ -492,7 +515,8 @@
    "#Kabir",
    "#Equality",
    "#Knowledge"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-pothi",
@@ -512,7 +536,8 @@
    "#Kabir",
    "#Love",
    "#Wisdom"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-nindak",
@@ -532,7 +557,8 @@
    "#Kabir",
    "#Feedback",
    "#SelfImprovement"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-khoja",
@@ -552,7 +578,8 @@
    "#Kabir",
    "#Courage",
    "#NeverGiveUp"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-khajur",
@@ -572,7 +599,8 @@
    "#Kabir",
    "#Humility",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-guru",
@@ -592,7 +620,8 @@
    "#Kabir",
    "#Guru",
    "#Teachers"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-sumiran",
@@ -612,7 +641,8 @@
    "#Kabir",
    "#Gratitude",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-sui",
@@ -632,7 +662,8 @@
    "#Rahim",
    "#RespectEveryone",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-taruvar",
@@ -652,7 +683,8 @@
    "#Rahim",
    "#Seva",
    "#Kindness"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-chandan",
@@ -672,7 +704,8 @@
    "#Rahim",
    "#Character",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-pani",
@@ -692,7 +725,8 @@
    "#Rahim",
    "#SelfRespect",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "vrind-abhyas",
@@ -712,7 +746,8 @@
    "#Practice",
    "#Consistency",
    "#HindiMotivation"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "tulsi-sansar",
@@ -732,7 +767,8 @@
    "#Tulsidas",
    "#Harmony",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tulsi-daya",
@@ -752,7 +788,8 @@
    "#Tulsidas",
    "#Compassion",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "hitopadesha-udyam",
@@ -770,7 +807,8 @@
    "#Sanskrit",
    "#HardWork",
    "#Subhashita"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "hitopadesha-vidya",
@@ -788,7 +826,8 @@
    "#Sanskrit",
    "#Education",
    "#Subhashita"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "upanishad-satyameva",
@@ -805,7 +844,8 @@
    "#SatyamevaJayate",
    "#ProudIndian",
    "#Truth"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "vasudhaiva",
@@ -825,7 +865,8 @@
    "#VasudhaivaKutumbakam",
    "#ProudIndian",
    "#Unity"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "gita-6-5",
@@ -843,7 +884,8 @@
    "#BhagavadGita",
    "#SelfBelief",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "gupt-nar-ho",
@@ -863,7 +905,8 @@
    "#MaithiliSharanGupt",
    "#HindiKavita",
    "#NeverGiveUp"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "confucius-reciprocity",
@@ -883,7 +926,8 @@
    "#Confucius",
    "#Kindness",
    "#LifeLessons"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "laozi-know-self",
@@ -903,7 +947,8 @@
    "#LaoTzu",
    "#SelfAwareness",
    "#Wisdom"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "seneca-postpone",
@@ -922,7 +967,8 @@
    "#Seneca",
    "#StartToday",
    "#Stoicism"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "seneca-imagination",
@@ -941,7 +987,8 @@
    "#Seneca",
    "#Overthinking",
    "#Stoicism"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "aurelius-obstacle",
@@ -960,7 +1007,8 @@
    "#MarcusAurelius",
    "#Resilience",
    "#Stoicism"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "aurelius-happy",
@@ -980,7 +1028,8 @@
    "#MarcusAurelius",
    "#Happiness",
    "#Mindset"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "epictetus-master",
@@ -999,7 +1048,8 @@
    "#Epictetus",
    "#SelfDiscipline",
    "#Stoicism"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "epictetus-first-say",
@@ -1019,7 +1069,8 @@
    "#Epictetus",
    "#Goals",
    "#Discipline"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "roosevelt-do-what",
@@ -1038,7 +1089,8 @@
    "#TheodoreRoosevelt",
    "#StartToday",
    "#Motivation"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "thoreau-dreams",
@@ -1058,7 +1110,8 @@
    "#Thoreau",
    "#Dreams",
    "#Success"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "keller-together",
@@ -1078,7 +1131,8 @@
    "#HelenKeller",
    "#Teamwork",
    "#Unity"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "einstein-bicycle",
@@ -1098,7 +1152,8 @@
    "#AlbertEinstein",
    "#KeepMoving",
    "#LifeLessons"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "emerson-enthusiasm",
@@ -1117,7 +1172,8 @@
    "#Emerson",
    "#Passion",
    "#Motivation"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "franklin-lost-time",
@@ -1136,7 +1192,8 @@
    "#BenjaminFranklin",
    "#TimeManagement",
    "#Discipline"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "tagore-butterfly",
@@ -1156,7 +1213,8 @@
    "#RabindranathTagore",
    "#LiveInTheMoment",
    "#LifeQuotes"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tagore-clouds",
@@ -1177,7 +1235,8 @@
    "#RabindranathTagore",
    "#Positivity",
    "#GoodThoughts"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-mala",
@@ -1197,7 +1256,8 @@
    "#Kabir",
    "#KabirKeDohe",
    "#InnerChange"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-bazaar",
@@ -1217,7 +1277,8 @@
    "#Kabir",
    "#Harmony",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-ati",
@@ -1237,7 +1298,8 @@
    "#Kabir",
    "#Balance",
    "#LifeLessons"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-man-ke-hare",
@@ -1255,7 +1317,8 @@
    "#Kabir",
    "#Mindset",
    "#NeverGiveUp"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "kabir-kumhar",
@@ -1275,7 +1338,8 @@
    "#Kabir",
    "#Guru",
    "#Teachers"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "kabir-sanch",
@@ -1295,7 +1359,8 @@
    "#Kabir",
    "#Truth",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-vipda",
@@ -1315,7 +1380,8 @@
    "#Rahim",
    "#TrueFriends",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-bigri",
@@ -1335,7 +1401,8 @@
    "#Rahim",
    "#ThinkBeforeYouSpeak",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-garib",
@@ -1355,7 +1422,8 @@
    "#Rahim",
    "#Kindness",
    "#Friendship"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-chup",
@@ -1375,7 +1443,8 @@
    "#Rahim",
    "#Patience",
    "#Hope"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "rahim-chhama",
@@ -1395,7 +1464,8 @@
    "#Rahim",
    "#Forgiveness",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tulsi-sathi",
@@ -1415,7 +1485,8 @@
    "#Tulsidas",
    "#Courage",
    "#Wisdom"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tulsi-aavat",
@@ -1435,7 +1506,8 @@
    "#Tulsidas",
    "#SelfRespect",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "gita-2-14",
@@ -1455,7 +1527,8 @@
    "#BhagavadGita",
    "#Resilience",
    "#Suvichar"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "gita-3-21",
@@ -1473,7 +1546,8 @@
    "#BhagavadGita",
    "#Leadership",
    "#LeadByExample"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "gita-2-50",
@@ -1490,7 +1564,8 @@
    "#BhagavadGita",
    "#Excellence",
    "#WorkEthic"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "upanishad-asato",
@@ -1509,7 +1584,8 @@
    "#Upanishad",
    "#Light",
    "#Prayer"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "subhashita-vidyarthi",
@@ -1529,7 +1605,8 @@
    "#Sanskrit",
    "#Students",
    "#StudyMotivation"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "sarve-bhavantu",
@@ -1547,7 +1624,8 @@
    "#Sanskrit",
    "#Peace",
    "#Wellbeing"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "subhadra-jhansi",
@@ -1567,7 +1645,8 @@
    "#JhansiKiRani",
    "#Courage",
    "#ProudIndian"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "prasad-himadri",
@@ -1587,7 +1666,8 @@
    "#JaishankarPrasad",
    "#HindiKavita",
    "#ProudIndian"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "bharatendu-nij-bhasha",
@@ -1605,7 +1685,8 @@
    "#Bharatendu",
    "#HindiDiwas",
    "#ProudIndian"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "iqbal-saare-jahan",
@@ -1625,7 +1706,8 @@
    "#SaareJahanSeAchha",
    "#ProudIndian",
    "#India"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "aurelius-revenge",
@@ -1644,7 +1726,8 @@
    "#MarcusAurelius",
    "#Character",
    "#Stoicism"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "seneca-chance",
@@ -1663,7 +1746,8 @@
    "#Seneca",
    "#Learning",
    "#Stoicism"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "seneca-poor",
@@ -1683,7 +1767,8 @@
    "#Seneca",
    "#Contentment",
    "#Stoicism"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "epictetus-views",
@@ -1703,7 +1788,8 @@
    "#Epictetus",
    "#Mindset",
    "#Stoicism"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "epictetus-improve",
@@ -1722,7 +1808,8 @@
    "#Epictetus",
    "#Growth",
    "#Stoicism"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "laozi-conquer-self",
@@ -1742,7 +1829,8 @@
    "#LaoTzu",
    "#SelfDiscipline",
    "#Wisdom"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "confucius-knowledge",
@@ -1762,7 +1850,8 @@
    "#Confucius",
    "#Knowledge",
    "#Wisdom"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "confucius-superior",
@@ -1782,7 +1871,8 @@
    "#Confucius",
    "#SelfImprovement",
    "#Character"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "aristotle-just-acts",
@@ -1802,7 +1892,8 @@
    "#Aristotle",
    "#Habits",
    "#Character"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "franklin-early",
@@ -1822,7 +1913,8 @@
    "#BenjaminFranklin",
    "#MorningRoutine",
    "#Discipline"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "franklin-diligence",
@@ -1841,7 +1933,8 @@
    "#BenjaminFranklin",
    "#HardWork",
    "#Success"
-  ]
+  ],
+  "theme": "work"
  },
  {
   "id": "emerson-peace",
@@ -1859,7 +1952,8 @@
    "#Emerson",
    "#InnerPeace",
    "#SelfBelief"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "thoreau-simplify",
@@ -1879,7 +1973,8 @@
    "#Thoreau",
    "#Minimalism",
    "#LifeLessons"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "keller-adventure",
@@ -1898,7 +1993,8 @@
    "#HelenKeller",
    "#Courage",
    "#Adventure"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "vivek-thoughts",
@@ -1918,7 +2014,8 @@
    "#SwamiVivekananda",
    "#Mindset",
    "#Thoughts"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tagore-love-light",
@@ -1938,7 +2035,8 @@
    "#RabindranathTagore",
    "#Love",
    "#Freedom"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "tagore-stream",
@@ -1958,7 +2056,8 @@
    "#RabindranathTagore",
    "#Gitanjali",
    "#Oneness"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "shakespeare-thinking",
@@ -1978,7 +2077,8 @@
    "#Shakespeare",
    "#Mindset",
    "#Perspective"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "shakespeare-doubts",
@@ -1998,7 +2098,8 @@
    "#Shakespeare",
    "#Courage",
    "#NeverGiveUp"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "newton-giants",
@@ -2018,7 +2119,8 @@
    "#IsaacNewton",
    "#Gratitude",
    "#Learning"
-  ]
+  ],
+  "theme": "life"
  },
  {
   "id": "vivek-powers",
@@ -2037,6 +2139,314 @@
    "#SwamiVivekananda",
    "#SelfBelief",
    "#InnerStrength"
-  ]
+  ],
+  "theme": "life"
+ },
+ {
+  "id": "tulsi-karm-pradhan",
+  "lang": "hi",
+  "hook": "कर्म का नियम",
+  "lines": [
+   "कर्म प्रधान बिस्व करि राखा।",
+   "जो जस करइ",
+   "सो तस फलु चाखा॥"
+  ],
+  "subtitle": "दुनिया कर्म पर चलती है — जैसा करोगे, वैसा पाओगे।",
+  "author": "गोस्वामी तुलसीदास",
+  "author_en": "Goswami Tulsidas",
+  "source": "Ramcharitmanas, Ayodhya Kand",
+  "topic_tags": [
+   "#Tulsidas",
+   "#Karma",
+   "#WorkMotivation"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "tulsi-sakal-padarath",
+  "lang": "hi",
+  "hook": "मेहनत का सच",
+  "lines": [
+   "सकल पदारथ हैं जग माहीं।",
+   "करमहीन नर",
+   "पावत नाहीं॥"
+  ],
+  "subtitle": "दुनिया में सब कुछ है, पर मेहनत न करने वाले को कुछ नहीं मिलता।",
+  "author": "गोस्वामी तुलसीदास",
+  "author_en": "Goswami Tulsidas",
+  "source": "Ramcharitmanas",
+  "topic_tags": [
+   "#Tulsidas",
+   "#HardWork",
+   "#WorkMotivation"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "gita-3-8",
+  "lang": "hi",
+  "hook": "गीता: कर्म करो",
+  "lines": [
+   "नियतं कुरु कर्म त्वं",
+   "कर्म ज्यायो",
+   "ह्यकर्मणः।"
+  ],
+  "subtitle": "अपना कर्तव्य करो — कर्म करना, कुछ न करने से बेहतर है।",
+  "author": "श्रीमद्भगवद्गीता 3.8",
+  "author_en": "Bhagavad Gita 3.8",
+  "source": "Bhagavad Gita, Chapter 3, Verse 8",
+  "topic_tags": [
+   "#BhagavadGita",
+   "#Duty",
+   "#WorkEthic"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "kabir-babool",
+  "lang": "hi",
+  "hook": "कबीर की चेतावनी",
+  "lines": [
+   "करता था तो क्यों रहा,",
+   "अब करि क्यों पछिताय।",
+   "बोया पेड़ बबूल का,",
+   "आम कहाँ ते खाय॥"
+  ],
+  "subtitle": "जैसा बोओगे, वैसा काटोगे।",
+  "author": "संत कबीर",
+  "author_en": "Sant Kabir",
+  "source": "Kabir Dohavali",
+  "topic_tags": [
+   "#Kabir",
+   "#Karma",
+   "#WorkMotivation"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "hitopadesha-udyogin",
+  "lang": "hi",
+  "hook": "मेहनती को लक्ष्मी मिलती है",
+  "lines": [
+   "उद्योगिनं पुरुषसिंहम्",
+   "उपैति लक्ष्मीः।"
+  ],
+  "subtitle": "लक्ष्मी मेहनती और साहसी व्यक्ति के पास ही आती है।",
+  "author": "हितोपदेश",
+  "author_en": "Hitopadesha",
+  "source": "Hitopadesha, Mitralabha",
+  "topic_tags": [
+   "#Sanskrit",
+   "#HardWork",
+   "#Success"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "roosevelt-work-worth",
+  "lang": "en",
+  "hook": "Theodore Roosevelt, 1903:",
+  "lines": [
+   "Far and away the best prize",
+   "that life offers",
+   "is the chance to work hard",
+   "at work worth doing."
+  ],
+  "subtitle": "ज़िंदगी का सबसे बड़ा इनाम है — सार्थक काम में जी-जान से लगना।",
+  "author": "Theodore Roosevelt",
+  "author_en": "Theodore Roosevelt",
+  "source": "Labor Day address, Syracuse, 7 September 1903",
+  "topic_tags": [
+   "#TheodoreRoosevelt",
+   "#WorkEthic",
+   "#Purpose"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "roosevelt-arena",
+  "lang": "en",
+  "hook": "The man in the arena:",
+  "lines": [
+   "The credit belongs",
+   "to the man who is",
+   "actually",
+   "in the arena."
+  ],
+  "subtitle": "श्रेय उसी का है जो मैदान में उतरकर कोशिश करता है।",
+  "author": "Theodore Roosevelt",
+  "author_en": "Theodore Roosevelt",
+  "source": "Citizenship in a Republic, Paris, 23 April 1910",
+  "topic_tags": [
+   "#TheodoreRoosevelt",
+   "#Courage",
+   "#ManInTheArena"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "booker-obstacles",
+  "lang": "en",
+  "hook": "Booker T. Washington, 1901:",
+  "lines": [
+   "Success is measured",
+   "not so much by the position",
+   "one has reached",
+   "as by the obstacles overcome."
+  ],
+  "subtitle": "सफलता पद से नहीं, पार की गई मुश्किलों से नापी जाती है।",
+  "author": "Booker T. Washington",
+  "author_en": "Booker T. Washington",
+  "source": "Up From Slavery, 1901",
+  "topic_tags": [
+   "#BookerTWashington",
+   "#Success",
+   "#Resilience"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "booker-dignity",
+  "lang": "en",
+  "hook": "The dignity of all work:",
+  "lines": [
+   "There is as much dignity",
+   "in tilling a field",
+   "as in writing",
+   "a poem."
+  ],
+  "subtitle": "खेत जोतने में भी उतनी ही इज़्ज़त है जितनी कविता लिखने में।",
+  "author": "Booker T. Washington",
+  "author_en": "Booker T. Washington",
+  "source": "Up From Slavery, 1901",
+  "topic_tags": [
+   "#BookerTWashington",
+   "#DignityOfLabour",
+   "#WorkEthic"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "vivek-work-sake",
+  "lang": "en",
+  "hook": "Vivekananda, Karma Yoga:",
+  "lines": [
+   "Work",
+   "for work's",
+   "sake."
+  ],
+  "subtitle": "काम को काम के लिए कीजिए — फल की चिंता छोड़कर।",
+  "author": "Swami Vivekananda",
+  "author_en": "Swami Vivekananda",
+  "source": "Karma Yoga, Chapter 3, 1896",
+  "topic_tags": [
+   "#SwamiVivekananda",
+   "#KarmaYoga",
+   "#WorkEthic"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "aurelius-rising",
+  "lang": "en",
+  "hook": "For the hard mornings:",
+  "lines": [
+   "In the morning",
+   "when thou risest unwillingly,",
+   "think: I am rising",
+   "to the work of a human being."
+  ],
+  "subtitle": "सुबह उठने का मन न हो, तो याद रखिए — आप इंसान का काम करने उठ रहे हैं।",
+  "author": "Marcus Aurelius",
+  "author_en": "Marcus Aurelius",
+  "source": "Meditations, Book 5.1 (tr. George Long, 1862)",
+  "topic_tags": [
+   "#MarcusAurelius",
+   "#MorningMotivation",
+   "#WorkEthic"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "epictetus-nothing-great",
+  "lang": "en",
+  "hook": "Epictetus on patience:",
+  "lines": [
+   "No great thing",
+   "is produced",
+   "suddenly."
+  ],
+  "subtitle": "कोई भी बड़ी चीज़ रातों-रात नहीं बनती।",
+  "author": "Epictetus",
+  "author_en": "Epictetus",
+  "source": "Discourses, Book 1.15",
+  "topic_tags": [
+   "#Epictetus",
+   "#Patience",
+   "#Consistency"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "franklin-patience",
+  "lang": "en",
+  "hook": "Franklin, 1736:",
+  "lines": [
+   "He that can have patience",
+   "can have",
+   "what he will."
+  ],
+  "subtitle": "जिसमें धैर्य है, वह जो चाहे पा सकता है।",
+  "author": "Benjamin Franklin",
+  "author_en": "Benjamin Franklin",
+  "source": "Poor Richard's Almanack, 1736",
+  "topic_tags": [
+   "#BenjaminFranklin",
+   "#Patience",
+   "#Success"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "franklin-plough",
+  "lang": "en",
+  "hook": "Franklin on hard work:",
+  "lines": [
+   "Plough deep",
+   "while sluggards sleep,",
+   "and you shall have corn",
+   "to sell and to keep."
+  ],
+  "subtitle": "जब आलसी सोएँ, तब मेहनत करो — फल ज़रूर मिलेगा।",
+  "author": "Benjamin Franklin",
+  "author_en": "Benjamin Franklin",
+  "source": "The Way to Wealth, 1758",
+  "topic_tags": [
+   "#BenjaminFranklin",
+   "#HardWork",
+   "#WorkMotivation"
+  ],
+  "theme": "work"
+ },
+ {
+  "id": "franklin-tomorrow",
+  "lang": "en",
+  "hook": "Stop postponing:",
+  "lines": [
+   "Have you somewhat",
+   "to do tomorrow?",
+   "Do it",
+   "today."
+  ],
+  "subtitle": "कल का काम आज कीजिए।",
+  "author": "Benjamin Franklin",
+  "author_en": "Benjamin Franklin",
+  "source": "Poor Richard's Almanack, 1742",
+  "topic_tags": [
+   "#BenjaminFranklin",
+   "#Procrastination",
+   "#Productivity"
+  ],
+  "theme": "work"
  }
 ]

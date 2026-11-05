@@ -256,14 +256,69 @@ SUBJECTS = {
                   "a lantern-lit path through a garden at night"],
 }
 
+# ------------------------------------------------------------------ real stock-video backgrounds (Pexels, optional)
+# With PEXELS_API_KEY set, each reel gets a real portrait video clip (free Pexels licence) that
+# matches its theme. Falls back to Gemini images, then to the built-in scenes.
+VIDEO_QUERIES = {
+    "work":      ["hands working workshop", "carpenter working wood", "farmer working field", "potter hands clay",
+                  "construction worker sunrise", "typing laptop desk night", "chef cooking kitchen", "blacksmith forge",
+                  "engineer factory", "writing notebook desk"],
+    "uplifting": ["sunrise mountains", "sunrise over fields", "morning light forest", "sunrise ocean", "hot air balloon sunrise"],
+    "calm":      ["misty forest", "calm lake morning", "river flowing forest", "rain on leaves", "foggy mountains"],
+    "rising":    ["eagle flying", "runner training dawn", "mountain climber summit", "waves crashing rocks", "storm clouds timelapse"],
+    "raga":      ["diya lamp flame", "temple bells india", "ganga ghat evening", "desert sand dunes sunset", "lotus pond"],
+    "gentle":    ["night sky stars timelapse", "candle flame dark", "city lights night bokeh", "moon clouds night", "fireflies night"],
+}
+
+def pexels_background(q, out_mp4, dur):
+    key = os.environ.get("PEXELS_API_KEY")
+    if not key:
+        return False
+    import requests
+    pool = VIDEO_QUERIES["work"] if q.get("theme") == "work" else VIDEO_QUERIES.get(q.get("mood", "calm"), VIDEO_QUERIES["calm"])
+    seed = zlib.crc32((q.get("date", "") + q["id"]).encode())
+    query = pool[seed % len(pool)]
+    try:
+        r = requests.get("https://api.pexels.com/videos/search", headers={"Authorization": key}, timeout=30,
+                         params={"query": query, "orientation": "portrait", "size": "medium", "per_page": 15,
+                                 "page": 1 + (seed >> 8) % 3})
+        r.raise_for_status()
+        vids = [v for v in r.json().get("videos", []) if v.get("duration", 0) >= 6]
+        if not vids:
+            raise RuntimeError(f"no portrait clips for '{query}'")
+        v = vids[(seed >> 4) % len(vids)]
+        files = [f for f in v["video_files"] if f.get("height") and f["height"] >= f.get("width", 0) and f["height"] >= 1280]
+        files = sorted(files or v["video_files"], key=lambda f: abs((f.get("height") or 0) - 1920))
+        src = out_mp4 + ".src.mp4"
+        with requests.get(files[0]["link"], stream=True, timeout=120) as dl:
+            dl.raise_for_status()
+            with open(src, "wb") as fh:
+                for chunk in dl.iter_content(1 << 20):
+                    fh.write(chunk)
+        # loop if short, cover-crop to 1080x1920, slow it slightly, grade down for text readability
+        vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setpts=1.15*PTS,fps={FPS},"
+              f"eq=brightness=-0.10:saturation=0.85:contrast=1.05,vignette=PI/4,format=yuv420p")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "-1", "-i", src, "-t", str(dur),
+                        "-vf", vf, "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", out_mp4], check=True)
+        os.remove(src)
+        print(f"  background: Pexels video '{query}' by {v.get('user', {}).get('name', '?')} ({v.get('url')})", flush=True)
+        return True
+    except Exception as e:
+        print(f"  Pexels background failed for {q['id']}, falling back: {e}", flush=True)
+        return False
+
 def gemini_prompt(q):
     if q.get("bg_prompt"):
         subject = q["bg_prompt"]
     else:
         pool = SUBJECTS.get(q.get("mood", "calm"), SUBJECTS["calm"])
         subject = pool[zlib.crc32((q.get("date", "") + q["id"]).encode()) % len(pool)]
-    return ("Vertical 9:16 cinematic digital painting, painterly illustrated style, rich but soft colours, "
-            f"{subject}. No people, no faces, no text, no letters, no logos, no watermark. "
+    if q.get("theme") == "work":
+        subject = ["a craftsman's hands shaping wood in a sunlit workshop", "a farmer walking through green fields at sunrise",
+                   "a desk with an open notebook and a cup of tea at dawn", "a potter's hands on a spinning wheel",
+                   "a lone road stretching toward mountains at sunrise"][zlib.crc32(q["id"].encode()) % 5]
+    return ("Vertical 9:16 photorealistic cinematic photograph, natural light, shallow depth of field, "
+            f"{subject}. No faces, no text, no letters, no logos, no watermark. "
             "Keep the middle third of the image calm and slightly dark so white text placed over it stays readable.")
 
 def gemini_background(q, out_png):
@@ -501,8 +556,6 @@ def render_video(q, d, out_mp4, use_voice=True):
     os.makedirs(d, exist_ok=True)
     paths, n = build_overlays(q, d)
     bg = f"{d}/bg.png"
-    if not gemini_background(q, bg):
-        Image.fromarray(SCENES[q["scene"]](q["id"] + q.get("date", "") + q["scene"])).save(bg)
     tl = None
     if use_voice:
         try:
@@ -513,16 +566,29 @@ def render_video(q, d, out_mp4, use_voice=True):
         tl = {"hook": (0.2, 2.2), "lines": [1.8 + i * 1.3 for i in range(n)], "dur": DUR}
         tl["credit"] = tl["lines"][-1] + 1.6; tl["cta"] = tl["credit"] + 2.4
     dur = tl["dur"]
+    bg_video = f"{d}/bg.mp4"
+    use_video = pexels_background(q, bg_video, dur)
+    if not use_video and not gemini_background(q, bg):
+        Image.fromarray(SCENES[q["scene"]](q["id"] + q.get("date", "") + q["scene"])).save(bg)
     wav = f"{d}/music.wav"; music(q["mood"], wav, dur)
     if use_voice and "vbuf" in locals():
         mixed = f"{d}/mix.wav"; mix(vbuf, wav, mixed); wav = mixed
     line_t, credit_t, cta_t = tl["lines"], tl["credit"], tl["cta"]
     DURs = str(dur)
-    inputs = ["-loop", "1", "-t", DURs, "-i", bg]
+    inputs = ["-i", bg_video] if use_video else ["-loop", "1", "-t", DURs, "-i", bg]
     for k in ["hook"] + [f"line{i}" for i in range(n)] + ["credit", "cta", "wm"]:
         inputs += ["-loop", "1", "-t", DURs, "-i", paths[k]]
     inputs += ["-i", wav]
-    fc = [f"[0:v]scale=w='{W}*1.12+{W}*0.06*t/{dur}':h=-2:eval=frame:flags=bicubic,crop={W}:{H},fps={FPS},format=yuv420p[b0]"]
+    if use_video:  # darker centre band so white text stays readable over real footage
+        shade = f"{d}/shade.png"
+        if not os.path.exists(shade):
+            yy = np.linspace(0, 1, H)[:, None]
+            a = (0.30 + 0.32 * np.exp(-((yy - 0.46) / 0.22) ** 2)) * 255
+            Image.fromarray(np.dstack([np.zeros((H, W, 3)), np.repeat(a, W, 1)]).astype(np.uint8), "RGBA").save(shade)
+        inputs += ["-loop", "1", "-t", DURs, "-i", shade]
+        fc = [f"[0:v]fps={FPS},format=yuv420p[raw]", f"[{len(paths) + 2}:v]format=rgba[sh]", "[raw][sh]overlay=0:0[b0]"]
+    else:
+        fc = [f"[0:v]scale=w='{W}*1.12+{W}*0.06*t/{dur}':h=-2:eval=frame:flags=bicubic,crop={W}:{H},fps={FPS},format=yuv420p[b0]"]
     fades = [("hook", tl["hook"][0], tl["hook"][1])] + [(f"line{i}", round(line_t[i], 2), None) for i in range(n)] + [("credit", round(credit_t, 2), None), ("cta", round(cta_t, 2), None), ("wm", 0.0, None)]
     cur = "b0"
     for idx, (k, st, end) in enumerate(fades, start=1):
@@ -543,6 +609,7 @@ def render_video(q, d, out_mp4, use_voice=True):
 SLOTS = {"weekday": ["07:40", "10:50", "12:50", "18:40", "20:50"], "weekend": ["08:40", "11:10", "13:20", "17:40", "21:10"]}
 BRAND = ["#Antarnaad", "#अंतर्नाद"]
 BROAD = {"en": ["#Motivation", "#MotivationalQuotes", "#Inspiration"], "hi": ["#HindiMotivation", "#Suvichar", "#MotivationalQuotesHindi"]}
+WORK = {"en": ["#WorkMotivation", "#WorkEthic", "#Motivation"], "hi": ["#WorkMotivation", "#HindiMotivation", "#Suvichar"]}
 
 def metadata(q, date):
     day = datetime.date.fromisoformat(date)
@@ -550,8 +617,8 @@ def metadata(q, date):
     slot_time = plan.post_time(day, q["slot"])
     quote = " ".join(q["lines"])
     lang = q["lang"]
-    yt_tags = [BRAND[0]] + BROAD[lang][:2] + q["topic_tags"][:1]
-    ig_tags = BRAND + BROAD[lang] + q["topic_tags"]
+    yt_tags = [BRAND[0]] + (WORK if q.get("theme") == "work" else BROAD)[lang][:2] + q["topic_tags"][:1]
+    ig_tags = BRAND + (WORK if q.get("theme") == "work" else BROAD)[lang] + q["topic_tags"]
     if lang == "hi":
         title = f"{q['author_en']} Suvichar | {q['lines'][0].rstrip(',')} #shorts"
         ask = "क्या आप सहमत हैं? कमेंट में बताइए 👇"
