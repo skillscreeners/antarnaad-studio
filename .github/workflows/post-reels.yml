@@ -21,6 +21,9 @@ on:
       preview_day:
         description: "Render all 5 reels for this date and attach them (no posting)"
         required: false
+      mark_posted:
+        description: "Only mark slots as already posted, e.g. 2026-11-05:2,2026-11-05:3"
+        required: false
 
 permissions:
   contents: write   # create posted-* tags
@@ -44,9 +47,23 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 pipeline/due.py
 
+  mark:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.mark_posted != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            pipeline
+            data
+      - env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 pipeline/due.py --mark "${{ inputs.mark_posted }}"
+
   reel:
     needs: check
-    if: ${{ always() && (github.event_name == 'workflow_dispatch' || needs.check.outputs.slot != '') }}
+    if: ${{ always() && ((github.event_name == 'workflow_dispatch' && inputs.mark_posted == '') || needs.check.outputs.slot != '') }}
     concurrency:
       group: antarnaad-post
       cancel-in-progress: false

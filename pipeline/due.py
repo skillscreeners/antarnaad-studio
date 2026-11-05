@@ -37,6 +37,11 @@ def mark_posted(date, slot, sha):
             raise
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--mark":   # --mark 2026-11-05:3,2026-11-05:2
+        for item in sys.argv[2].split(","):
+            d, s = item.strip().split(":")
+            mark_posted(d, int(s), os.environ["GITHUB_SHA"]); print("marked", tag_name(d, s))
+        sys.exit(0)
     now = dt.datetime.now(plan.IST)
     slot = plan.slot_now(now)
     due = slot if slot and not is_posted(now.date().isoformat(), slot) else None
