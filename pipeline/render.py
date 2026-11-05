@@ -389,24 +389,35 @@ def _still_to_bg(im, q, out_png):
     arr = np.asarray(im.crop((l, t, l + BW, t + BH))).astype(np.float64)
     Image.fromarray(finish(arr, rng_for(q["id"]), darken=0.32)).save(out_png)
 
+PHOTO_QUERIES = {
+    "work":      ["workshop", "carpenter", "farmer field", "pottery", "blacksmith", "desk notebook", "factory worker", "construction"],
+    "uplifting": ["sunrise mountains", "sunrise", "mountain valley", "morning forest", "sunrise sea"],
+    "calm":      ["misty forest", "lake mountains", "foggy hills", "river forest", "waterfall"],
+    "rising":    ["eagle", "mountain summit", "waves rocks", "storm clouds", "lighthouse"],
+    "raga":      ["oil lamp", "ganges", "sand dunes", "lotus", "temple india"],
+    "gentle":    ["night sky", "milky way", "candle", "moon", "stars mountains"],
+}
+
 def openverse_background(q, out_png):
-    """Real photo from Openverse (WordPress.org; no key). Only CC0 / public-domain images, so no
+    """Real photo from Openverse (WordPress.org; no key). Only CC0 / public-domain photographs, so no
     attribution is required; the slow zoom in render_video turns the still into motion."""
     import requests
-    query, seed = _query_for(q)
+    _, seed = _query_for(q)
+    pool = PHOTO_QUERIES["work"] if q.get("theme") == "work" else PHOTO_QUERIES.get(q.get("mood", "calm"), PHOTO_QUERIES["calm"])
     ua = {"User-Agent": "AntarnaadStudio/1.0 (+https://skillscreeners.github.io/antarnaad-studio/)"}
     try:
-        hits = []
-        for aspect in ("tall", None):
-            params = {"q": query, "license": "cc0,pdm", "size": "large", "page_size": 20, "mature": "false",
-                      "category": "photograph", "excluded_source": "rawpixel"}
-            if aspect:
-                params["aspect_ratio"] = aspect
-            r = requests.get("https://api.openverse.org/v1/images/", params=params, headers=ua, timeout=30)
+        hits, query = [], None
+        for k in range(min(4, len(pool))):
+            query = pool[(seed + k) % len(pool)]
+            r = requests.get("https://api.openverse.org/v1/images/", headers=ua, timeout=30,
+                             params={"q": query, "license": "cc0,pdm", "category": "photograph",
+                                     "page_size": 30, "mature": "false", "excluded_source": "rawpixel"})
             r.raise_for_status()
             hits = [h for h in r.json().get("results", [])
                     if min(h.get("width") or 0, h.get("height") or 0) >= 1000 and h.get("url")]
+            hits.sort(key=lambda h: (h["height"] < h["width"]))   # portrait first
             if hits:
+                hits = hits[:12]
                 break
         if not hits:
             raise RuntimeError(f"no CC0 photos for '{query}'")
