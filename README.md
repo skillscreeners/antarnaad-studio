@@ -60,8 +60,13 @@ aistudio.google.com → Get API key. Image generation may be billed on your Goog
 the next fallback is used. Model can be changed with the repo variable `GEMINI_IMAGE_MODEL`.
 The free Gemini tier has no image quota (HTTP 429): turn on billing for the key's project to use it.
 
-Background order: Pexels video → Pixabay video → Gemini image → Openverse CC0/public-domain photo
-(no key needed) → built-in drawn scene.
+Background order: Pexels video → Pixabay video → Gemini image → reviewed CC0/public-domain photo from
+`assets/photos/` → built-in drawn scene.
+
+### 4b. Photo library (no key needed)
+Actions → *Harvest background photos* → Run. It adds real CC0 photos from Openverse to `assets/photos/<mood>/`.
+**Review every new photo by eye** before the next post: delete unsuitable ones (people in swimwear, text,
+weapons, logos…) and add their ids to `assets/photos/rejected.txt` so they never come back.
 
 ### 5. GitHub secrets and variables
 Settings → Secrets and variables → Actions:
