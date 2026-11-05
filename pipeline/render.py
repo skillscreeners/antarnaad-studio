@@ -394,8 +394,8 @@ PHOTO_QUERIES = {
     "uplifting": ["sunrise mountains", "sunrise", "mountain valley", "morning forest", "sunrise sea"],
     "calm":      ["misty forest", "lake mountains", "foggy hills", "river forest", "waterfall"],
     "rising":    ["eagle", "mountain summit", "waves rocks", "storm clouds", "lighthouse"],
-    "raga":      ["oil lamp", "ganges", "sand dunes", "lotus", "temple india"],
-    "gentle":    ["night sky", "milky way", "candle", "moon", "stars mountains"],
+    "raga":      ["sand dunes", "desert sunset", "river sunset", "temple sunset", "lotus flower", "banyan tree"],
+    "gentle":    ["night sky", "milky way", "moon", "stars mountains", "night lake"],
 }
 
 PHOTO_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "photos")
@@ -676,8 +676,8 @@ def render_video(q, d, out_mp4, use_voice=True):
     dur = tl["dur"]
     bg_video = f"{d}/bg.mp4"
     use_video = pexels_background(q, bg_video, dur) or pixabay_background(q, bg_video, dur)
-    if not use_video and not gemini_background(q, bg) and not library_background(q, bg) \
-            and not openverse_background(q, bg):
+    # live Openverse search is not used at post time: its photos are not reviewed (see assets/photos)
+    if not use_video and not gemini_background(q, bg) and not library_background(q, bg):
         Image.fromarray(SCENES[q["scene"]](q["id"] + q.get("date", "") + q["scene"])).save(bg)
     wav = f"{d}/music.wav"; music(q["mood"], wav, dur)
     if use_voice and "vbuf" in locals():

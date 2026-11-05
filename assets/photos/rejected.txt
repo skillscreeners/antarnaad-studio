@@ -1,0 +1,12 @@
+# photo id prefixes that must never be used (reviewed and rejected)
+583d85c5-7bc
+421e7931-962
+87a3a730-75b
+f2220494-272
+508e5958-5eb
+8e6e4495-cfd
+f856ef85-972
+a047bebf-98e
+8c93c3de-5c3
+3db526d9-e7f
+a75558a0-7e1

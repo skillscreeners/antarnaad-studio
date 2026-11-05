@@ -4,6 +4,7 @@
 Run by the "Harvest background photos" workflow. Saves assets/photos/<pool>/<id>.jpg, cropped to
 the 1296x2304 portrait canvas, plus assets/photos/credits.json. No attribution is legally required
 for CC0/PDM, but sources are kept anyway. Existing photos are kept; run again to add more.
+Every new photo must be reviewed by eye before it goes live: delete bad ones and list their ids in rejected.txt.
 """
 import io, json, os, sys, time
 import requests
@@ -16,7 +17,10 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", 
 UA = {"User-Agent": "AntarnaadStudio/1.0 (+https://skillscreeners.github.io/antarnaad-studio/)"}
 PER_QUERY = int(os.environ.get("PER_QUERY", "3"))
 BAD = ("illustration", "cartoon", "vector", "drawing", "clipart", "clip art", "icon", "logo", "text",
-       "poster", "painting", "sketch", "render", "3d", "map", "diagram", "screenshot", "nude", "blood", "war")
+       "poster", "painting", "sketch", "render", "3d", "map", "diagram", "screenshot", "nude", "blood", "war",
+       "woman", "girl", "bikini", "topless", "sexy", "model", "body", "crowd", "protest", "knife", "gun", "cake", "birthday")
+REJECTED = {l.strip() for l in open(os.path.join(ROOT, "rejected.txt")) if l.strip() and not l.startswith("#")} \
+    if os.path.exists(os.path.join(ROOT, "rejected.txt")) else set()
 
 def search(query):
     for attempt in range(5):
@@ -50,6 +54,8 @@ def main():
                 if got >= PER_QUERY:
                     break
                 path = os.path.join(ROOT, pool, f"{h['id'][:12]}.jpg")
+                if h["id"][:12] in REJECTED:
+                    continue
                 if os.path.exists(path):
                     got += 1; continue
                 try:
