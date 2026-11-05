@@ -71,7 +71,7 @@ jobs:
       group: antarnaad-post
       cancel-in-progress: false
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     env:
       TZ: Asia/Kolkata
       ANTARNAAD_FONT_DIR: ${{ github.workspace }}/fonts
@@ -95,22 +95,30 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: System packages
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg libfribidi0 libharfbuzz0b >/dev/null
-
       - name: Python packages
-        run: pip install -q -r requirements.txt
+        timeout-minutes: 6
+        run: pip install -q -r requirements.txt imageio-ffmpeg
 
-      - name: Fonts (Poppins, OFL — covers English and Hindi)
+      - name: ffmpeg (static build from PyPI; apt mirrors on runners can hang)
+        timeout-minutes: 3
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo ln -sf "$(python -c 'import imageio_ffmpeg as f; print(f.get_ffmpeg_exe())')" /usr/local/bin/ffmpeg
+          fi
+          ffmpeg -version | head -1
+
+      - name: Fonts and Hindi text shaping
+        timeout-minutes: 6
         run: |
           mkdir -p fonts
           for w in Bold Medium; do
-            [ -f fonts/Poppins-$w.ttf ] || curl -fsSL -o fonts/Poppins-$w.ttf \
+            [ -f fonts/Poppins-$w.ttf ] || curl -fsSL --retry 3 -o fonts/Poppins-$w.ttf \
               https://github.com/google/fonts/raw/main/ofl/poppins/Poppins-$w.ttf
           done
-          python -c "from PIL import features; assert features.check('raqm'), 'raqm missing: Hindi text would render wrongly'"
+          RAQM='from PIL import features; assert features.check("raqm")'
+          python -c "$RAQM" || { sudo timeout 120 apt-get install -y -qq libfribidi0 >/dev/null 2>&1 \
+            || { sudo timeout 150 apt-get update -qq && sudo timeout 120 apt-get install -y -qq libfribidi0; }; }
+          python -c "$RAQM" && echo "Hindi shaping OK"
 
       - name: Preview a whole day
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.preview_day != '' }}
