@@ -375,15 +375,57 @@ def gemini_background(q, out_png):
         data = next(p["inlineData"]["data"] for p in parts if "inlineData" in p)
         im = Image.open(io.BytesIO(base64.b64decode(data))).convert("RGB")
     except Exception as e:
-        print(f"  Gemini background failed for {q['id']}, using built-in scene: {e}", flush=True)
+        print(f"  Gemini background failed for {q['id']}, falling back: {e}", flush=True)
         return False
-    # cover-crop to the oversized background canvas, then grade for text readability
+    _still_to_bg(im, q, out_png)
+    print("  background: Gemini photorealistic image", flush=True)
+    return True
+
+def _still_to_bg(im, q, out_png):
+    """cover-crop a photo to the oversized background canvas, then grade it for text readability"""
     sc = max(BW / im.width, BH / im.height)
     im = im.resize((math.ceil(im.width * sc), math.ceil(im.height * sc)), Image.LANCZOS)
     l, t = (im.width - BW) // 2, (im.height - BH) // 2
     arr = np.asarray(im.crop((l, t, l + BW, t + BH))).astype(np.float64)
     Image.fromarray(finish(arr, rng_for(q["id"]), darken=0.32)).save(out_png)
-    return True
+
+def openverse_background(q, out_png):
+    """Real photo from Openverse (WordPress.org; no key). Only CC0 / public-domain images, so no
+    attribution is required; the slow zoom in render_video turns the still into motion."""
+    import requests
+    query, seed = _query_for(q)
+    ua = {"User-Agent": "AntarnaadStudio/1.0 (+https://skillscreeners.github.io/antarnaad-studio/)"}
+    try:
+        hits = []
+        for aspect in ("tall", None):
+            params = {"q": query, "license": "cc0,pdm", "size": "large", "page_size": 20, "mature": "false"}
+            if aspect:
+                params["aspect_ratio"] = aspect
+            r = requests.get("https://api.openverse.org/v1/images/", params=params, headers=ua, timeout=30)
+            r.raise_for_status()
+            hits = [h for h in r.json().get("results", [])
+                    if min(h.get("width") or 0, h.get("height") or 0) >= 1000 and h.get("url")]
+            if hits:
+                break
+        if not hits:
+            raise RuntimeError(f"no CC0 photos for '{query}'")
+        for k in range(len(hits)):  # some hosts refuse hotlinks: try the next photo
+            h = hits[((seed >> 4) + k) % len(hits)]
+            try:
+                r = requests.get(h["url"], headers=ua, timeout=60)
+                r.raise_for_status()
+                im = Image.open(io.BytesIO(r.content)).convert("RGB")
+                break
+            except Exception:
+                continue
+        else:
+            raise RuntimeError("no photo could be downloaded")
+        _still_to_bg(im, q, out_png)
+        print(f"  background: Openverse photo '{query}' ({h.get('license')}) {h.get('foreign_landing_url')}", flush=True)
+        return True
+    except Exception as e:
+        print(f"  Openverse background failed for {q['id']}, using built-in scene: {e}", flush=True)
+        return False
 
 # ------------------------------------------------------------------ text overlays
 def font(path, size):
@@ -607,7 +649,7 @@ def render_video(q, d, out_mp4, use_voice=True):
     dur = tl["dur"]
     bg_video = f"{d}/bg.mp4"
     use_video = pexels_background(q, bg_video, dur) or pixabay_background(q, bg_video, dur)
-    if not use_video and not gemini_background(q, bg):
+    if not use_video and not gemini_background(q, bg) and not openverse_background(q, bg):
         Image.fromarray(SCENES[q["scene"]](q["id"] + q.get("date", "") + q["scene"])).save(bg)
     wav = f"{d}/music.wav"; music(q["mood"], wav, dur)
     if use_voice and "vbuf" in locals():

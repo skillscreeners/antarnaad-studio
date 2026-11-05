@@ -57,7 +57,11 @@ the default 10,000 daily quota units, so 5 Antarnaad reels a day would crowd out
 
 ### 4. Gemini backgrounds (optional)
 aistudio.google.com → Get API key. Image generation may be billed on your Google account; without the key
-the built-in scenes are used. Model can be changed with the repo variable `GEMINI_IMAGE_MODEL`.
+the next fallback is used. Model can be changed with the repo variable `GEMINI_IMAGE_MODEL`.
+The free Gemini tier has no image quota (HTTP 429): turn on billing for the key's project to use it.
+
+Background order: Pexels video → Pixabay video → Gemini image → Openverse CC0/public-domain photo
+(no key needed) → built-in drawn scene.
 
 ### 5. GitHub secrets and variables
 Settings → Secrets and variables → Actions:
