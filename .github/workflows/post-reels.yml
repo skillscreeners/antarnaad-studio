@@ -6,6 +6,9 @@ on:
     # (01:00–16:59 UTC = 06:30–22:29 IST). The "check" job posts only when a slot is due
     # and not yet marked posted (git tag posted-YYYY-MM-DD-sN), so nothing posts twice.
     - cron: "*/10 1-16 * * *"
+  repository_dispatch:
+    # external scheduler (Google Cloud Scheduler) sends {"event_type": "tick"} every 10 minutes
+    types: [tick]
   workflow_dispatch:
     inputs:
       slot:
@@ -31,7 +34,7 @@ permissions:
 
 jobs:
   check:
-    if: ${{ github.event_name == 'schedule' }}
+    if: ${{ github.event_name == 'schedule' || github.event_name == 'repository_dispatch' }}
     runs-on: ubuntu-latest
     timeout-minutes: 3
     outputs:
