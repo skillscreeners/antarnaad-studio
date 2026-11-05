@@ -398,6 +398,21 @@ PHOTO_QUERIES = {
     "gentle":    ["night sky", "milky way", "candle", "moon", "stars mountains"],
 }
 
+PHOTO_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "photos")
+
+def library_background(q, out_png):
+    """Real CC0 photo from assets/photos (filled by the 'Harvest background photos' workflow)."""
+    pool = "work" if q.get("theme") == "work" else q.get("mood", "calm")
+    folder = os.path.join(PHOTO_DIR, pool)
+    files = sorted(f for f in os.listdir(folder) if f.endswith(".jpg")) if os.path.isdir(folder) else []
+    if not files:
+        return False
+    _, seed = _query_for(q)
+    name = files[(seed >> 4) % len(files)]
+    _still_to_bg(Image.open(os.path.join(folder, name)).convert("RGB"), q, out_png)
+    print(f"  background: library photo {pool}/{name}", flush=True)
+    return True
+
 def openverse_background(q, out_png):
     """Real photo from Openverse (WordPress.org; no key). Only CC0 / public-domain photographs, so no
     attribution is required; the slow zoom in render_video turns the still into motion."""
@@ -661,7 +676,8 @@ def render_video(q, d, out_mp4, use_voice=True):
     dur = tl["dur"]
     bg_video = f"{d}/bg.mp4"
     use_video = pexels_background(q, bg_video, dur) or pixabay_background(q, bg_video, dur)
-    if not use_video and not gemini_background(q, bg) and not openverse_background(q, bg):
+    if not use_video and not gemini_background(q, bg) and not library_background(q, bg) \
+            and not openverse_background(q, bg):
         Image.fromarray(SCENES[q["scene"]](q["id"] + q.get("date", "") + q["scene"])).save(bg)
     wav = f"{d}/music.wav"; music(q["mood"], wav, dur)
     if use_voice and "vbuf" in locals():
