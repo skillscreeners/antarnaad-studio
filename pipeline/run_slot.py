@@ -64,7 +64,7 @@ def main():
     a = ap.parse_args()
     now = dt.datetime.now(plan.IST)
     if a.preview:
-        for s in range(1, 6):
+        for s in plan.SLOTS:
             build(a.preview, s)
         return
     date = a.date or now.date().isoformat()

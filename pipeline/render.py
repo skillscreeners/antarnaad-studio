@@ -546,7 +546,8 @@ BROAD = {"en": ["#Motivation", "#MotivationalQuotes", "#Inspiration"], "hi": ["#
 
 def metadata(q, date):
     day = datetime.date.fromisoformat(date)
-    slot_time = SLOTS["weekend" if day.weekday() >= 5 else "weekday"][q["slot"] - 1]
+    import plan
+    slot_time = plan.post_time(day, q["slot"])
     quote = " ".join(q["lines"])
     lang = q["lang"]
     yt_tags = [BRAND[0]] + BROAD[lang][:2] + q["topic_tags"][:1]

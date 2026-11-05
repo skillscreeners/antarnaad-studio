@@ -11,16 +11,22 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 EPOCH = dt.date(2026, 11, 1)
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 
-PILLARS = {1: "Subah ka Vichar", 2: "Global Greats", 3: "In the News", 4: "Indian Icons", 5: "Life Lessons"}
-MOODS = {1: "uplifting", 2: "calm", 3: "rising", 4: "raga", 5: "gentle"}
-SCENES = {1: "sunrise_mountains", 2: "misty_path", 3: "storm_light", 4: "dunes_sunset", 5: "starry_night"}
+# 10 slots a day, 90 minutes apart. Odd slots Hindi, even slots English.
+_TIMES = ["07:10", "08:40", "10:10", "11:40", "13:10", "14:40", "16:10", "17:40", "19:10", "20:40"]
+SLOTS = list(range(1, len(_TIMES) + 1))
+NEWS_SLOT = 6   # "In the News": uses data/trending.json[date] when present
+_P = ["Subah ka Vichar", "Global Greats", "Indian Icons", "Life Lessons"]
+PILLARS = {s: ("In the News" if s == NEWS_SLOT else _P[(s - 1) % len(_P)]) for s in SLOTS}
+_M = ["uplifting", "calm", "raga", "gentle", "rising"]
+_S = ["sunrise_mountains", "misty_path", "dunes_sunset", "starry_night", "storm_light"]
+MOODS = {s: _M[(s - 1) % len(_M)] for s in SLOTS}
+SCENES = {s: _S[(s - 1) % len(_S)] for s in SLOTS}
 # IST post times. Off-the-hour minutes avoid the :00 rush.
-TIMES = {"weekday": {1: "07:40", 2: "10:50", 3: "12:50", 4: "18:40", 5: "20:50"},
-         "weekend": {1: "08:40", 2: "11:10", 3: "13:20", 4: "17:40", 5: "21:10"}}
+TIMES = {"weekday": dict(zip(SLOTS, _TIMES)), "weekend": dict(zip(SLOTS, _TIMES))}
 
 def slot_langs(day_index):
-    """Hindi in the morning and evening slots, English mid-morning and night; slot 3 alternates."""
-    return {1: "hi", 2: "en", 3: "hi" if day_index % 2 == 0 else "en", 4: "hi", 5: "en"}
+    """Odd slots Hindi, even slots English (5 + 5 a day)."""
+    return {s: ("hi" if s % 2 == 1 else "en") for s in SLOTS}
 
 def _bank():
     return json.load(open(os.path.join(ROOT, "data", "quote_bank.json"), encoding="utf-8"))
@@ -36,7 +42,7 @@ def quote_for(date, slot):
     date = dt.date.fromisoformat(date) if isinstance(date, str) else date
     d = (date - EPOCH).days
     trending = json.load(open(os.path.join(ROOT, "data", "trending.json"), encoding="utf-8"))
-    if slot == 3 and date.isoformat() in trending:
+    if slot == NEWS_SLOT and date.isoformat() in trending:
         q = dict(trending[date.isoformat()])
         q.setdefault("lang", "en")
     else:
@@ -58,7 +64,7 @@ def post_time(date, slot):
 def slot_now(now=None, window_min=75):
     """Which slot is due right now (IST), allowing for GitHub's cron delays."""
     now = now or dt.datetime.now(IST)
-    for slot in range(1, 6):
+    for slot in SLOTS:
         hh, mm = map(int, post_time(now.date(), slot).split(":"))
         start = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
         if dt.timedelta(minutes=-10) <= now - start <= dt.timedelta(minutes=window_min):
@@ -71,4 +77,4 @@ if __name__ == "__main__":
     days = int(sys.argv[2]) if len(sys.argv) > 2 else 7
     for i in range(days):
         day = start + dt.timedelta(days=i)
-        print(day, " | ".join(f"{post_time(day, s)} {quote_for(day, s)['id']}" for s in range(1, 6)))
+        print(day, " | ".join(f"{post_time(day, s)} {quote_for(day, s)['id']}" for s in SLOTS))

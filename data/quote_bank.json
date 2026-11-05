@@ -1178,5 +1178,865 @@
    "#Positivity",
    "#GoodThoughts"
   ]
+ },
+ {
+  "id": "kabir-mala",
+  "lang": "hi",
+  "hook": "कबीर की सीख",
+  "lines": [
+   "माला फेरत जुग भया,",
+   "फिरा न मन का फेर।",
+   "कर का मनका डार दे,",
+   "मन का मनका फेर॥"
+  ],
+  "subtitle": "दिखावे से नहीं, मन बदलने से बदलाव आता है।",
+  "author": "संत कबीर",
+  "author_en": "Sant Kabir",
+  "source": "Kabir Dohavali",
+  "topic_tags": [
+   "#Kabir",
+   "#KabirKeDohe",
+   "#InnerChange"
+  ]
+ },
+ {
+  "id": "kabir-bazaar",
+  "lang": "hi",
+  "hook": "कबीर का संदेश",
+  "lines": [
+   "कबीरा खड़ा बाज़ार में,",
+   "मांगे सबकी खैर।",
+   "ना काहू से दोस्ती,",
+   "न काहू से बैर॥"
+  ],
+  "subtitle": "सबका भला चाहिए, किसी से बैर न रखिए।",
+  "author": "संत कबीर",
+  "author_en": "Sant Kabir",
+  "source": "Kabir Dohavali",
+  "topic_tags": [
+   "#Kabir",
+   "#Harmony",
+   "#Suvichar"
+  ]
+ },
+ {
+  "id": "kabir-ati",
+  "lang": "hi",
+  "hook": "संतुलन का मंत्र",
+  "lines": [
+   "अति का भला न बोलना,",
+   "अति की भली न चूप।",
+   "अति का भला न बरसना,",
+   "अति की भली न धूप॥"
+  ],
+  "subtitle": "हर चीज़ में संतुलन ही सबसे अच्छा है।",
+  "author": "संत कबीर",
+  "author_en": "Sant Kabir",
+  "source": "Kabir Dohavali",
+  "topic_tags": [
+   "#Kabir",
+   "#Balance",
+   "#LifeLessons"
+  ]
+ },
+ {
+  "id": "kabir-man-ke-hare",
+  "lang": "hi",
+  "hook": "कबीर का मंत्र",
+  "lines": [
+   "मन के हारे हार है,",
+   "मन के जीते जीत।"
+  ],
+  "subtitle": "हार और जीत पहले मन में होती है।",
+  "author": "संत कबीर",
+  "author_en": "Sant Kabir",
+  "source": "Kabir Dohavali",
+  "topic_tags": [
+   "#Kabir",
+   "#Mindset",
+   "#NeverGiveUp"
+  ]
+ },
+ {
+  "id": "kabir-kumhar",
+  "lang": "hi",
+  "hook": "गुरु की महिमा",
+  "lines": [
+   "गुरु कुम्हार शिष कुंभ है,",
+   "गढ़ि गढ़ि काढ़ै खोट।",
+   "अन्तर हाथ सहार दै,",
+   "बाहर बाहै चोट॥"
+  ],
+  "subtitle": "सच्चा गुरु बाहर से सख़्त, भीतर से सहारा देता है।",
+  "author": "संत कबीर",
+  "author_en": "Sant Kabir",
+  "source": "Kabir Dohavali",
+  "topic_tags": [
+   "#Kabir",
+   "#Guru",
+   "#Teachers"
+  ]
+ },
+ {
+  "id": "kabir-sanch",
+  "lang": "hi",
+  "hook": "सच की ताक़त",
+  "lines": [
+   "साँच बराबर तप नहीं,",
+   "झूठ बराबर पाप।",
+   "जाके हिरदै साँच है,",
+   "ताकै हिरदै आप॥"
+  ],
+  "subtitle": "सच्चाई से बड़ा कोई तप नहीं।",
+  "author": "संत कबीर",
+  "author_en": "Sant Kabir",
+  "source": "Kabir Dohavali",
+  "topic_tags": [
+   "#Kabir",
+   "#Truth",
+   "#Suvichar"
+  ]
+ },
+ {
+  "id": "rahim-vipda",
+  "lang": "hi",
+  "hook": "रहीम का दोहा",
+  "lines": [
+   "रहिमन विपदा हू भली,",
+   "जो थोरे दिन होय।",
+   "हित अनहित या जगत में,",
+   "जानि परत सब कोय॥"
+  ],
+  "subtitle": "मुश्किल समय दिखा देता है कौन सच्चा अपना है।",
+  "author": "रहीम",
+  "author_en": "Abdul Rahim Khan-i-Khanan",
+  "source": "Rahim Dohavali",
+  "topic_tags": [
+   "#Rahim",
+   "#TrueFriends",
+   "#Suvichar"
+  ]
+ },
+ {
+  "id": "rahim-bigri",
+  "lang": "hi",
+  "hook": "रहीम की सलाह",
+  "lines": [
+   "बिगरी बात बनै नहीं,",
+   "लाख करौ किन कोय।",
+   "रहिमन बिगरे दूध को,",
+   "मथे न माखन होय॥"
+  ],
+  "subtitle": "बोलने और करने से पहले सोचिए।",
+  "author": "रहीम",
+  "author_en": "Abdul Rahim Khan-i-Khanan",
+  "source": "Rahim Dohavali",
+  "topic_tags": [
+   "#Rahim",
+   "#ThinkBeforeYouSpeak",
+   "#Suvichar"
+  ]
+ },
+ {
+  "id": "rahim-garib",
+  "lang": "hi",
+  "hook": "रहीम का दोहा",
+  "lines": [
+   "जे गरीब पर हित करैं,",
+   "ते रहीम बड़ लोग।",
+   "कहा सुदामा बापुरो,",
+   "कृष्ण मिताई जोग॥"
+  ],
+  "subtitle": "बड़ा वही है जो कमज़ोर का साथ दे।",
+  "author": "रहीम",
+  "author_en": "Abdul Rahim Khan-i-Khanan",
+  "source": "Rahim Dohavali",
+  "topic_tags": [
+   "#Rahim",
+   "#Kindness",
+   "#Friendship"
+  ]
+ },
+ {
+  "id": "rahim-chup",
+  "lang": "hi",
+  "hook": "धैर्य का दोहा",
+  "lines": [
+   "रहिमन चुप हो बैठिए,",
+   "देखि दिनन के फेर।",
+   "जब नीके दिन आइहैं,",
+   "बनत न लगिहैं देर॥"
+  ],
+  "subtitle": "बुरा समय भी बीत जाएगा — धैर्य रखिए।",
+  "author": "रहीम",
+  "author_en": "Abdul Rahim Khan-i-Khanan",
+  "source": "Rahim Dohavali",
+  "topic_tags": [
+   "#Rahim",
+   "#Patience",
+   "#Hope"
+  ]
+ },
+ {
+  "id": "rahim-chhama",
+  "lang": "hi",
+  "hook": "क्षमा का बल",
+  "lines": [
+   "छमा बड़न को चाहिए,",
+   "छोटन को उतपात।",
+   "कह रहीम हरि का घट्यो,",
+   "जो भृगु मारी लात॥"
+  ],
+  "subtitle": "क्षमा करना बड़प्पन की निशानी है।",
+  "author": "रहीम",
+  "author_en": "Abdul Rahim Khan-i-Khanan",
+  "source": "Rahim Dohavali",
+  "topic_tags": [
+   "#Rahim",
+   "#Forgiveness",
+   "#Suvichar"
+  ]
+ },
+ {
+  "id": "tulsi-sathi",
+  "lang": "hi",
+  "hook": "मुश्किल के साथी",
+  "lines": [
+   "तुलसी साथी विपत्ति के,",
+   "विद्या विनय विवेक।",
+   "साहस सुकृति सुसत्यव्रत,",
+   "राम भरोसो एक॥"
+  ],
+  "subtitle": "मुश्किल में विद्या, विनम्रता, विवेक और साहस ही साथ देते हैं।",
+  "author": "गोस्वामी तुलसीदास",
+  "author_en": "Goswami Tulsidas",
+  "source": "Tulsidas Dohavali",
+  "topic_tags": [
+   "#Tulsidas",
+   "#Courage",
+   "#Wisdom"
+  ]
+ },
+ {
+  "id": "tulsi-aavat",
+  "lang": "hi",
+  "hook": "तुलसीदास जी कहते हैं",
+  "lines": [
+   "आवत ही हरषै नहीं,",
+   "नैनन नहीं सनेह।",
+   "तुलसी तहां न जाइए,",
+   "कंचन बरसे मेह॥"
+  ],
+  "subtitle": "जहाँ सम्मान न हो, वहाँ मत जाइए।",
+  "author": "गोस्वामी तुलसीदास",
+  "author_en": "Goswami Tulsidas",
+  "source": "Tulsidas Dohavali",
+  "topic_tags": [
+   "#Tulsidas",
+   "#SelfRespect",
+   "#Suvichar"
+  ]
+ },
+ {
+  "id": "gita-2-14",
+  "lang": "hi",
+  "hook": "गीता का संदेश",
+  "lines": [
+   "मात्रास्पर्शास्तु कौन्तेय",
+   "शीतोष्णसुखदुःखदाः।",
+   "आगमापायिनोऽनित्या:",
+   "तांस्तितिक्षस्व भारत॥"
+  ],
+  "subtitle": "सुख-दुख आते-जाते रहते हैं — उन्हें धैर्य से सहिए।",
+  "author": "श्रीमद्भगवद्गीता 2.14",
+  "author_en": "Bhagavad Gita 2.14",
+  "source": "Bhagavad Gita, Chapter 2, Verse 14",
+  "topic_tags": [
+   "#BhagavadGita",
+   "#Resilience",
+   "#Suvichar"
+  ]
+ },
+ {
+  "id": "gita-3-21",
+  "lang": "hi",
+  "hook": "नेतृत्व का सूत्र",
+  "lines": [
+   "यद्यदाचरति श्रेष्ठ:",
+   "तत्तदेवेतरो जनः।"
+  ],
+  "subtitle": "बड़े लोग जैसा करते हैं, बाकी लोग वैसा ही करते हैं।",
+  "author": "श्रीमद्भगवद्गीता 3.21",
+  "author_en": "Bhagavad Gita 3.21",
+  "source": "Bhagavad Gita, Chapter 3, Verse 21",
+  "topic_tags": [
+   "#BhagavadGita",
+   "#Leadership",
+   "#LeadByExample"
+  ]
+ },
+ {
+  "id": "gita-2-50",
+  "lang": "hi",
+  "hook": "काम का मंत्र",
+  "lines": [
+   "योगः कर्मसु कौशलम्।"
+  ],
+  "subtitle": "काम में कुशलता ही योग है।",
+  "author": "श्रीमद्भगवद्गीता 2.50",
+  "author_en": "Bhagavad Gita 2.50",
+  "source": "Bhagavad Gita, Chapter 2, Verse 50",
+  "topic_tags": [
+   "#BhagavadGita",
+   "#Excellence",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "upanishad-asato",
+  "lang": "hi",
+  "hook": "सबसे सुंदर प्रार्थना",
+  "lines": [
+   "असतो मा सद्गमय।",
+   "तमसो मा ज्योतिर्गमय।",
+   "मृत्योर्मा अमृतं गमय॥"
+  ],
+  "subtitle": "असत्य से सत्य की ओर, अंधकार से प्रकाश की ओर ले चलो।",
+  "author": "बृहदारण्यक उपनिषद् 1.3.28",
+  "author_en": "Brihadaranyaka Upanishad 1.3.28",
+  "source": "Brihadaranyaka Upanishad 1.3.28",
+  "topic_tags": [
+   "#Upanishad",
+   "#Light",
+   "#Prayer"
+  ]
+ },
+ {
+  "id": "subhashita-vidyarthi",
+  "lang": "hi",
+  "hook": "विद्यार्थी के पाँच गुण",
+  "lines": [
+   "काक चेष्टा बको ध्यानं,",
+   "श्वान निद्रा तथैव च।",
+   "अल्पाहारी गृहत्यागी,",
+   "विद्यार्थी पंच लक्षणम्॥"
+  ],
+  "subtitle": "कौवे-सी लगन, बगुले-सा ध्यान, कुत्ते-सी नींद, कम भोजन — यही विद्यार्थी के गुण।",
+  "author": "संस्कृत सुभाषित",
+  "author_en": "Sanskrit Subhashita",
+  "source": "Traditional Sanskrit subhashita",
+  "topic_tags": [
+   "#Sanskrit",
+   "#Students",
+   "#StudyMotivation"
+  ]
+ },
+ {
+  "id": "sarve-bhavantu",
+  "lang": "hi",
+  "hook": "सबके लिए शुभकामना",
+  "lines": [
+   "सर्वे भवन्तु सुखिनः,",
+   "सर्वे सन्तु निरामयाः।"
+  ],
+  "subtitle": "सब सुखी हों, सब स्वस्थ हों।",
+  "author": "शांति मंत्र",
+  "author_en": "Shanti Mantra",
+  "source": "Traditional Sanskrit shanti mantra",
+  "topic_tags": [
+   "#Sanskrit",
+   "#Peace",
+   "#Wellbeing"
+  ]
+ },
+ {
+  "id": "subhadra-jhansi",
+  "lang": "hi",
+  "hook": "सुभद्रा कुमारी चौहान की पंक्तियाँ",
+  "lines": [
+   "बुंदेले हरबोलों के मुँह",
+   "हमने सुनी कहानी थी,",
+   "खूब लड़ी मर्दानी वह तो",
+   "झाँसी वाली रानी थी॥"
+  ],
+  "subtitle": "साहस की मिसाल — रानी लक्ष्मीबाई।",
+  "author": "सुभद्रा कुमारी चौहान",
+  "author_en": "Subhadra Kumari Chauhan",
+  "source": "Jhansi Ki Rani (poem), 1930",
+  "topic_tags": [
+   "#JhansiKiRani",
+   "#Courage",
+   "#ProudIndian"
+  ]
+ },
+ {
+  "id": "prasad-himadri",
+  "lang": "hi",
+  "hook": "जयशंकर प्रसाद की पंक्तियाँ",
+  "lines": [
+   "हिमाद्रि तुंग शृंग से",
+   "प्रबुद्ध शुद्ध भारती,",
+   "स्वयं प्रभा समुज्ज्वला",
+   "स्वतंत्रता पुकारती॥"
+  ],
+  "subtitle": "हिमालय की चोटियों से भारत माता पुकार रही है।",
+  "author": "जयशंकर प्रसाद",
+  "author_en": "Jaishankar Prasad",
+  "source": "Chandragupta (play), 1931",
+  "topic_tags": [
+   "#JaishankarPrasad",
+   "#HindiKavita",
+   "#ProudIndian"
+  ]
+ },
+ {
+  "id": "bharatendu-nij-bhasha",
+  "lang": "hi",
+  "hook": "भारतेन्दु हरिश्चंद्र",
+  "lines": [
+   "निज भाषा उन्नति अहै,",
+   "सब उन्नति को मूल।"
+  ],
+  "subtitle": "अपनी भाषा की उन्नति ही हर उन्नति की जड़ है।",
+  "author": "भारतेन्दु हरिश्चंद्र",
+  "author_en": "Bharatendu Harishchandra",
+  "source": "Nij Bhasha (poem), 1877",
+  "topic_tags": [
+   "#Bharatendu",
+   "#HindiDiwas",
+   "#ProudIndian"
+  ]
+ },
+ {
+  "id": "iqbal-saare-jahan",
+  "lang": "hi",
+  "hook": "इक़बाल की पंक्तियाँ",
+  "lines": [
+   "सारे जहाँ से अच्छा,",
+   "हिन्दोस्ताँ हमारा।",
+   "हम बुलबुलें हैं इसकी,",
+   "यह गुलसिताँ हमारा॥"
+  ],
+  "subtitle": "Better than the whole world is our India.",
+  "author": "मुहम्मद इक़बाल",
+  "author_en": "Muhammad Iqbal",
+  "source": "Tarana-e-Hind, 1904",
+  "topic_tags": [
+   "#SaareJahanSeAchha",
+   "#ProudIndian",
+   "#India"
+  ]
+ },
+ {
+  "id": "aurelius-revenge",
+  "lang": "en",
+  "hook": "Marcus Aurelius on enemies:",
+  "lines": [
+   "The best revenge",
+   "is not to be",
+   "like your enemy."
+  ],
+  "subtitle": "सबसे अच्छा बदला है, दुश्मन जैसा न बनना।",
+  "author": "Marcus Aurelius",
+  "author_en": "Marcus Aurelius",
+  "source": "Meditations, Book 6.6",
+  "topic_tags": [
+   "#MarcusAurelius",
+   "#Character",
+   "#Stoicism"
+  ]
+ },
+ {
+  "id": "seneca-chance",
+  "lang": "en",
+  "hook": "Seneca, Letter 76:",
+  "lines": [
+   "No man",
+   "was ever wise",
+   "by chance."
+  ],
+  "subtitle": "कोई भी संयोग से बुद्धिमान नहीं बनता।",
+  "author": "Seneca",
+  "author_en": "Seneca",
+  "source": "Letters to Lucilius, Letter 76",
+  "topic_tags": [
+   "#Seneca",
+   "#Learning",
+   "#Stoicism"
+  ]
+ },
+ {
+  "id": "seneca-poor",
+  "lang": "en",
+  "hook": "Seneca on wealth:",
+  "lines": [
+   "It is not the man",
+   "who has too little,",
+   "but the man who craves more,",
+   "that is poor."
+  ],
+  "subtitle": "गरीब वह नहीं जिसके पास कम है, गरीब वह है जो और चाहता है।",
+  "author": "Seneca",
+  "author_en": "Seneca",
+  "source": "Letters to Lucilius, Letter 2",
+  "topic_tags": [
+   "#Seneca",
+   "#Contentment",
+   "#Stoicism"
+  ]
+ },
+ {
+  "id": "epictetus-views",
+  "lang": "en",
+  "hook": "Epictetus on worry:",
+  "lines": [
+   "Men are disturbed",
+   "not by things,",
+   "but by the views",
+   "they take of things."
+  ],
+  "subtitle": "हमें चीज़ें नहीं, उनके बारे में हमारी सोच परेशान करती है।",
+  "author": "Epictetus",
+  "author_en": "Epictetus",
+  "source": "Enchiridion, 5",
+  "topic_tags": [
+   "#Epictetus",
+   "#Mindset",
+   "#Stoicism"
+  ]
+ },
+ {
+  "id": "epictetus-improve",
+  "lang": "en",
+  "hook": "The price of growth:",
+  "lines": [
+   "If you want to improve,",
+   "be content to be thought",
+   "foolish and stupid."
+  ],
+  "subtitle": "सुधरना है तो लोगों की राय की परवाह छोड़िए।",
+  "author": "Epictetus",
+  "author_en": "Epictetus",
+  "source": "Enchiridion, 13",
+  "topic_tags": [
+   "#Epictetus",
+   "#Growth",
+   "#Stoicism"
+  ]
+ },
+ {
+  "id": "laozi-conquer-self",
+  "lang": "en",
+  "hook": "Lao Tzu on strength:",
+  "lines": [
+   "He who conquers others",
+   "is strong;",
+   "he who conquers himself",
+   "is mighty."
+  ],
+  "subtitle": "दूसरों को जीतने वाला ताक़तवर है, खुद को जीतने वाला महान।",
+  "author": "Lao Tzu",
+  "author_en": "Lao Tzu",
+  "source": "Tao Te Ching, Chapter 33",
+  "topic_tags": [
+   "#LaoTzu",
+   "#SelfDiscipline",
+   "#Wisdom"
+  ]
+ },
+ {
+  "id": "confucius-knowledge",
+  "lang": "en",
+  "hook": "Confucius on knowledge:",
+  "lines": [
+   "To know what you know",
+   "and what you do not know,",
+   "that is",
+   "true knowledge."
+  ],
+  "subtitle": "क्या जानते हैं और क्या नहीं — यह जानना ही सच्चा ज्ञान है।",
+  "author": "Confucius",
+  "author_en": "Confucius",
+  "source": "Analects 2.17",
+  "topic_tags": [
+   "#Confucius",
+   "#Knowledge",
+   "#Wisdom"
+  ]
+ },
+ {
+  "id": "confucius-superior",
+  "lang": "en",
+  "hook": "Confucius, Analects 15.21:",
+  "lines": [
+   "The superior man",
+   "seeks what is in himself;",
+   "the small man seeks",
+   "what is in others."
+  ],
+  "subtitle": "महान व्यक्ति खुद में खोजता है, छोटा व्यक्ति दूसरों में।",
+  "author": "Confucius",
+  "author_en": "Confucius",
+  "source": "Analects 15.21",
+  "topic_tags": [
+   "#Confucius",
+   "#SelfImprovement",
+   "#Character"
+  ]
+ },
+ {
+  "id": "aristotle-just-acts",
+  "lang": "en",
+  "hook": "Aristotle on habits:",
+  "lines": [
+   "We become just",
+   "by doing just acts,",
+   "brave by doing",
+   "brave acts."
+  ],
+  "subtitle": "अच्छे काम करते-करते ही हम अच्छे बनते हैं।",
+  "author": "Aristotle",
+  "author_en": "Aristotle",
+  "source": "Nicomachean Ethics, Book 2",
+  "topic_tags": [
+   "#Aristotle",
+   "#Habits",
+   "#Character"
+  ]
+ },
+ {
+  "id": "franklin-early",
+  "lang": "en",
+  "hook": "Benjamin Franklin, 1735:",
+  "lines": [
+   "Early to bed",
+   "and early to rise,",
+   "makes a man healthy,",
+   "wealthy and wise."
+  ],
+  "subtitle": "जल्दी सोना, जल्दी उठना — सेहत, धन और बुद्धि की कुंजी।",
+  "author": "Benjamin Franklin",
+  "author_en": "Benjamin Franklin",
+  "source": "Poor Richard's Almanack, 1735",
+  "topic_tags": [
+   "#BenjaminFranklin",
+   "#MorningRoutine",
+   "#Discipline"
+  ]
+ },
+ {
+  "id": "franklin-diligence",
+  "lang": "en",
+  "hook": "Franklin on luck:",
+  "lines": [
+   "Diligence",
+   "is the mother",
+   "of good luck."
+  ],
+  "subtitle": "मेहनत ही अच्छी किस्मत की जननी है।",
+  "author": "Benjamin Franklin",
+  "author_en": "Benjamin Franklin",
+  "source": "The Way to Wealth, 1758",
+  "topic_tags": [
+   "#BenjaminFranklin",
+   "#HardWork",
+   "#Success"
+  ]
+ },
+ {
+  "id": "emerson-peace",
+  "lang": "en",
+  "hook": "Emerson, Self-Reliance:",
+  "lines": [
+   "Nothing can bring you peace",
+   "but yourself."
+  ],
+  "subtitle": "आपको शांति सिर्फ़ आप ही दे सकते हैं।",
+  "author": "Ralph Waldo Emerson",
+  "author_en": "Ralph Waldo Emerson",
+  "source": "Self-Reliance, 1841",
+  "topic_tags": [
+   "#Emerson",
+   "#InnerPeace",
+   "#SelfBelief"
+  ]
+ },
+ {
+  "id": "thoreau-simplify",
+  "lang": "en",
+  "hook": "Thoreau, Walden:",
+  "lines": [
+   "Our life is frittered",
+   "away by detail.",
+   "Simplify,",
+   "simplify."
+  ],
+  "subtitle": "ज़िंदगी को सरल बनाइए।",
+  "author": "Henry David Thoreau",
+  "author_en": "Henry David Thoreau",
+  "source": "Walden, 1854",
+  "topic_tags": [
+   "#Thoreau",
+   "#Minimalism",
+   "#LifeLessons"
+  ]
+ },
+ {
+  "id": "keller-adventure",
+  "lang": "en",
+  "hook": "Helen Keller on living:",
+  "lines": [
+   "Life is either",
+   "a daring adventure,",
+   "or nothing."
+  ],
+  "subtitle": "ज़िंदगी या तो एक साहसी सफ़र है, या कुछ भी नहीं।",
+  "author": "Helen Keller",
+  "author_en": "Helen Keller",
+  "source": "The Open Door, 1957",
+  "topic_tags": [
+   "#HelenKeller",
+   "#Courage",
+   "#Adventure"
+  ]
+ },
+ {
+  "id": "vivek-thoughts",
+  "lang": "en",
+  "hook": "Vivekananda on the mind:",
+  "lines": [
+   "We are what",
+   "our thoughts have made us;",
+   "so take care",
+   "about what you think."
+  ],
+  "subtitle": "हम वही बनते हैं जो हमारे विचार हमें बनाते हैं।",
+  "author": "Swami Vivekananda",
+  "author_en": "Swami Vivekananda",
+  "source": "Complete Works of Swami Vivekananda, Vol. 7",
+  "topic_tags": [
+   "#SwamiVivekananda",
+   "#Mindset",
+   "#Thoughts"
+  ]
+ },
+ {
+  "id": "tagore-love-light",
+  "lang": "en",
+  "hook": "Tagore, Fireflies:",
+  "lines": [
+   "Let my love,",
+   "like sunlight,",
+   "surround you and yet",
+   "give you illumined freedom."
+  ],
+  "subtitle": "मेरा प्रेम सूरज की रोशनी-सा हो — घेरे भी, और आज़ादी भी दे।",
+  "author": "Rabindranath Tagore",
+  "author_en": "Rabindranath Tagore",
+  "source": "Fireflies, 1928",
+  "topic_tags": [
+   "#RabindranathTagore",
+   "#Love",
+   "#Freedom"
+  ]
+ },
+ {
+  "id": "tagore-stream",
+  "lang": "en",
+  "hook": "Tagore, Gitanjali:",
+  "lines": [
+   "The same stream of life",
+   "that runs through my veins",
+   "runs through",
+   "the world."
+  ],
+  "subtitle": "जो जीवन-धारा मुझमें बहती है, वही पूरे संसार में बहती है।",
+  "author": "Rabindranath Tagore",
+  "author_en": "Rabindranath Tagore",
+  "source": "Gitanjali 69, 1912",
+  "topic_tags": [
+   "#RabindranathTagore",
+   "#Gitanjali",
+   "#Oneness"
+  ]
+ },
+ {
+  "id": "shakespeare-thinking",
+  "lang": "en",
+  "hook": "Shakespeare, Hamlet:",
+  "lines": [
+   "There is nothing",
+   "either good or bad,",
+   "but thinking",
+   "makes it so."
+  ],
+  "subtitle": "कुछ भी अच्छा या बुरा नहीं — हमारी सोच उसे वैसा बनाती है।",
+  "author": "William Shakespeare",
+  "author_en": "William Shakespeare",
+  "source": "Hamlet, Act 2, Scene 2",
+  "topic_tags": [
+   "#Shakespeare",
+   "#Mindset",
+   "#Perspective"
+  ]
+ },
+ {
+  "id": "shakespeare-doubts",
+  "lang": "en",
+  "hook": "Shakespeare on fear:",
+  "lines": [
+   "Our doubts are traitors,",
+   "and make us lose the good",
+   "we oft might win",
+   "by fearing to attempt."
+  ],
+  "subtitle": "हमारे संदेह ही हमें कोशिश करने से रोकते हैं।",
+  "author": "William Shakespeare",
+  "author_en": "William Shakespeare",
+  "source": "Measure for Measure, Act 1, Scene 4",
+  "topic_tags": [
+   "#Shakespeare",
+   "#Courage",
+   "#NeverGiveUp"
+  ]
+ },
+ {
+  "id": "newton-giants",
+  "lang": "en",
+  "hook": "Newton, in a 1675 letter:",
+  "lines": [
+   "If I have seen further,",
+   "it is by standing",
+   "on the shoulders",
+   "of giants."
+  ],
+  "subtitle": "मैंने दूर तक देखा, क्योंकि मैं महान लोगों के कंधों पर खड़ा था।",
+  "author": "Isaac Newton",
+  "author_en": "Isaac Newton",
+  "source": "Letter to Robert Hooke, 5 February 1675",
+  "topic_tags": [
+   "#IsaacNewton",
+   "#Gratitude",
+   "#Learning"
+  ]
+ },
+ {
+  "id": "vivek-powers",
+  "lang": "en",
+  "hook": "Vivekananda on inner strength:",
+  "lines": [
+   "All the powers",
+   "in the universe",
+   "are already ours."
+  ],
+  "subtitle": "ब्रह्मांड की सारी शक्तियाँ पहले से हमारे भीतर हैं।",
+  "author": "Swami Vivekananda",
+  "author_en": "Swami Vivekananda",
+  "source": "Complete Works of Swami Vivekananda, Vol. 2",
+  "topic_tags": [
+   "#SwamiVivekananda",
+   "#SelfBelief",
+   "#InnerStrength"
+  ]
  }
 ]
