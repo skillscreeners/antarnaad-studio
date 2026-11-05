@@ -270,14 +270,62 @@ VIDEO_QUERIES = {
     "gentle":    ["night sky stars timelapse", "candle flame dark", "city lights night bokeh", "moon clouds night", "fireflies night"],
 }
 
+def _query_for(q):
+    pool = VIDEO_QUERIES["work"] if q.get("theme") == "work" else VIDEO_QUERIES.get(q.get("mood", "calm"), VIDEO_QUERIES["calm"])
+    seed = zlib.crc32((q.get("date", "") + q["id"]).encode())
+    return pool[seed % len(pool)], seed
+
+def _grade_clip(src, out_mp4, dur):
+    """loop if short, cover-crop to 1080x1920, slow slightly, grade down for text readability"""
+    vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setpts=1.15*PTS,fps={FPS},"
+          f"eq=brightness=-0.10:saturation=0.85:contrast=1.05,vignette=PI/4,format=yuv420p")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "-1", "-i", src, "-t", str(dur),
+                    "-vf", vf, "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", out_mp4], check=True)
+    os.remove(src)
+
+def _download(url, path, headers=None):
+    import requests
+    with requests.get(url, stream=True, timeout=120, headers=headers or {}) as dl:
+        dl.raise_for_status()
+        with open(path, "wb") as fh:
+            for chunk in dl.iter_content(1 << 20):
+                fh.write(chunk)
+
+def pixabay_background(q, out_mp4, dur):
+    """Pixabay videos (free key at pixabay.com/api/docs). Mostly landscape: centre-cropped to 9:16."""
+    key = os.environ.get("PIXABAY_API_KEY")
+    if not key:
+        return False
+    import requests
+    query, seed = _query_for(q)
+    try:
+        r = requests.get("https://pixabay.com/api/videos/", timeout=30,
+                         params={"key": key, "q": query, "per_page": 20, "safesearch": "true", "video_type": "film"})
+        r.raise_for_status()
+        hits = [h for h in r.json().get("hits", []) if h.get("duration", 0) >= 6]
+        if not hits:
+            raise RuntimeError(f"no clips for '{query}'")
+        # prefer portrait clips, then the highest resolution
+        hits.sort(key=lambda h: (h["videos"]["large"].get("height", 0) <= h["videos"]["large"].get("width", 1)))
+        portrait = [h for h in hits if h["videos"]["large"].get("height", 0) > h["videos"]["large"].get("width", 1)]
+        pick = (portrait or hits)[(seed >> 4) % len(portrait or hits)]
+        v = pick["videos"]
+        f = next((v[k] for k in ("large", "medium", "small") if v.get(k, {}).get("url")), None)
+        src = out_mp4 + ".src.mp4"
+        _download(f["url"], src)
+        _grade_clip(src, out_mp4, dur)
+        print(f"  background: Pixabay video '{query}' by {pick.get('user', '?')} ({pick.get('pageURL')})", flush=True)
+        return True
+    except Exception as e:
+        print(f"  Pixabay background failed for {q['id']}, falling back: {e}", flush=True)
+        return False
+
 def pexels_background(q, out_mp4, dur):
     key = os.environ.get("PEXELS_API_KEY")
     if not key:
         return False
     import requests
-    pool = VIDEO_QUERIES["work"] if q.get("theme") == "work" else VIDEO_QUERIES.get(q.get("mood", "calm"), VIDEO_QUERIES["calm"])
-    seed = zlib.crc32((q.get("date", "") + q["id"]).encode())
-    query = pool[seed % len(pool)]
+    query, seed = _query_for(q)
     try:
         r = requests.get("https://api.pexels.com/videos/search", headers={"Authorization": key}, timeout=30,
                          params={"query": query, "orientation": "portrait", "size": "medium", "per_page": 15,
@@ -290,17 +338,8 @@ def pexels_background(q, out_mp4, dur):
         files = [f for f in v["video_files"] if f.get("height") and f["height"] >= f.get("width", 0) and f["height"] >= 1280]
         files = sorted(files or v["video_files"], key=lambda f: abs((f.get("height") or 0) - 1920))
         src = out_mp4 + ".src.mp4"
-        with requests.get(files[0]["link"], stream=True, timeout=120) as dl:
-            dl.raise_for_status()
-            with open(src, "wb") as fh:
-                for chunk in dl.iter_content(1 << 20):
-                    fh.write(chunk)
-        # loop if short, cover-crop to 1080x1920, slow it slightly, grade down for text readability
-        vf = (f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setpts=1.15*PTS,fps={FPS},"
-              f"eq=brightness=-0.10:saturation=0.85:contrast=1.05,vignette=PI/4,format=yuv420p")
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-stream_loop", "-1", "-i", src, "-t", str(dur),
-                        "-vf", vf, "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", out_mp4], check=True)
-        os.remove(src)
+        _download(files[0]["link"], src)
+        _grade_clip(src, out_mp4, dur)
         print(f"  background: Pexels video '{query}' by {v.get('user', {}).get('name', '?')} ({v.get('url')})", flush=True)
         return True
     except Exception as e:
@@ -567,7 +606,7 @@ def render_video(q, d, out_mp4, use_voice=True):
         tl["credit"] = tl["lines"][-1] + 1.6; tl["cta"] = tl["credit"] + 2.4
     dur = tl["dur"]
     bg_video = f"{d}/bg.mp4"
-    use_video = pexels_background(q, bg_video, dur)
+    use_video = pexels_background(q, bg_video, dur) or pixabay_background(q, bg_video, dur)
     if not use_video and not gemini_background(q, bg):
         Image.fromarray(SCENES[q["scene"]](q["id"] + q.get("date", "") + q["scene"])).save(bg)
     wav = f"{d}/music.wav"; music(q["mood"], wav, dur)

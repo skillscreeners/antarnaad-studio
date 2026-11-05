@@ -66,7 +66,8 @@ Settings → Secrets and variables → Actions:
 |---|---|
 | `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` | from step 2.4 |
 | `IG_USER_ID`, `IG_ACCESS_TOKEN` | from step 3.4 |
-| `PEXELS_API_KEY` | free key from pexels.com/api (recommended: real stock-video backgrounds) |
+| `PIXABAY_API_KEY` | free key from pixabay.com/api/docs (real stock-video backgrounds) |
+| `PEXELS_API_KEY` | optional, pexels.com/api (new keys paused as of Nov 2026) |
 | `GEMINI_API_KEY` | from step 4 (optional: photorealistic AI images when no stock clip fits) |
 
 | Variable (optional) | Default |
