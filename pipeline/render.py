@@ -398,7 +398,8 @@ def openverse_background(q, out_png):
     try:
         hits = []
         for aspect in ("tall", None):
-            params = {"q": query, "license": "cc0,pdm", "size": "large", "page_size": 20, "mature": "false"}
+            params = {"q": query, "license": "cc0,pdm", "size": "large", "page_size": 20, "mature": "false",
+                      "category": "photograph", "excluded_source": "rawpixel"}
             if aspect:
                 params["aspect_ratio"] = aspect
             r = requests.get("https://api.openverse.org/v1/images/", params=params, headers=ua, timeout=30)
