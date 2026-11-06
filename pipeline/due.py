@@ -20,18 +20,34 @@ def _api(method, path, body=None):
                                  headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"})
     return urllib.request.urlopen(req, timeout=30)
 
-def is_posted(date, slot):
+def _tag_exists(name):
     try:
-        _api("GET", f"git/ref/tags/{tag_name(date, slot)}")
+        _api("GET", f"git/ref/tags/{name}")
         return True
     except urllib.error.HTTPError as e:
         if e.code == 404:
             return False
         raise
 
+def is_posted(date, slot):
+    return _tag_exists(tag_name(date, slot))
+
+def capped_tag(date):
+    return f"yt-cap-{date}"
+
+def is_capped(date):
+    """YouTube refused an upload today (daily per-channel limit): skip the rest of the day."""
+    return _tag_exists(capped_tag(date))
+
+def mark_capped(date, sha):
+    _make_tag(capped_tag(date), sha)
+
 def mark_posted(date, slot, sha):
+    _make_tag(tag_name(date, slot), sha)
+
+def _make_tag(name, sha):
     try:
-        _api("POST", "git/refs", {"ref": f"refs/tags/{tag_name(date, slot)}", "sha": sha})
+        _api("POST", "git/refs", {"ref": f"refs/tags/{name}", "sha": sha})
     except urllib.error.HTTPError as e:
         if e.code != 422:  # 422 = already exists
             raise
@@ -44,7 +60,8 @@ if __name__ == "__main__":
         sys.exit(0)
     now = dt.datetime.now(plan.IST)
     slot = plan.slot_now(now)
-    due = slot if slot and not is_posted(now.date().isoformat(), slot) else None
+    today = now.date().isoformat()
+    due = slot if slot and not is_posted(today, slot) and not is_capped(today) else None
     print(f"{now:%Y-%m-%d %H:%M} IST: slot due = {due or 'none'}")
     out = os.environ.get("GITHUB_OUTPUT")
     if out:

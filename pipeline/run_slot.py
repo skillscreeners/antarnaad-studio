@@ -82,6 +82,13 @@ def main():
     ok, results = post(mp4, meta)
     if track and str(results.get("youtube", "")).startswith("https://"):
         due.mark_posted(date, slot, os.environ.get("GITHUB_SHA", ""))
+    if "uploadLimitExceeded" in str(results.get("youtube", "")):
+        # YouTube's daily per-channel upload cap (not API quota). Retrying today only fails again,
+        # so stop for the day without a failure email; posting resumes tomorrow.
+        if track:
+            due.mark_capped(date, os.environ.get("GITHUB_SHA", ""))
+        print(f"::warning::YouTube daily upload limit reached on {date}; remaining slots skipped until tomorrow.")
+        ok = not any(str(v).startswith("FAILED") for k, v in results.items() if k != "youtube")
     if not ok:
         sys.exit(1)
 
