@@ -734,6 +734,8 @@ def metadata(q, date):
     else:
         title = f"{q['author_en']} Quote: {q['lines'][0].rstrip(',.')}… #shorts"
         ask = "What does this line mean to you? Comment below 👇"
+    if q.get("special"):
+        title = f"{q['special']} Special | {q['lines'][0].rstrip(',.;')} – {q['author_en']} #shorts"
     title = title[:95]
     other = q.get("subtitle") or ""
     yt_desc = (f"“{quote}” — {q['author_en']}, {q['source']}\n\n" + (other + "\n\n" if other else "") +
