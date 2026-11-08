@@ -24,6 +24,10 @@ on:
       preview_day:
         description: "Render all 5 reels for this date and attach them (no posting)"
         required: false
+      force:
+        description: "Post even if the slot is already marked posted"
+        type: boolean
+        default: false
       mark_posted:
         description: "Only mark slots as already posted, e.g. 2026-11-05:2,2026-11-05:3"
         required: false
@@ -132,6 +136,7 @@ jobs:
           [ -n "${{ inputs.slot }}" ] && ARGS="$ARGS --slot ${{ inputs.slot }}"
           [ -n "${{ inputs.date }}" ] && ARGS="$ARGS --date ${{ inputs.date }}"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          [ "${{ inputs.force }}" = "true" ] && ARGS="$ARGS --force"
           python pipeline/run_slot.py $ARGS
 
       - name: Keep the reels for review
