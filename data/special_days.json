@@ -1,0 +1,16 @@
+{
+ "2026-11-08": {
+  "name": "Diwali",
+  "slots": {
+   "10": {
+    "id": "diwali-mlk-light", "lang": "en", "theme": "life", "mood": "gentle",
+    "hook": "This Diwali, remember:",
+    "lines": ["Darkness cannot drive out darkness;", "only light can do that.", "Hate cannot drive out hate;", "only love can do that."],
+    "subtitle": "अंधकार को केवल प्रकाश मिटा सकता है। शुभ दीपावली!",
+    "author": "Martin Luther King Jr.", "author_en": "Martin Luther King Jr.",
+    "source": "Strength to Love, 1963",
+    "topic_tags": ["#HappyDiwali", "#Diwali2026", "#FestivalOfLights"]
+   }
+  }
+ }
+}

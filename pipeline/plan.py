@@ -55,18 +55,32 @@ def _uses_before(date, slot, key):
     n += sum(1 for s in SLOTS if s < slot and slot_pool(date, s) == key)
     return n
 
+def _special_days():
+    path = os.path.join(ROOT, "data", "special_days.json")
+    return json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
+
+def _special(date):
+    """{slot: quote} for a festival / national day (data/special_days.json)."""
+    return _special_days().get(date.isoformat(), {}).get("slots", {})
+
+def _special_name(date):
+    return _special_days().get(date.isoformat(), {}).get("name")
+
 def quote_for(date, slot):
     date = dt.date.fromisoformat(date) if isinstance(date, str) else date
     trending = json.load(open(os.path.join(ROOT, "data", "trending.json"), encoding="utf-8"))
-    if slot == NEWS_SLOT and date.isoformat() in trending:
+    special = _special(date).get(str(slot))
+    if special:
+        q = dict(special); q.setdefault("theme", "life"); q["special"] = _special_name(date)
+    elif slot == NEWS_SLOT and date.isoformat() in trending:
         q = dict(trending[date.isoformat()])
         q.setdefault("lang", "en")
     else:
         key = slot_pool(date, slot)
         pool = [q for q in _bank() if (q["lang"], q.get("theme", "life")) == key]
         q = dict(_nth(pool, _uses_before(date, slot, key), f"{key[0]}-{key[1]}"))
-    pillar = "Work Motivation" if q.get("theme") == "work" and slot in WORK_SLOTS else PILLARS[slot]
-    mood = MOODS[slot] if not (MOODS[slot] == "raga" and q["lang"] != "hi") else "gentle"
+    pillar = q["special"] if q.get("special") else "Work Motivation" if q.get("theme") == "work" and slot in WORK_SLOTS else PILLARS[slot]
+    mood = q.get("mood") or MOODS[slot] if not (MOODS[slot] == "raga" and q["lang"] != "hi") else "gentle"
     q.update(slot=slot, pillar=pillar, mood=mood, scene=q.get("scene", SCENES[slot]), date=date.isoformat())
     return q
 
