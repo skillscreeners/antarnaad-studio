@@ -49,6 +49,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 pipeline/due.py
+      - name: Collect YouTube stats for the feedback loop (every 3 h)
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 pipeline/collect_stats.py
 
   mark:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.mark_posted != '' }}

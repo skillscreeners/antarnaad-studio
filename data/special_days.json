@@ -3,13 +3,411 @@
   "name": "Diwali",
   "slots": {
    "10": {
-    "id": "diwali-mlk-light", "lang": "en", "theme": "life", "mood": "gentle",
+    "id": "diwali-mlk-light",
+    "lang": "en",
+    "theme": "life",
+    "mood": "gentle",
     "hook": "This Diwali, remember:",
-    "lines": ["Darkness cannot drive out darkness;", "only light can do that.", "Hate cannot drive out hate;", "only love can do that."],
+    "lines": [
+     "Darkness cannot drive out darkness;",
+     "only light can do that.",
+     "Hate cannot drive out hate;",
+     "only love can do that."
+    ],
     "subtitle": "अंधकार को केवल प्रकाश मिटा सकता है। शुभ दीपावली!",
-    "author": "Martin Luther King Jr.", "author_en": "Martin Luther King Jr.",
+    "author": "Martin Luther King Jr.",
+    "author_en": "Martin Luther King Jr.",
     "source": "Strength to Love, 1963",
-    "topic_tags": ["#HappyDiwali", "#Diwali2026", "#FestivalOfLights"]
+    "topic_tags": [
+     "#HappyDiwali",
+     "#Diwali2026",
+     "#FestivalOfLights"
+    ]
+   }
+  }
+ },
+ "2026-11-11": {
+  "name": "Bhai Dooj",
+  "slots": {
+   "1": {
+    "id": "bhaidooj-hands-hi",
+    "lang": "hi",
+    "theme": "life",
+    "hook": "भाई दूज पर एक सुंदर बात:",
+    "lines": [
+     "भाई और बहन",
+     "हाथ और पैर की तरह",
+     "एक-दूसरे के करीब होते हैं।"
+    ],
+    "subtitle": "Brothers and sisters are as close as hands and feet.",
+    "author": "वियतनामी कहावत",
+    "author_en": "Vietnamese proverb",
+    "source": "Traditional proverb",
+    "topic_tags": [
+     "#BhaiDooj",
+     "#BhaiDooj2026",
+     "#BrotherSister"
+    ],
+    "mood": "gentle"
+   },
+   "2": {
+    "id": "bhaidooj-hands-en",
+    "lang": "en",
+    "theme": "life",
+    "hook": "A Bhai Dooj thought:",
+    "lines": [
+     "Brothers and sisters",
+     "are as close",
+     "as hands and feet."
+    ],
+    "subtitle": "भाई और बहन हाथ और पैर की तरह करीब होते हैं। शुभ भाई दूज!",
+    "author": "Vietnamese proverb",
+    "author_en": "Vietnamese proverb",
+    "source": "Traditional proverb",
+    "topic_tags": [
+     "#BhaiDooj",
+     "#HappyBhaiDooj",
+     "#Siblings"
+    ],
+    "mood": "gentle"
+   }
+  }
+ },
+ "2026-11-14": {
+  "name": "Children's Day",
+  "slots": {
+   "1": {
+    "id": "childrensday-kalam-dreams",
+    "lang": "hi",
+    "theme": "life",
+    "hook": "बाल दिवस पर कलाम साहब की सीख:",
+    "lines": [
+     "सपने वो नहीं",
+     "जो आप नींद में देखते हैं,",
+     "सपने वो हैं",
+     "जो आपको सोने नहीं देते।"
+    ],
+    "subtitle": "Dreams are not what you see in sleep; they are what do not let you sleep.",
+    "author": "डॉ. ए. पी. जे. अब्दुल कलाम",
+    "author_en": "Dr. A. P. J. Abdul Kalam",
+    "source": "Widely quoted from his talks to students",
+    "topic_tags": [
+     "#ChildrensDay",
+     "#BalDiwas",
+     "#APJAbdulKalam"
+    ],
+    "mood": "uplifting"
+   },
+   "2": {
+    "id": "childrensday-tagore-child",
+    "lang": "en",
+    "theme": "life",
+    "hook": "On Children's Day:",
+    "lines": [
+     "Every child comes",
+     "with the message",
+     "that God is not yet",
+     "discouraged of man."
+    ],
+    "subtitle": "हर बच्चा यह संदेश लाता है कि ईश्वर अभी मनुष्य से निराश नहीं हुआ। बाल दिवस की शुभकामनाएँ!",
+    "author": "Rabindranath Tagore",
+    "author_en": "Rabindranath Tagore",
+    "source": "Stray Birds, 77 (1916)",
+    "topic_tags": [
+     "#ChildrensDay",
+     "#ChildrensDay2026",
+     "#Tagore"
+    ],
+    "mood": "uplifting"
+   },
+   "3": {
+    "id": "childrensday-einstein-imagination",
+    "lang": "hi",
+    "theme": "life",
+    "hook": "बच्चों के लिए आइंस्टीन का मंत्र:",
+    "lines": [
+     "कल्पना",
+     "ज्ञान से भी",
+     "अधिक महत्वपूर्ण है।"
+    ],
+    "subtitle": "Imagination is more important than knowledge.",
+    "author": "अल्बर्ट आइंस्टीन",
+    "author_en": "Albert Einstein",
+    "source": "Interview, The Saturday Evening Post, 26 Oct 1929",
+    "topic_tags": [
+     "#ChildrensDay",
+     "#BalDiwas",
+     "#Einstein"
+    ],
+    "mood": "rising"
+   }
+  }
+ },
+ "2026-11-24": {
+  "name": "Guru Nanak Jayanti",
+  "slots": {
+   "1": {
+    "id": "gurunanak-truthful-hi",
+    "lang": "hi",
+    "theme": "life",
+    "hook": "गुरु नानक देव जी की वाणी:",
+    "lines": [
+     "सच ऊँचा है,",
+     "पर उससे भी ऊँचा है",
+     "सच्चा आचरण।"
+    ],
+    "subtitle": "Truth is high, but higher still is truthful living.",
+    "author": "गुरु नानक देव जी",
+    "author_en": "Guru Nanak Dev Ji",
+    "source": "Guru Granth Sahib, Sri Raag, Ang 62",
+    "topic_tags": [
+     "#GuruNanakJayanti",
+     "#Gurpurab",
+     "#GuruNanakDevJi"
+    ],
+    "mood": "calm"
+   },
+   "2": {
+    "id": "gurunanak-truthful-en",
+    "lang": "en",
+    "theme": "life",
+    "hook": "Guru Nanak Dev Ji taught:",
+    "lines": [
+     "Truth is high,",
+     "but higher still",
+     "is truthful living."
+    ],
+    "subtitle": "सच ऊँचा है, पर उससे भी ऊँचा है सच्चा आचरण।",
+    "author": "Guru Nanak Dev Ji",
+    "author_en": "Guru Nanak Dev Ji",
+    "source": "Guru Granth Sahib, Sri Raag, Ang 62",
+    "topic_tags": [
+     "#GuruNanakJayanti",
+     "#Gurpurab",
+     "#GuruNanak"
+    ],
+    "mood": "calm"
+   },
+   "3": {
+    "id": "gurunanak-kirat",
+    "lang": "hi",
+    "theme": "work",
+    "hook": "गुरु नानक के तीन सूत्र:",
+    "lines": [
+     "किरत करो —",
+     "ईमानदारी से मेहनत करो।",
+     "नाम जपो, वंड छको —",
+     "याद रखो और बाँटकर खाओ।"
+    ],
+    "subtitle": "Work honestly, remember God, share with others.",
+    "author": "गुरु नानक देव जी",
+    "author_en": "Guru Nanak Dev Ji",
+    "source": "The three pillars of Guru Nanak's teaching",
+    "topic_tags": [
+     "#GuruNanakJayanti",
+     "#KiratKaro",
+     "#WorkEthic"
+    ],
+    "mood": "uplifting"
+   }
+  }
+ },
+ "2026-11-26": {
+  "name": "Constitution Day",
+  "slots": {
+   "1": {
+    "id": "constitution-ambedkar-hi",
+    "lang": "hi",
+    "theme": "life",
+    "hook": "संविधान दिवस पर बाबासाहेब:",
+    "lines": [
+     "संविधान चाहे कितना भी अच्छा हो,",
+     "यदि उसे लागू करने वाले",
+     "अच्छे न हों,",
+     "तो वह बुरा ही सिद्ध होगा।"
+    ],
+    "subtitle": "However good a Constitution may be, if those implementing it are not good, it will prove to be bad.",
+    "author": "डॉ. बी. आर. आंबेडकर",
+    "author_en": "Dr. B. R. Ambedkar",
+    "source": "Constituent Assembly speech, 25 Nov 1949",
+    "topic_tags": [
+     "#ConstitutionDay",
+     "#SamvidhanDiwas",
+     "#Ambedkar"
+    ],
+    "mood": "rising"
+   },
+   "2": {
+    "id": "constitution-ambedkar-en",
+    "lang": "en",
+    "theme": "life",
+    "hook": "On Constitution Day:",
+    "lines": [
+     "However good a Constitution may be,",
+     "if those implementing it",
+     "are not good,",
+     "it will prove to be bad."
+    ],
+    "subtitle": "संविधान की ताकत उसे निभाने वालों में है।",
+    "author": "Dr. B. R. Ambedkar",
+    "author_en": "Dr. B. R. Ambedkar",
+    "source": "Constituent Assembly speech, 25 Nov 1949",
+    "topic_tags": [
+     "#ConstitutionDay",
+     "#SamvidhanDiwas",
+     "#Ambedkar"
+    ],
+    "mood": "rising"
+   }
+  }
+ },
+ "2026-12-25": {
+  "name": "Christmas",
+  "slots": {
+   "2": {
+    "id": "christmas-dickens",
+    "lang": "en",
+    "theme": "life",
+    "hook": "A Christmas promise:",
+    "lines": [
+     "I will honour Christmas",
+     "in my heart,",
+     "and try to keep it",
+     "all the year."
+    ],
+    "subtitle": "क्रिसमस की भावना को पूरे साल दिल में रखें।",
+    "author": "Charles Dickens",
+    "author_en": "Charles Dickens",
+    "source": "A Christmas Carol, 1843",
+    "topic_tags": [
+     "#Christmas",
+     "#MerryChristmas",
+     "#CharlesDickens"
+    ],
+    "mood": "gentle"
+   }
+  }
+ },
+ "2027-01-01": {
+  "name": "New Year",
+  "slots": {
+   "1": {
+    "id": "newyear-bachchan",
+    "lang": "hi",
+    "theme": "life",
+    "hook": "नए साल का पहला विचार:",
+    "lines": [
+     "जो बीत गई",
+     "सो बात गई।"
+    ],
+    "subtitle": "What has passed, has passed. Happy New Year!",
+    "author": "हरिवंशराय बच्चन",
+    "author_en": "Harivansh Rai Bachchan",
+    "source": "Jo Beet Gayi (poem)",
+    "topic_tags": [
+     "#HappyNewYear",
+     "#NewYear2027",
+     "#Bachchan"
+    ],
+    "mood": "uplifting"
+   },
+   "2": {
+    "id": "newyear-tennyson",
+    "lang": "en",
+    "theme": "life",
+    "hook": "For the New Year:",
+    "lines": [
+     "Ring out the old,",
+     "ring in the new,",
+     "The year is going,",
+     "let him go;",
+     "Ring out the false,",
+     "ring in the true."
+    ],
+    "subtitle": "पुराना जाने दो, नए का स्वागत करो। नववर्ष की शुभकामनाएँ!",
+    "author": "Alfred, Lord Tennyson",
+    "author_en": "Alfred, Lord Tennyson",
+    "source": "In Memoriam A.H.H., CVI (1850)",
+    "topic_tags": [
+     "#HappyNewYear",
+     "#NewYear2027",
+     "#Tennyson"
+    ],
+    "mood": "uplifting"
+   }
+  }
+ },
+ "2027-01-12": {
+  "name": "National Youth Day",
+  "slots": {
+   "1": {
+    "ref": "vivek-arise"
+   },
+   "2": {
+    "id": "youthday-vivek-arise-en",
+    "lang": "en",
+    "theme": "life",
+    "hook": "National Youth Day — Vivekananda:",
+    "lines": [
+     "Arise, awake,",
+     "and stop not",
+     "till the goal is reached."
+    ],
+    "subtitle": "उठो, जागो और तब तक मत रुको जब तक लक्ष्य प्राप्त न हो जाए।",
+    "author": "Swami Vivekananda",
+    "author_en": "Swami Vivekananda",
+    "source": "Katha Upanishad 1.3.14, as Vivekananda's call to youth",
+    "topic_tags": [
+     "#NationalYouthDay",
+     "#SwamiVivekananda",
+     "#YouthDay"
+    ],
+    "mood": "rising"
+   },
+   "4": {
+    "ref": "vivek-one-idea"
+   }
+  }
+ },
+ "2027-01-26": {
+  "name": "Republic Day",
+  "slots": {
+   "1": {
+    "id": "republicday-tagore-hi",
+    "lang": "hi",
+    "theme": "life",
+    "hook": "गणतंत्र दिवस पर गुरुदेव की प्रार्थना:",
+    "lines": [
+     "जहाँ मन भयमुक्त हो",
+     "और सिर ऊँचा हो,",
+     "जहाँ ज्ञान मुक्त हो,",
+     "स्वतंत्रता के उस स्वर्ग में",
+     "हे पिता, मेरा देश जागे।"
+    ],
+    "subtitle": "Where the mind is without fear... into that heaven of freedom, let my country awake.",
+    "author": "रवीन्द्रनाथ टैगोर",
+    "author_en": "Rabindranath Tagore",
+    "source": "Gitanjali 35 (Hindi rendering)",
+    "topic_tags": [
+     "#RepublicDay",
+     "#RepublicDay2027",
+     "#Tagore"
+    ],
+    "mood": "rising"
+   },
+   "2": {
+    "ref": "tagore-mind-fear"
+   },
+   "4": {
+    "ref": "constitution-ambedkar-en"
+   }
+  }
+ },
+ "2027-01-30": {
+  "name": "Martyrs' Day",
+  "slots": {
+   "2": {
+    "ref": "gandhi-will"
    }
   }
  }

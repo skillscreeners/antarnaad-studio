@@ -59,14 +59,36 @@ def _special_days():
     path = os.path.join(ROOT, "data", "special_days.json")
     return json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
 
+def all_quotes():
+    """Quote bank plus every festival quote (for stats matching)."""
+    qs = list(_bank())
+    for day in _special_days().values():
+        qs += [q for q in day.get("slots", {}).values() if "ref" not in q]
+    return qs
+
 def _special(date):
-    """{slot: quote} for a festival / national day (data/special_days.json)."""
-    return _special_days().get(date.isoformat(), {}).get("slots", {})
+    """{slot: quote} for a festival / national day (data/special_days.json).
+    An entry {"ref": "<quote id>"} reuses a quote from the bank or another festival."""
+    slots = _special_days().get(date.isoformat(), {}).get("slots", {})
+    if any("ref" in q for q in slots.values()):
+        by_id = {q["id"]: q for q in all_quotes()}
+        slots = {k: (by_id[q["ref"]] if "ref" in q else q) for k, q in slots.items()}
+    return slots
 
 def _special_name(date):
     return _special_days().get(date.isoformat(), {}).get("name")
 
+import functools
+
+@functools.lru_cache(maxsize=512)
+def _quote_for(date, slot):
+    return quote_for_uncached(date, slot)
+
 def quote_for(date, slot):
+    date = dt.date.fromisoformat(date) if isinstance(date, str) else date
+    return dict(_quote_for(date, slot))
+
+def quote_for_uncached(date, slot):
     date = dt.date.fromisoformat(date) if isinstance(date, str) else date
     trending = json.load(open(os.path.join(ROOT, "data", "trending.json"), encoding="utf-8"))
     special = _special(date).get(str(slot))
@@ -78,7 +100,13 @@ def quote_for(date, slot):
     else:
         key = slot_pool(date, slot)
         pool = [q for q in _bank() if (q["lang"], q.get("theme", "life")) == key]
-        q = dict(_nth(pool, _uses_before(date, slot, key), f"{key[0]}-{key[1]}"))
+        pick = None
+        if os.environ.get("ANTARNAAD_FEEDBACK", "1") == "1":
+            import feedback
+            earlier = [quote_for(date, s) for s in SLOTS if s < slot]   # same-day picks, even if history is behind
+            today = {h["id"] for h in feedback.history() if h["date"] == date.isoformat()} | {e["id"] for e in earlier}
+            pick = feedback.pick(pool, date, slot, used_today=today, authors_today=[e.get("author_en") for e in earlier])
+        q = dict(pick or _nth(pool, _uses_before(date, slot, key), f"{key[0]}-{key[1]}"))
     pillar = q["special"] if q.get("special") else "Work Motivation" if q.get("theme") == "work" and slot in WORK_SLOTS else PILLARS[slot]
     mood = q.get("mood") or MOODS[slot] if not (MOODS[slot] == "raga" and q["lang"] != "hi") else "gentle"
     q.update(slot=slot, pillar=pillar, mood=mood, scene=q.get("scene", SCENES[slot]), date=date.isoformat())

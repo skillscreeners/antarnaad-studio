@@ -106,3 +106,18 @@ For a positive story in the news, add a verified quote to `data/trending.json` (
 }
 ```
 Exact words from a named source only. No photos or logos; no politics, controversy or tragedy.
+
+## Feedback loop (learns what works)
+- `pipeline/collect_stats.py` reads views and likes of the latest videos from the channel's public RSS feed every
+  3 hours (no key) into `data/stats.json`. Each post is also logged in `data/history.json`.
+- `pipeline/feedback.py` scores each post (views + 10 × likes, read about a day after posting), averages by author,
+  and picks for each slot the best-scoring quote that has rested 7 days. About 1 slot in 5 tries a quote that was
+  never posted, at most 2 reels per author per day. With no stats yet it falls back to the fixed rotation.
+- To see what is winning: `python pipeline/feedback.py` is not a CLI; use
+  `python -c "import sys; sys.path.insert(0,'pipeline'); import plan, feedback; print(feedback.report(plan.all_quotes()))"`.
+- More quotes by the top authors make the loop more useful: add them to `data/quote_bank.json`.
+
+## Festivals and national days
+`data/special_days.json` lists dated reels that replace the normal slots that day (2–3 in the morning slots):
+`{"2026-11-14": {"name": "Children's Day", "slots": {"1": {...quote...}, "2": {"ref": "<existing quote id>"}}}}`.
+Titles become "<Name> Special | …". Filled through Jan 2027; extend it a few months ahead.

@@ -54,6 +54,19 @@ def post(mp4, meta):
                     "".join(f"- {k}: {v}\n" for k, v in results.items()) + "\n")
     return not failed, results
 
+def record_history(date, slot, quote_id, video):
+    """Append this post to data/history.json in the repo (used by the feedback loop)."""
+    import collect_stats
+    for attempt in range(3):
+        hist, sha = collect_stats.get_file("data/history.json")
+        hist = hist or []
+        hist.append({"date": date, "slot": slot, "id": quote_id, "video": video})
+        try:
+            collect_stats.put_file("data/history.json", hist, sha, f"history: {date} slot {slot}"); return
+        except Exception:
+            if attempt == 2:
+                raise
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--slot", type=int)
@@ -82,6 +95,10 @@ def main():
     ok, results = post(mp4, meta)
     if track and str(results.get("youtube", "")).startswith("https://"):
         due.mark_posted(date, slot, os.environ.get("GITHUB_SHA", ""))
+        try:
+            record_history(date, slot, meta["id"], results["youtube"].rsplit("/", 1)[-1])
+        except Exception as e:
+            print(f"::warning::history not recorded: {e}")
     if "uploadLimitExceeded" in str(results.get("youtube", "")):
         # YouTube's daily per-channel upload cap (not API quota). Retrying today only fails again,
         # so stop for the day without a failure email; posting resumes tomorrow.
