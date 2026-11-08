@@ -74,7 +74,7 @@ jobs:
     timeout-minutes: 20
     env:
       TZ: Asia/Kolkata
-      ANTARNAAD_FONT_DIR: ${{ github.workspace }}/fonts
+      ANTARNAAD_FONT_DIR: ${{ github.workspace }}/assets/fonts
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
@@ -107,14 +107,9 @@ jobs:
           fi
           ffmpeg -version | head -1
 
-      - name: Fonts and Hindi text shaping
+      - name: Hindi text shaping (fonts are in assets/fonts)
         timeout-minutes: 6
         run: |
-          mkdir -p fonts
-          for w in Bold Medium; do
-            [ -f fonts/Poppins-$w.ttf ] || curl -fsSL --retry 3 -o fonts/Poppins-$w.ttf \
-              https://github.com/google/fonts/raw/main/ofl/poppins/Poppins-$w.ttf
-          done
           RAQM='from PIL import features; assert features.check("raqm")'
           python -c "$RAQM" || { sudo timeout 120 apt-get install -y -qq libfribidi0 >/dev/null 2>&1 \
             || { sudo timeout 150 apt-get update -qq && sudo timeout 120 apt-get install -y -qq libfribidi0; }; }
