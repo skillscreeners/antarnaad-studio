@@ -32,6 +32,27 @@ def _tag_exists(name):
 def is_posted(date, slot):
     return _tag_exists(tag_name(date, slot))
 
+UPLOAD_LIMIT = int(os.environ.get("YT_UPLOAD_LIMIT_24H", "10"))
+
+def uploads_last_24h(now):
+    """YouTube caps this channel at about 10 uploads in any rolling 24 hours. Count ours from
+    data/history.json (time of each post) and data/stats.json (publish times from the feed)."""
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data")
+    since = now.astimezone(dt.timezone.utc) - dt.timedelta(hours=24)
+    seen = {}
+    def load(name):
+        try:
+            return json.load(open(os.path.join(root, name), encoding="utf-8"))
+        except (OSError, ValueError):
+            return {}
+    for vid, s in load("stats.json").items():
+        if not vid.startswith("_") and len(vid) == 11 and s.get("published"):
+            seen[vid] = dt.datetime.fromisoformat(s["published"].replace("Z", "+00:00"))
+    for h in load("history.json") or []:
+        if h.get("at") and h.get("video"):
+            seen.setdefault(h["video"], dt.datetime.fromisoformat(h["at"]))
+    return sum(1 for t in seen.values() if t > since)
+
 def capped_tag(date):
     return f"yt-cap-{date}"
 
@@ -61,7 +82,12 @@ if __name__ == "__main__":
     now = dt.datetime.now(plan.IST)
     slot = plan.slot_now(now)
     today = now.date().isoformat()
-    due = slot if slot and not is_posted(today, slot) and not is_capped(today) else None
+    due = slot if slot and not is_posted(today, slot) else None
+    if due:
+        n = uploads_last_24h(now)
+        if n >= UPLOAD_LIMIT:
+            print(f"{n} uploads in the last 24 h (YouTube limit {UPLOAD_LIMIT}): slot {due} waits for the next check")
+            due = None
     print(f"{now:%Y-%m-%d %H:%M} IST: slot due = {due or 'none'}")
     out = os.environ.get("GITHUB_OUTPUT")
     if out:

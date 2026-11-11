@@ -60,7 +60,8 @@ def record_history(date, slot, quote_id, video):
     for attempt in range(3):
         hist, sha = collect_stats.get_file("data/history.json")
         hist = hist or []
-        hist.append({"date": date, "slot": slot, "id": quote_id, "video": video})
+        hist.append({"date": date, "slot": slot, "id": quote_id, "video": video,
+                     "at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")})
         try:
             collect_stats.put_file("data/history.json", hist, sha, f"history: {date} slot {slot}"); return
         except Exception:
@@ -100,11 +101,9 @@ def main():
         except Exception as e:
             print(f"::warning::history not recorded: {e}")
     if "uploadLimitExceeded" in str(results.get("youtube", "")):
-        # YouTube's daily per-channel upload cap (not API quota). Retrying today only fails again,
-        # so stop for the day without a failure email; posting resumes tomorrow.
-        if track:
-            due.mark_capped(date, os.environ.get("GITHUB_SHA", ""))
-        print(f"::warning::YouTube daily upload limit reached on {date}; remaining slots skipped until tomorrow.")
+        # YouTube's rolling 24-hour upload cap. The slot stays unposted, so the next 10-minute check
+        # retries it once the oldest upload is 24 h old (due.py also waits for that before posting).
+        print(f"::warning::YouTube upload limit reached; slot {slot} will be retried at the next check.")
         ok = not any(str(v).startswith("FAILED") for k, v in results.items() if k != "youtube")
     if not ok:
         sys.exit(1)
