@@ -53,15 +53,26 @@ def uploads_last_24h(now):
             seen.setdefault(h["video"], dt.datetime.fromisoformat(h["at"]))
     return sum(1 for t in seen.values() if t > since)
 
-def capped_tag(date):
-    return f"yt-cap-{date}"
+CAP_BACKOFF_MIN = 30
 
-def is_capped(date):
-    """YouTube refused an upload today (daily per-channel limit): skip the rest of the day."""
-    return _tag_exists(capped_tag(date))
+def is_capped(date, now=None):
+    """YouTube refused an upload in the last CAP_BACKOFF_MIN minutes (rolling 24-hour upload limit).
+    Tags are yt-cap-YYYY-MM-DD-HHMM (IST). Uploads age out of the 24-hour window, so retry after a pause."""
+    now = now or dt.datetime.now(plan.IST)
+    try:
+        refs = json.load(_api("GET", f"git/matching-refs/tags/yt-cap-{date}-"))
+    except urllib.error.HTTPError:
+        return False
+    for r in refs:
+        hhmm = r["ref"].rsplit("-", 1)[-1]
+        if len(hhmm) == 4 and hhmm.isdigit():
+            t = now.replace(hour=int(hhmm[:2]), minute=int(hhmm[2:]), second=0, microsecond=0)
+            if dt.timedelta(0) <= now - t < dt.timedelta(minutes=CAP_BACKOFF_MIN):
+                return True
+    return False
 
 def mark_capped(date, sha):
-    _make_tag(capped_tag(date), sha)
+    _make_tag(f"yt-cap-{date}-{dt.datetime.now(plan.IST):%H%M}", sha)
 
 def mark_posted(date, slot, sha):
     _make_tag(tag_name(date, slot), sha)
@@ -88,7 +99,7 @@ if __name__ == "__main__":
         if n >= UPLOAD_LIMIT:
             print(f"{n} uploads in the last 24 h (YouTube limit {UPLOAD_LIMIT}): slot {due} waits for the next check")
             due = None
-    print(f"{now:%Y-%m-%d %H:%M} IST: slot due = {due or 'none'}")
+    print(f"{now:%Y-%m-%d %H:%M} IST: slot due = {due or 'none'}" + (" (waiting: upload limit)" if slot and not due and is_capped(today, now) else ""))
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a") as f:

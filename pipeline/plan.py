@@ -122,7 +122,7 @@ def slot_now(now=None, window_min=75):
     for slot in SLOTS:
         hh, mm = map(int, post_time(now.date(), slot).split(":"))
         start = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
-        if dt.timedelta(minutes=-10) <= now - start <= dt.timedelta(minutes=window_min):
+        if dt.timedelta(minutes=0) <= now - start <= dt.timedelta(minutes=window_min):
             return slot
     return None
 
