@@ -4,7 +4,7 @@
 Run by the "Harvest background photos" workflow. Saves assets/photos/<pool>/<id>.jpg, cropped to
 the 1296x2304 portrait canvas, plus assets/photos/credits.json. No attribution is legally required
 for CC0/PDM, but sources are kept anyway. Existing photos are kept; run again to add more.
-Every new photo must be reviewed by eye before it goes live: delete bad ones and list their ids in rejected.txt.
+Policy: no people at all, nothing suggestive, no text, weapons or vehicles. Every new photo must be reviewed by eye before it goes live: delete bad ones and list their ids in rejected.txt.
 """
 import io, json, os, sys, time
 import requests
@@ -18,7 +18,7 @@ UA = {"User-Agent": "AntarnaadStudio/1.0 (+https://skillscreeners.github.io/anta
 PER_QUERY = int(os.environ.get("PER_QUERY", "3"))
 BAD = ("illustration", "cartoon", "vector", "drawing", "clipart", "clip art", "icon", "logo", "text",
        "poster", "painting", "sketch", "render", "3d", "map", "diagram", "screenshot", "nude", "blood", "war",
-       "woman", "girl", "bikini", "topless", "sexy", "model", "body", "crowd", "protest", "knife", "gun", "cake", "birthday")
+       "woman", "man", "men", "people", "person", "boy", "child", "kid", "beach", "hiker", "worker", "portrait", "girl", "bikini", "topless", "sexy", "model", "body", "crowd", "protest", "knife", "gun", "cake", "birthday")
 REJECTED = {l.strip() for l in open(os.path.join(ROOT, "rejected.txt")) if l.strip() and not l.startswith("#")} \
     if os.path.exists(os.path.join(ROOT, "rejected.txt")) else set()
 

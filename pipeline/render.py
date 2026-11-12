@@ -353,11 +353,12 @@ def gemini_prompt(q):
         pool = SUBJECTS.get(q.get("mood", "calm"), SUBJECTS["calm"])
         subject = pool[zlib.crc32((q.get("date", "") + q["id"]).encode()) % len(pool)]
     if q.get("theme") == "work":
-        subject = ["a craftsman's hands shaping wood in a sunlit workshop", "a farmer walking through green fields at sunrise",
-                   "a desk with an open notebook and a cup of tea at dawn", "a potter's hands on a spinning wheel",
+        subject = ["neatly arranged woodworking tools in a sunlit workshop", "green farm fields with a plough at sunrise",
+                   "a desk with an open notebook and a cup of tea at dawn", "clay pots drying on shelves in a pottery studio",
                    "a lone road stretching toward mountains at sunrise"][zlib.crc32(q["id"].encode()) % 5]
     return ("Vertical 9:16 photorealistic cinematic photograph, natural light, shallow depth of field, "
-            f"{subject}. No faces, no text, no letters, no logos, no watermark. "
+            f"{subject}. Absolutely no people, no human figures or body parts, nothing suggestive. "
+            "No text, no letters, no logos, no watermark. "
             "Keep the middle third of the image calm and slightly dark so white text placed over it stays readable.")
 
 def gemini_background(q, out_png):
@@ -404,7 +405,9 @@ def library_background(q, out_png):
     """Real CC0 photo from assets/photos (filled by the 'Harvest background photos' workflow)."""
     pool = "work" if q.get("theme") == "work" else q.get("mood", "calm")
     folder = os.path.join(PHOTO_DIR, pool)
-    files = sorted(f for f in os.listdir(folder) if f.endswith(".jpg")) if os.path.isdir(folder) else []
+    rej_path = os.path.join(PHOTO_DIR, "rejected.txt")
+    rejected = {l.strip() for l in open(rej_path) if l.strip() and not l.startswith("#")} if os.path.exists(rej_path) else set()
+    files = sorted(f for f in os.listdir(folder) if f.endswith(".jpg") and f[:-4] not in rejected) if os.path.isdir(folder) else []
     if not files:
         return False
     _, seed = _query_for(q)
@@ -675,7 +678,9 @@ def render_video(q, d, out_mp4, use_voice=True):
         tl["credit"] = tl["lines"][-1] + 1.6; tl["cta"] = tl["credit"] + 2.4
     dur = tl["dur"]
     bg_video = f"{d}/bg.mp4"
-    use_video = pexels_background(q, bg_video, dur) or pixabay_background(q, bg_video, dur)
+    # Stock video is off by default: its clips are not reviewed and can show people (see assets/photos policy).
+    use_video = os.environ.get("ANTARNAAD_STOCK_VIDEO") == "1" and (
+        pexels_background(q, bg_video, dur) or pixabay_background(q, bg_video, dur))
     # live Openverse search is not used at post time: its photos are not reviewed (see assets/photos)
     if not use_video and not gemini_background(q, bg) and not library_background(q, bg):
         Image.fromarray(SCENES[q["scene"]](q["id"] + q.get("date", "") + q["scene"])).save(bg)
