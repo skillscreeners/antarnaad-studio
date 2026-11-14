@@ -2448,5 +2448,1799 @@
    "#Productivity"
   ],
   "theme": "work"
+ },
+ {
+  "id": "antarnaad-hi-life-00",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज की बात:",
+  "lines": [
+   "हालात कैसे भी हों,",
+   "हौसला अपना रखो।"
+  ],
+  "subtitle": "Whatever the situation, keep your courage.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-01",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "एक छोटी-सी सीख:",
+  "lines": [
+   "जो आज थकान है,",
+   "वही कल पहचान बनेगी।"
+  ],
+  "subtitle": "Today's tiredness becomes tomorrow's identity.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-02",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "याद रखना:",
+  "lines": [
+   "खुद पर भरोसा रखो,",
+   "रास्ते खुद बनते जाएँगे।"
+  ],
+  "subtitle": "Trust yourself; the paths will appear.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-03",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "दिल से एक बात:",
+  "lines": [
+   "छोटी शुरुआत से मत डरो,",
+   "हर पेड़ एक बीज से उगता है।"
+  ],
+  "subtitle": "Don't fear small beginnings; every tree grows from a seed.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-04",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सोचिए ज़रा:",
+  "lines": [
+   "गिरना हार नहीं,",
+   "गिरकर रुक जाना हार है।"
+  ],
+  "subtitle": "Falling is not defeat; staying down is.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-05",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज का सुविचार:",
+  "lines": [
+   "मन शांत हो,",
+   "तो हर रास्ता साफ़ दिखता है।"
+  ],
+  "subtitle": "When the mind is calm, every path looks clear.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-06",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज की बात:",
+  "lines": [
+   "जितनी गहरी जड़ें,",
+   "उतना ऊँचा पेड़।"
+  ],
+  "subtitle": "The deeper the roots, the taller the tree.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-07",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "एक छोटी-सी सीख:",
+  "lines": [
+   "सूरज भी रोज़ उगता है,",
+   "तुम भी रोज़ कोशिश करो।"
+  ],
+  "subtitle": "The sun rises every day; so should your effort.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-08",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "याद रखना:",
+  "lines": [
+   "दूसरों से नहीं,",
+   "कल वाले खुद से आगे निकलो।"
+  ],
+  "subtitle": "Don't race others; outgrow who you were yesterday.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-09",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "दिल से एक बात:",
+  "lines": [
+   "शिकायत कम,",
+   "कोशिश ज़्यादा।"
+  ],
+  "subtitle": "Complain less, try more.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-10",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सोचिए ज़रा:",
+  "lines": [
+   "अंधेरा कितना भी हो,",
+   "एक दीया काफ़ी है।"
+  ],
+  "subtitle": "However deep the dark, one lamp is enough.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-11",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज का सुविचार:",
+  "lines": [
+   "जो बीत गया उसे छोड़ो,",
+   "जो आने वाला है उसे संवारो।"
+  ],
+  "subtitle": "Let go of the past; shape what is coming.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-12",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज की बात:",
+  "lines": [
+   "मुस्कान मुफ़्त है,",
+   "पर उसका असर अनमोल है।"
+  ],
+  "subtitle": "A smile is free, but its effect is priceless.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-13",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "एक छोटी-सी सीख:",
+  "lines": [
+   "सीखते रहो,",
+   "ज़िंदगी पढ़ाना नहीं छोड़ती।"
+  ],
+  "subtitle": "Keep learning; life never stops teaching.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-14",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "याद रखना:",
+  "lines": [
+   "बीज को समय दो,",
+   "वो पेड़ बनकर लौटेगा।"
+  ],
+  "subtitle": "Give the seed time; it returns as a tree.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-15",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "दिल से एक बात:",
+  "lines": [
+   "अपनी तुलना मत करो,",
+   "हर फूल अपने मौसम में खिलता है।"
+  ],
+  "subtitle": "Don't compare; every flower blooms in its own season.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-16",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सोचिए ज़रा:",
+  "lines": [
+   "रास्ता लंबा है तो क्या,",
+   "हर कदम उसे छोटा करता है।"
+  ],
+  "subtitle": "So what if the road is long? Every step shortens it.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-17",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज का सुविचार:",
+  "lines": [
+   "सही इंसान बनो,",
+   "सही समय अपने आप आएगा।"
+  ],
+  "subtitle": "Become the right person; the right time will come.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-18",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज की बात:",
+  "lines": [
+   "आज का दिन",
+   "कल से बेहतर बनाओ।"
+  ],
+  "subtitle": "Make today better than yesterday.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-19",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "एक छोटी-सी सीख:",
+  "lines": [
+   "कड़ी धूप में ही",
+   "छाँव की क़ीमत समझ आती है।"
+  ],
+  "subtitle": "Only in harsh sun do we value the shade.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-20",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "याद रखना:",
+  "lines": [
+   "जो झुकना जानता है,",
+   "वही ऊँचा उठता है।"
+  ],
+  "subtitle": "Those who know how to bow, rise high.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-21",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "दिल से एक बात:",
+  "lines": [
+   "हर सुबह",
+   "एक नया मौका है।"
+  ],
+  "subtitle": "Every morning is a new chance.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-22",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सोचिए ज़रा:",
+  "lines": [
+   "नदी पत्थर से नहीं लड़ती,",
+   "रास्ता बना लेती है।"
+  ],
+  "subtitle": "A river doesn't fight the rock; it finds a way.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-23",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज का सुविचार:",
+  "lines": [
+   "मंज़िल दूर हो सकती है,",
+   "पर नामुमकिन नहीं।"
+  ],
+  "subtitle": "The goal may be far, but not impossible.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-24",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज की बात:",
+  "lines": [
+   "दिल साफ़ रखो,",
+   "दुनिया अपने आप सुंदर लगेगी।"
+  ],
+  "subtitle": "Keep a clean heart and the world looks beautiful.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-25",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "एक छोटी-सी सीख:",
+  "lines": [
+   "उम्मीद का एक धागा",
+   "पूरी ज़िंदगी बुन सकता है।"
+  ],
+  "subtitle": "One thread of hope can weave a whole life.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-26",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "याद रखना:",
+  "lines": [
+   "वक़्त सबका आता है,",
+   "तैयारी पहले करनी पड़ती है।"
+  ],
+  "subtitle": "Everyone's time comes; preparation comes first.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-27",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "दिल से एक बात:",
+  "lines": [
+   "तूफ़ान से मत डरो,",
+   "वही नाविक को मज़बूत बनाता है।"
+  ],
+  "subtitle": "Don't fear the storm; it makes the sailor strong.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-28",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सोचिए ज़रा:",
+  "lines": [
+   "सपने बड़े रखो,",
+   "शुरुआत छोटी ही सही।"
+  ],
+  "subtitle": "Dream big, even if the start is small.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-29",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज का सुविचार:",
+  "lines": [
+   "अच्छा सोचो,",
+   "अच्छा करो,",
+   "अच्छा होगा।"
+  ],
+  "subtitle": "Think good, do good, and good will follow.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-30",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज की बात:",
+  "lines": [
+   "ख़ुद को रोज़ थोड़ा सुधारो,",
+   "यही असली जीत है।"
+  ],
+  "subtitle": "Improve yourself a little every day; that is the real win.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-31",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "एक छोटी-सी सीख:",
+  "lines": [
+   "जहाँ चाह है,",
+   "वहाँ राह भी बनेगी।"
+  ],
+  "subtitle": "Where there is will, a way will be made.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-32",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "याद रखना:",
+  "lines": [
+   "धैर्य रखो,",
+   "हर रात की सुबह होती है।"
+  ],
+  "subtitle": "Be patient; every night has a morning.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-33",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "दिल से एक बात:",
+  "lines": [
+   "विनम्रता",
+   "सबसे सुंदर गहना है।"
+  ],
+  "subtitle": "Humility is the most beautiful ornament.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-life-34",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सोचिए ज़रा:",
+  "lines": [
+   "जो मिला है उसका शुक्रिया,",
+   "जो चाहिए उसके लिए मेहनत।"
+  ],
+  "subtitle": "Be grateful for what you have; work for what you want.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-00",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "आज का सुविचार:",
+  "lines": [
+   "काम ऐसा करो",
+   "कि नाम खुद बोले।"
+  ],
+  "subtitle": "Work so well that your name speaks for itself.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-01",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "आज की बात:",
+  "lines": [
+   "आज की मेहनत",
+   "कल का आराम है।"
+  ],
+  "subtitle": "Today's effort is tomorrow's comfort.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-02",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "एक छोटी-सी सीख:",
+  "lines": [
+   "वक़्त की पाबंदी",
+   "सबसे बड़ी ईमानदारी है।"
+  ],
+  "subtitle": "Punctuality is the greatest honesty.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-03",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "याद रखना:",
+  "lines": [
+   "रोज़ थोड़ा-थोड़ा करो,",
+   "बड़ा काम भी हो जाएगा।"
+  ],
+  "subtitle": "Do a little every day and big work gets done.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-04",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "दिल से एक बात:",
+  "lines": [
+   "जो काम हाथ में है,",
+   "उसे पूरे दिल से करो।"
+  ],
+  "subtitle": "Whatever work is in your hands, do it wholeheartedly.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-05",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "सोचिए ज़रा:",
+  "lines": [
+   "बहाने आसान हैं,",
+   "नतीजे मेहनत से आते हैं।"
+  ],
+  "subtitle": "Excuses are easy; results come from effort.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-06",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "आज का सुविचार:",
+  "lines": [
+   "पहला कदम उठाओ,",
+   "बाक़ी रास्ता दिखने लगेगा।"
+  ],
+  "subtitle": "Take the first step; the rest of the road appears.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-07",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "आज की बात:",
+  "lines": [
+   "गुणवत्ता से समझौता नहीं,",
+   "यही असली पहचान है।"
+  ],
+  "subtitle": "No compromise on quality; that is true identity.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-08",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "एक छोटी-सी सीख:",
+  "lines": [
+   "सुबह जल्दी उठो,",
+   "दिन तुम्हारा होगा।"
+  ],
+  "subtitle": "Rise early and the day is yours.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-09",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "याद रखना:",
+  "lines": [
+   "कोई काम छोटा नहीं होता,",
+   "सोच छोटी-बड़ी होती है।"
+  ],
+  "subtitle": "No work is small; only thinking is.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-10",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "दिल से एक बात:",
+  "lines": [
+   "आज टालोगे,",
+   "तो कल पछताओगे।"
+  ],
+  "subtitle": "Postpone today, regret tomorrow.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-11",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "सोचिए ज़रा:",
+  "lines": [
+   "हुनर निखारते रहो,",
+   "मौक़े खुद दस्तक देंगे।"
+  ],
+  "subtitle": "Keep sharpening your skill; opportunities will knock.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-12",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "आज का सुविचार:",
+  "lines": [
+   "वादा छोटा करो,",
+   "काम बड़ा करो।"
+  ],
+  "subtitle": "Promise less, deliver more.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-hi-work-13",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "आज की बात:",
+  "lines": [
+   "ध्यान एक जगह हो,",
+   "तो काम आधा हो जाता है।"
+  ],
+  "subtitle": "With focus in one place, half the work is done.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-00",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Remember this:",
+  "lines": [
+   "Small steps every day",
+   "still move mountains."
+  ],
+  "subtitle": "रोज़ के छोटे कदम भी पहाड़ हिला देते हैं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-01",
+  "lang": "en",
+  "theme": "life",
+  "hook": "A thought for today:",
+  "lines": [
+   "Be patient with yourself.",
+   "Growth takes time."
+  ],
+  "subtitle": "खुद के साथ धैर्य रखो, विकास में समय लगता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-02",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Read this twice:",
+  "lines": [
+   "Your pace is not the problem.",
+   "Stopping is."
+  ],
+  "subtitle": "धीमी चाल समस्या नहीं, रुक जाना है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-03",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Keep this in mind:",
+  "lines": [
+   "Rise every morning",
+   "with one good intention."
+  ],
+  "subtitle": "हर सुबह एक अच्छे इरादे के साथ उठो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-04",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Today's reminder:",
+  "lines": [
+   "Kind words cost nothing",
+   "and change everything."
+  ],
+  "subtitle": "मीठे बोल मुफ़्त हैं, पर सब बदल देते हैं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-05",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Remember this:",
+  "lines": [
+   "Calm minds",
+   "make clear choices."
+  ],
+  "subtitle": "शांत मन साफ़ फ़ैसले लेता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-06",
+  "lang": "en",
+  "theme": "life",
+  "hook": "A thought for today:",
+  "lines": [
+   "Let today be better",
+   "than yesterday."
+  ],
+  "subtitle": "आज को कल से बेहतर बनाओ।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-07",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Read this twice:",
+  "lines": [
+   "The roots you grow in silence",
+   "hold you up in the storm."
+  ],
+  "subtitle": "ख़ामोशी में उगी जड़ें तूफ़ान में थामे रखती हैं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-08",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Keep this in mind:",
+  "lines": [
+   "Learn from yesterday.",
+   "Work on today."
+  ],
+  "subtitle": "कल से सीखो, आज पर काम करो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-09",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Today's reminder:",
+  "lines": [
+   "A single lamp",
+   "can push back the dark."
+  ],
+  "subtitle": "एक दीया भी अंधेरा पीछे धकेल देता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-10",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Remember this:",
+  "lines": [
+   "Be thankful today;",
+   "it makes tomorrow lighter."
+  ],
+  "subtitle": "आज आभार जताओ, कल हल्का लगेगा।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-11",
+  "lang": "en",
+  "theme": "life",
+  "hook": "A thought for today:",
+  "lines": [
+   "Hope is a small seed.",
+   "Water it daily."
+  ],
+  "subtitle": "उम्मीद एक छोटा बीज है, रोज़ सींचो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-12",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Read this twice:",
+  "lines": [
+   "Strong people",
+   "are gentle too."
+  ],
+  "subtitle": "मज़बूत लोग नरम भी होते हैं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-13",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Keep this in mind:",
+  "lines": [
+   "Falling is part of the path.",
+   "Staying down is optional."
+  ],
+  "subtitle": "गिरना रास्ते का हिस्सा है, पड़े रहना नहीं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-14",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Today's reminder:",
+  "lines": [
+   "Guard your mind;",
+   "it shapes your days."
+  ],
+  "subtitle": "अपने मन की रक्षा करो, वही दिन गढ़ता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-15",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Remember this:",
+  "lines": [
+   "Simple living,",
+   "clear thinking."
+  ],
+  "subtitle": "सादा जीवन, साफ़ सोच।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-16",
+  "lang": "en",
+  "theme": "life",
+  "hook": "A thought for today:",
+  "lines": [
+   "The best time to start",
+   "is the moment you decide."
+  ],
+  "subtitle": "शुरू करने का सबसे अच्छा समय वही है जब तुम ठान लो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-17",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Read this twice:",
+  "lines": [
+   "Your effort today",
+   "is a gift to your future self."
+  ],
+  "subtitle": "आज की मेहनत आने वाले कल के लिए तोहफ़ा है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-18",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Keep this in mind:",
+  "lines": [
+   "Quiet confidence",
+   "outlasts loud doubt."
+  ],
+  "subtitle": "शांत आत्मविश्वास, शोर करते संदेह से ज़्यादा टिकता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-19",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Today's reminder:",
+  "lines": [
+   "Be the reason",
+   "someone smiles today."
+  ],
+  "subtitle": "आज किसी की मुस्कान की वजह बनो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-20",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Remember this:",
+  "lines": [
+   "Every sunrise",
+   "is a second chance."
+  ],
+  "subtitle": "हर सूर्योदय एक नया मौका है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-21",
+  "lang": "en",
+  "theme": "life",
+  "hook": "A thought for today:",
+  "lines": [
+   "Grow quietly.",
+   "Shine naturally."
+  ],
+  "subtitle": "चुपचाप बढ़ो, सहज चमको।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-22",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Read this twice:",
+  "lines": [
+   "What you practise daily",
+   "is who you become."
+  ],
+  "subtitle": "जो रोज़ करते हो, वही बन जाते हो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-life-23",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Keep this in mind:",
+  "lines": [
+   "Peace begins",
+   "with one deep breath."
+  ],
+  "subtitle": "शांति एक गहरी साँस से शुरू होती है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ]
+ },
+ {
+  "id": "antarnaad-en-work-00",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Today's reminder:",
+  "lines": [
+   "Show up on time.",
+   "It says more than words."
+  ],
+  "subtitle": "समय पर पहुँचो, यह शब्दों से ज़्यादा कहता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-en-work-01",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Remember this:",
+  "lines": [
+   "Do the work well,",
+   "even when no one is watching."
+  ],
+  "subtitle": "काम अच्छे से करो, चाहे कोई देखे या न देखे।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-en-work-02",
+  "lang": "en",
+  "theme": "work",
+  "hook": "A thought for today:",
+  "lines": [
+   "Excuses delay.",
+   "Discipline delivers."
+  ],
+  "subtitle": "बहाने देर करते हैं, अनुशासन नतीजे देता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-en-work-03",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Read this twice:",
+  "lines": [
+   "Master the basics;",
+   "they never go out of style."
+  ],
+  "subtitle": "बुनियादी बातों में माहिर बनो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-en-work-04",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Keep this in mind:",
+  "lines": [
+   "Finish what you start.",
+   "That is how trust is built."
+  ],
+  "subtitle": "जो शुरू करो, उसे पूरा करो; भरोसा ऐसे बनता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "antarnaad-en-work-05",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Today's reminder:",
+  "lines": [
+   "One focused hour",
+   "beats a distracted day."
+  ],
+  "subtitle": "एक केंद्रित घंटा, भटके हुए दिन से बेहतर है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ]
+ },
+ {
+  "id": "kalam-shine",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Dr. Kalam's advice:",
+  "lines": [
+   "If you want to shine like a sun,",
+   "first burn like a sun."
+  ],
+  "subtitle": "सूरज की तरह चमकना है तो पहले सूरज की तरह जलो।",
+  "author": "Dr. A. P. J. Abdul Kalam",
+  "author_en": "Dr. A. P. J. Abdul Kalam",
+  "source": "Wings of Fire (1999)",
+  "topic_tags": [
+   "#APJAbdulKalam",
+   "#Kalam",
+   "#MissileMan"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "kalam-shine-hi",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "कलाम साहब की सीख:",
+  "lines": [
+   "अगर सूरज की तरह",
+   "चमकना चाहते हो,",
+   "तो पहले सूरज की तरह जलो।"
+  ],
+  "subtitle": "If you want to shine like a sun, first burn like a sun.",
+  "author": "डॉ. ए. पी. जे. अब्दुल कलाम",
+  "author_en": "Dr. A. P. J. Abdul Kalam",
+  "source": "Wings of Fire (1999)",
+  "topic_tags": [
+   "#APJAbdulKalam",
+   "#Kalam",
+   "#Suvichar"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "kalam-talent",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Dr. Kalam on talent:",
+  "lines": [
+   "All of us do not have equal talent.",
+   "But all of us have",
+   "an equal opportunity",
+   "to develop our talents."
+  ],
+  "subtitle": "सबमें बराबर प्रतिभा नहीं, पर उसे निखारने का अवसर सबको बराबर है।",
+  "author": "Dr. A. P. J. Abdul Kalam",
+  "author_en": "Dr. A. P. J. Abdul Kalam",
+  "source": "Wings of Fire (1999)",
+  "topic_tags": [
+   "#APJAbdulKalam",
+   "#Kalam",
+   "#WorkEthic"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "kalam-talent-hi",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "कलाम साहब ने कहा:",
+  "lines": [
+   "हम सबमें",
+   "बराबर प्रतिभा नहीं होती,",
+   "पर प्रतिभा निखारने का",
+   "अवसर सबको बराबर मिलता है।"
+  ],
+  "subtitle": "All of us do not have equal talent, but we have an equal opportunity to develop it.",
+  "author": "डॉ. ए. पी. जे. अब्दुल कलाम",
+  "author_en": "Dr. A. P. J. Abdul Kalam",
+  "source": "Wings of Fire (1999)",
+  "topic_tags": [
+   "#APJAbdulKalam",
+   "#Kalam",
+   "#Mehnat"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "tilak-swaraj",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "लोकमान्य तिलक का उद्घोष:",
+  "lines": [
+   "स्वराज मेरा",
+   "जन्मसिद्ध अधिकार है,",
+   "और मैं इसे",
+   "लेकर रहूँगा।"
+  ],
+  "subtitle": "Swaraj is my birthright, and I shall have it.",
+  "author": "लोकमान्य बाल गंगाधर तिलक",
+  "author_en": "Lokmanya Bal Gangadhar Tilak",
+  "source": "Speech, 1916",
+  "topic_tags": [
+   "#LokmanyaTilak",
+   "#Tilak",
+   "#Swaraj"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "tilak-swaraj-en",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Lokmanya Tilak declared:",
+  "lines": [
+   "Swaraj is my birthright,",
+   "and I shall have it."
+  ],
+  "subtitle": "स्वराज मेरा जन्मसिद्ध अधिकार है, और मैं इसे लेकर रहूँगा।",
+  "author": "Lokmanya Bal Gangadhar Tilak",
+  "author_en": "Lokmanya Bal Gangadhar Tilak",
+  "source": "Speech, 1916",
+  "topic_tags": [
+   "#LokmanyaTilak",
+   "#Tilak",
+   "#Swaraj"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "nehru-tryst",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Pandit Nehru, 14 August 1947:",
+  "lines": [
+   "At the stroke of the midnight hour,",
+   "when the world sleeps,",
+   "India will awake",
+   "to life and freedom."
+  ],
+  "subtitle": "आधी रात को, जब दुनिया सो रही होगी, भारत जीवन और स्वतंत्रता के लिए जागेगा।",
+  "author": "Jawaharlal Nehru",
+  "author_en": "Jawaharlal Nehru",
+  "source": "Tryst with Destiny speech, 14 Aug 1947",
+  "topic_tags": [
+   "#Nehru",
+   "#TrystWithDestiny",
+   "#India"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "ambedkar-women",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Babasaheb Ambedkar said:",
+  "lines": [
+   "I measure the progress",
+   "of a community",
+   "by the degree of progress",
+   "which women have achieved."
+  ],
+  "subtitle": "किसी समाज की प्रगति को मैं महिलाओं की प्रगति से मापता हूँ।",
+  "author": "Dr. B. R. Ambedkar",
+  "author_en": "Dr. B. R. Ambedkar",
+  "source": "All India Depressed Classes Women's Conference, Nagpur, 1942",
+  "topic_tags": [
+   "#Ambedkar",
+   "#Babasaheb",
+   "#WomenEmpowerment"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "ajitpawar-rules-en",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Ajit Pawar on discipline:",
+  "lines": [
+   "Do not break any rules.",
+   "Be it Ajit Pawar",
+   "or any of his relatives —",
+   "the rules are the same for everyone."
+  ],
+  "subtitle": "नियम सबके लिए एक हैं, चाहे कोई भी हो।",
+  "author": "Ajit Pawar",
+  "author_en": "Ajit Pawar",
+  "source": "Speech in Baramati, 12 Jul 2025 (translated)",
+  "topic_tags": [
+   "#AjitPawar",
+   "#Dada",
+   "#Discipline"
+  ],
+  "mood": "rising"
  }
 ]

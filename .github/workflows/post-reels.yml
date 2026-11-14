@@ -28,6 +28,9 @@ on:
         description: "Post even if the slot is already marked posted"
         type: boolean
         default: false
+      refill:
+        description: "Generate original lines now: 'dry' to preview, 'yes' to save"
+        required: false
       mark_posted:
         description: "Only mark slots as already posted, e.g. 2026-11-05:2,2026-11-05:3"
         required: false
@@ -58,6 +61,23 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 pipeline/collect_stats.py
+      - name: Top up original lines so reels never repeat (every 3 h)
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 pipeline/refill.py
+
+  refill:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.refill != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 pipeline/refill.py --force ${{ inputs.refill == 'dry' && '--dry' || '' }}
 
   mark:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.mark_posted != '' }}
@@ -75,7 +95,7 @@ jobs:
 
   reel:
     needs: check
-    if: ${{ always() && ((github.event_name == 'workflow_dispatch' && inputs.mark_posted == '') || needs.check.outputs.slot != '') }}
+    if: ${{ always() && ((github.event_name == 'workflow_dispatch' && inputs.mark_posted == '' && inputs.refill == '') || needs.check.outputs.slot != '') }}
     concurrency:
       group: antarnaad-post
       cancel-in-progress: false

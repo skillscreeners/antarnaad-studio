@@ -285,6 +285,27 @@
      "#CharlesDickens"
     ],
     "mood": "gentle"
+   },
+   "1": {
+    "id": "vajpayee-haar",
+    "lang": "hi",
+    "theme": "life",
+    "hook": "अटल जी की पंक्तियाँ:",
+    "lines": [
+     "हार नहीं मानूँगा,",
+     "रार नहीं ठानूँगा।"
+    ],
+    "subtitle": "I will not accept defeat; I will not pick a quarrel.",
+    "author": "अटल बिहारी वाजपेयी",
+    "author_en": "Atal Bihari Vajpayee",
+    "source": "Geet Naya Gaata Hoon (poem)",
+    "topic_tags": [
+     "#AtalBihariVajpayee",
+     "#GoodGovernanceDay",
+     "#AtalJayanti"
+    ],
+    "mood": "rising",
+    "special_name": "Atal Jayanti"
    }
   }
  },
@@ -408,6 +429,117 @@
   "slots": {
    "2": {
     "ref": "gandhi-will"
+   }
+  }
+ },
+ "2026-11-19": {
+  "name": "Indira Gandhi Jayanti",
+  "slots": {
+   "2": {
+    "id": "indira-two-kinds",
+    "lang": "en",
+    "theme": "work",
+    "hook": "Indira Gandhi recalled:",
+    "lines": [
+     "There are two kinds of people:",
+     "those who do the work",
+     "and those who take the credit.",
+     "Try to be in the first group;",
+     "there is less competition there."
+    ],
+    "subtitle": "दो तरह के लोग होते हैं: जो काम करते हैं और जो श्रेय लेते हैं। पहले समूह में रहो।",
+    "author": "Indira Gandhi",
+    "author_en": "Indira Gandhi",
+    "source": "Advice from her grandfather, as she often recalled",
+    "topic_tags": [
+     "#IndiraGandhi",
+     "#WorkEthic",
+     "#Leadership"
+    ],
+    "mood": "uplifting"
+   },
+   "3": {
+    "id": "indira-two-kinds-hi",
+    "lang": "hi",
+    "theme": "work",
+    "hook": "इंदिरा गांधी ने कहा:",
+    "lines": [
+     "दो तरह के लोग होते हैं —",
+     "एक जो काम करते हैं,",
+     "दूसरे जो श्रेय लेते हैं।",
+     "पहले समूह में रहो,",
+     "वहाँ भीड़ कम है।"
+    ],
+    "subtitle": "There are two kinds of people: those who do the work and those who take the credit.",
+    "author": "इंदिरा गांधी",
+    "author_en": "Indira Gandhi",
+    "source": "Advice from her grandfather, as she often recalled",
+    "topic_tags": [
+     "#IndiraGandhi",
+     "#Mehnat",
+     "#WorkEthic"
+    ],
+    "mood": "uplifting"
+   }
+  }
+ },
+ "2026-12-06": {
+  "name": "Mahaparinirvan Diwas",
+  "slots": {
+   "2": {
+    "ref": "ambedkar-women"
+   }
+  }
+ },
+ "2027-01-11": {
+  "name": "Shastri Punyatithi",
+  "slots": {
+   "1": {
+    "id": "shastri-jai-jawan",
+    "lang": "hi",
+    "theme": "work",
+    "hook": "लाल बहादुर शास्त्री का नारा:",
+    "lines": [
+     "जय जवान,",
+     "जय किसान।"
+    ],
+    "subtitle": "Hail the soldier, hail the farmer.",
+    "author": "लाल बहादुर शास्त्री",
+    "author_en": "Lal Bahadur Shastri",
+    "source": "Ramlila Maidan, Delhi, 1965",
+    "topic_tags": [
+     "#LalBahadurShastri",
+     "#JaiJawanJaiKisan",
+     "#Shastri"
+    ],
+    "mood": "rising"
+   }
+  }
+ },
+ "2027-01-28": {
+  "name": "Remembering Ajit Pawar",
+  "slots": {
+   "1": {
+    "id": "ajitpawar-rules-hi",
+    "lang": "hi",
+    "theme": "work",
+    "hook": "अजित दादा की सीख:",
+    "lines": [
+     "नियम तोड़ना ही नहीं।",
+     "चाहे अजित पवार हो",
+     "या उसका कोई रिश्तेदार,",
+     "नियम सबके लिए एक हैं।"
+    ],
+    "subtitle": "Do not break any rules; they are the same for everyone, even for Ajit Pawar.",
+    "author": "अजित पवार",
+    "author_en": "Ajit Pawar",
+    "source": "Speech in Baramati, 12 Jul 2025 (translated)",
+    "topic_tags": [
+     "#AjitPawar",
+     "#AjitDada",
+     "#Shraddhanjali"
+    ],
+    "mood": "calm"
    }
   }
  }

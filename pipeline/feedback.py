@@ -5,8 +5,8 @@ data/stats.json    views and likes per video from the channel's public RSS feed 
 
 Scoring: a post's score is views + 10 x likes, read about a day after posting. Authors get a smoothed
 average of their posts' scores, so "similar content" (same author, same theme) is preferred.
-Quotes that were never posted get an exploration bonus so new material is still tried, and every
-quote waits COOLDOWN_DAYS before it can come back.
+Quotes that were never posted get an exploration bonus so new material is still tried, and a quote
+that was ever posted is never used again (data/generated.json keeps the supply topped up).
 """
 import datetime as dt, json, os, random
 
@@ -76,22 +76,33 @@ def expected_scores(quotes):
             exp[q["id"]] = max(a, mean) * EXPLORE_BONUS
     return exp
 
-MAX_PER_AUTHOR_DAY = 2
+MAX_PER_AUTHOR_DAY = 2   # Antarnaad originals are many short lines: allowed 4 a day
+MAX_ORIGINALS_DAY = 4
+
+def used_ids():
+    """Every quote ever posted: history, stats matched by title, and the first week (data/legacy_used.json)."""
+    used = {h["id"] for h in history()}
+    used |= {s.get("quote") for k, s in stats().items() if not k.startswith("_") and s.get("quote")}
+    used |= set(_load("legacy_used.json", []))
+    return used
 
 def pick(pool, date, slot, used_today=(), authors_today=()):
     """Choose a quote from pool for this slot, or None to fall back to the fixed rotation."""
     exp = expected_scores(pool)
-    if not exp:
-        return None
-    last_used = {}
-    for h in history():
-        last_used[h["id"]] = max(last_used.get(h["id"], ""), h["date"])
-    cutoff = (date - dt.timedelta(days=COOLDOWN_DAYS)).isoformat()
-    crowded = {a for a in authors_today if list(authors_today).count(a) >= MAX_PER_AUTHOR_DAY}
-    fresh = [q for q in pool if last_used.get(q["id"], "") < cutoff and q["id"] not in used_today
-             and q.get("author_en") not in crowded]
-    if not fresh:  # whole pool used recently: take the least recently used
-        fresh = sorted([q for q in pool if q["id"] not in used_today] or pool, key=lambda q: last_used.get(q["id"], ""))[:3]
+    # Unique reels only: a quote that was ever posted is never chosen again.
+    used = used_ids() | set(used_today)
+    crowded = {a for a in authors_today
+               if list(authors_today).count(a) >= (MAX_ORIGINALS_DAY if a == "Antarnaad" else MAX_PER_AUTHOR_DAY)}
+    fresh = [q for q in pool if q["id"] not in used and q.get("author_en") not in crowded]
+    if not fresh:
+        fresh = [q for q in pool if q["id"] not in used]
+    if not fresh:
+        print(f"::warning::no unused quote left for {pool[0]['lang']}/{pool[0].get('theme', 'life')}: repeating the oldest one")
+        last_used = {}
+        for h in history():
+            last_used[h["id"]] = max(last_used.get(h["id"], ""), h["date"])
+        fresh = sorted(pool, key=lambda q: last_used.get(q["id"], ""))[:3]
+    last_used = {h["id"]: h["date"] for h in history()}
     rng = random.Random(f"antarnaad-fb-{date}-{slot}")
     never = [q for q in fresh if q["id"] not in last_used]
     if never and rng.randrange(EXPLORE_EVERY) == 0:

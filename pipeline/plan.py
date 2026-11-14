@@ -37,7 +37,12 @@ def slot_pool(date, slot):
     return lang, theme
 
 def _bank():
-    return json.load(open(os.path.join(ROOT, "data", "quote_bank.json"), encoding="utf-8"))
+    """Curated quotes plus original lines added automatically by refill.py (data/generated.json)."""
+    bank = json.load(open(os.path.join(ROOT, "data", "quote_bank.json"), encoding="utf-8"))
+    gen = os.path.join(ROOT, "data", "generated.json")
+    if os.path.exists(gen):
+        bank += [q for q in json.load(open(gen, encoding="utf-8")) if isinstance(q, dict) and not q.get("_meta")]
+    return bank
 
 def _nth(pool, n, key):
     """n-th quote of a fixed shuffled rotation through pool: each quote waits a full lap before repeating.
@@ -93,7 +98,7 @@ def quote_for_uncached(date, slot):
     trending = json.load(open(os.path.join(ROOT, "data", "trending.json"), encoding="utf-8"))
     special = _special(date).get(str(slot))
     if special:
-        q = dict(special); q.setdefault("theme", "life"); q["special"] = _special_name(date)
+        q = dict(special); q.setdefault("theme", "life"); q["special"] = q.pop("special_name", None) or _special_name(date)
     elif slot == NEWS_SLOT and date.isoformat() in trending:
         q = dict(trending[date.isoformat()])
         q.setdefault("lang", "en")
