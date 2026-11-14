@@ -43,7 +43,7 @@ jobs:
   check:
     if: ${{ github.event_name == 'schedule' || github.event_name == 'repository_dispatch' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 8
     outputs:
       slot: ${{ steps.due.outputs.slot }}
     steps:
@@ -71,7 +71,7 @@ jobs:
   refill:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.refill != '' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - env:

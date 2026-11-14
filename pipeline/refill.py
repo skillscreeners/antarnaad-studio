@@ -36,35 +36,30 @@ def prompt(lang, theme, avoid):
             + " | ".join(avoid[-80:]) +
             '. Return only JSON: [{"hook": "...", "lines": ["...", "..."], "subtitle": "..."}]')
 
-_MODEL = None
-
-def text_model():
-    """Configured model, or the newest available 'flash' text model (names change over time)."""
-    global _MODEL
-    if _MODEL:
-        return _MODEL
-    if os.environ.get("GEMINI_TEXT_MODEL"):
-        _MODEL = os.environ["GEMINI_TEXT_MODEL"]; return _MODEL
-    req = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
-                                 headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]})
-    models = json.load(urllib.request.urlopen(req, timeout=30)).get("models", [])
-    names = [m["name"].split("/", 1)[1] for m in models if "generateContent" in m.get("supportedGenerationMethods", [])]
-    print("refill: available models:", ", ".join(names[:40]))
-    flash = [n for n in names if "flash" in n and not any(x in n for x in ("image", "tts", "live", "audio", "lite", "exp", "preview", "thinking"))]
-    _MODEL = sorted(flash, key=lambda n: [int(x) if x.isdigit() else 0 for x in re.findall(r"\d+", n)], reverse=True)[0] if flash else names[0]
-    print("refill: using", _MODEL)
-    return _MODEL
+CANDIDATES = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-3-flash-preview", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"]
 
 def ask_gemini(text):
+    """Try a few text models (busy or retired models answer 503/404/429) with a short retry each."""
+    import time
     key = os.environ["GEMINI_API_KEY"]
-    MODEL = text_model()
     body = {"contents": [{"parts": [{"text": text}]}],
             "generationConfig": {"responseMimeType": "application/json", "temperature": 1.0}}
-    req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent",
-                                 data=json.dumps(body).encode(), method="POST",
-                                 headers={"x-goog-api-key": key, "Content-Type": "application/json"})
-    r = json.load(urllib.request.urlopen(req, timeout=90))
-    return json.loads(r["candidates"][0]["content"]["parts"][0]["text"])
+    models = [os.environ["GEMINI_TEXT_MODEL"]] if os.environ.get("GEMINI_TEXT_MODEL") else CANDIDATES
+    err = None
+    for model in models:
+        for attempt in range(2):
+            try:
+                req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                                             data=json.dumps(body).encode(), method="POST",
+                                             headers={"x-goog-api-key": key, "Content-Type": "application/json"})
+                r = json.load(urllib.request.urlopen(req, timeout=120))
+                print(f"refill: {model} answered")
+                return json.loads(r["candidates"][0]["content"]["parts"][0]["text"])
+            except Exception as e:
+                err = f"{model}: {e}"
+                print(f"refill: {err}")
+                time.sleep(5)
+    raise RuntimeError(err)
 
 def valid(item, lang, seen):
     try:
