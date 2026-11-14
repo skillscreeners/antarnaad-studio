@@ -12,7 +12,6 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import collect_stats, feedback, plan
 
 LOW, BATCH, EVERY_H = 20, 15, 3
-MODEL = os.environ.get("GEMINI_TEXT_MODEL", "gemini-2.5-flash")
 BLOCK = ["love", "kiss", "sex", "romance", "girlfriend", "boyfriend", "death", "die ", "dead", "kill", "suicide", "blood",
          "war", "hate", "revenge", "betray", "alcohol", "drunk", "party", "religion", "caste", "modi", "gandhi", "congress",
          "bjp", "प्यार", "इश्क", "मोहब्बत", "मौत", "मरना", "खून", "धोखा", "नफ़रत", "नफरत", "बेवफ़ा", "बदला", "शराब", "जाति",
@@ -37,8 +36,28 @@ def prompt(lang, theme, avoid):
             + " | ".join(avoid[-80:]) +
             '. Return only JSON: [{"hook": "...", "lines": ["...", "..."], "subtitle": "..."}]')
 
+_MODEL = None
+
+def text_model():
+    """Configured model, or the newest available 'flash' text model (names change over time)."""
+    global _MODEL
+    if _MODEL:
+        return _MODEL
+    if os.environ.get("GEMINI_TEXT_MODEL"):
+        _MODEL = os.environ["GEMINI_TEXT_MODEL"]; return _MODEL
+    req = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
+                                 headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]})
+    models = json.load(urllib.request.urlopen(req, timeout=30)).get("models", [])
+    names = [m["name"].split("/", 1)[1] for m in models if "generateContent" in m.get("supportedGenerationMethods", [])]
+    print("refill: available models:", ", ".join(names[:40]))
+    flash = [n for n in names if "flash" in n and not any(x in n for x in ("image", "tts", "live", "audio", "lite", "exp", "preview", "thinking"))]
+    _MODEL = sorted(flash, key=lambda n: [int(x) if x.isdigit() else 0 for x in re.findall(r"\d+", n)], reverse=True)[0] if flash else names[0]
+    print("refill: using", _MODEL)
+    return _MODEL
+
 def ask_gemini(text):
     key = os.environ["GEMINI_API_KEY"]
+    MODEL = text_model()
     body = {"contents": [{"parts": [{"text": text}]}],
             "generationConfig": {"responseMimeType": "application/json", "temperature": 1.0}}
     req = urllib.request.Request(f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent",
