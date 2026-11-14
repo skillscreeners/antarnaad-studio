@@ -10,6 +10,7 @@ Reads a JSON list of quotes and renders, for each one:
 
 Usage:  python3 generate.py quotes_today.json out_dir [YYYY-MM-DD]
 """
+import re
 import base64, io, json, math, os, subprocess, sys, datetime, zlib
 import numpy as np
 from scipy import ndimage, signal
@@ -401,6 +402,23 @@ PHOTO_QUERIES = {
 
 PHOTO_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "photos")
 
+PORTRAIT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "portraits")
+
+def portrait_slug(name):
+    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+def portrait_background(q, out_png):
+    """Owner-supplied photo of the quoted person: assets/portraits/<slug>.jpg|png, e.g.
+    swami-vivekananda.jpg for "Swami Vivekananda". Only photos the owner added and has the right to use."""
+    slug = portrait_slug(q.get("author_en", ""))
+    for ext in ("jpg", "jpeg", "png", "webp"):
+        path = os.path.join(PORTRAIT_DIR, f"{slug}.{ext}")
+        if slug and os.path.exists(path):
+            _still_to_bg(Image.open(path).convert("RGB"), q, out_png)
+            print(f"  background: portrait {slug}.{ext}", flush=True)
+            return True
+    return False
+
 def library_background(q, out_png):
     """Real CC0 photo from assets/photos (filled by the 'Harvest background photos' workflow)."""
     pool = "work" if q.get("theme") == "work" else q.get("mood", "calm")
@@ -682,7 +700,8 @@ def render_video(q, d, out_mp4, use_voice=True):
     use_video = os.environ.get("ANTARNAAD_STOCK_VIDEO") == "1" and (
         pexels_background(q, bg_video, dur) or pixabay_background(q, bg_video, dur))
     # live Openverse search is not used at post time: its photos are not reviewed (see assets/photos)
-    if not use_video and not gemini_background(q, bg) and not library_background(q, bg):
+    if not use_video and not portrait_background(q, bg) and not gemini_background(q, bg) \
+            and not library_background(q, bg):
         Image.fromarray(SCENES[q["scene"]](q["id"] + q.get("date", "") + q["scene"])).save(bg)
     wav = f"{d}/music.wav"; music(q["mood"], wav, dur)
     if use_voice and "vbuf" in locals():
