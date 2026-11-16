@@ -1,6 +1,305 @@
 [
  {
+  "id": "ai-en-work-55cbd09a",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Focus on this:",
+  "lines": [
+   "Eyes on the goal.",
+   "Ignore the noise.",
+   "Win the moment."
+  ],
+  "subtitle": "लक्ष्य पर ध्यान दें, शोर को भूल जाएं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-3b30060a",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Take note:",
+  "lines": [
+   "Arrive early.",
+   "Value every minute.",
+   "Time is a gift."
+  ],
+  "subtitle": "समय पर पहुँचें और हर मिनट का सम्मान करें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-9f6f7ad6",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Never forget:",
+  "lines": [
+   "Learn one new thing.",
+   "Every single day.",
+   "Growth never stops."
+  ],
+  "subtitle": "हर दिन एक नई बात सीखें, प्रगति कभी नहीं रुकती।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-ccea8cf7",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Stay strong:",
+  "lines": [
+   "Follow the plan.",
+   "Even when tired.",
+   "Results will follow."
+  ],
+  "subtitle": "योजना का पालन करें, परिणाम ज़रूर मिलेंगे।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-b3cf1574",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Listen close:",
+  "lines": [
+   "Do your best work.",
+   "No matter how small.",
+   "Let quality speak."
+  ],
+  "subtitle": "अपना सबसे अच्छा काम करें, चाहे वह कितना भी छोटा हो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-7e0175a9",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Remember this:",
+  "lines": [
+   "Hand in hand.",
+   "We go further.",
+   "Stronger together."
+  ],
+  "subtitle": "हम मिलकर और आगे बढ़ सकते हैं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-997f7994",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Keep in mind:",
+  "lines": [
+   "Start with energy.",
+   "End with pride.",
+   "Close every chapter."
+  ],
+  "subtitle": "ऊर्जा के साथ शुरू करें और गर्व के साथ समाप्त करें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-5d5a65e1",
+  "lang": "en",
+  "theme": "work",
+  "hook": "True words:",
+  "lines": [
+   "Work with heart.",
+   "Stay honest always.",
+   "Peace is the prize."
+  ],
+  "subtitle": "दिल से काम करें और हमेशा ईमानदार रहें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-2b267a28",
+  "lang": "en",
+  "theme": "work",
+  "hook": "A quick tip:",
+  "lines": [
+   "Be the first one.",
+   "Ready and steady.",
+   "Lead by example."
+  ],
+  "subtitle": "सबसे पहले पहुँचें और दूसरों के लिए उदाहरण बनें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-e30a20cb",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Look ahead:",
+  "lines": [
+   "One step at a time.",
+   "Deeply focused.",
+   "Purely dedicated."
+  ],
+  "subtitle": "एक समय में एक ही कदम और पूरा समर्पण।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-8c3d4e4a",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Start now:",
+  "lines": [
+   "Sharpen your tools.",
+   "Practice makes power.",
+   "Build your future."
+  ],
+  "subtitle": "अपने कौशल को सुधारें और अपना भविष्य बनाएं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-4ce264c4",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Side by side:",
+  "lines": [
+   "Lift someone up.",
+   "Grow as a team.",
+   "Victory is shared."
+  ],
+  "subtitle": "किसी की मदद करें और टीम के रूप में बढ़ें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
+  "id": "ai-en-work-fde614b7",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Always remember:",
+  "lines": [
+   "Clean work.",
+   "Clear mind.",
+   "Excellence matters."
+  ],
+  "subtitle": "साफ़ काम और साफ़ मन, श्रेष्ठता ही मायने रखती है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-16"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-16T00:30:15+00:00"
+  "updated": "2026-11-16T03:40:09+00:00"
  }
 ]
