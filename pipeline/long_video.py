@@ -216,24 +216,7 @@ def build(date, series_name=None, out_dir="out"):
     print(f"long video {sid}: {len(items)} quotes, {total / 60:.1f} min -> {out}")
     return out, meta
 
-LONG_TIME = (11, 0)    # Sundays, IST
-
-def due_now():
-    """True on Sunday from 11:00 to 13:30 IST if this week's long video is not posted yet."""
-    import due
-    now = dt.datetime.now(plan.IST)
-    start = now.replace(hour=LONG_TIME[0], minute=LONG_TIME[1], second=0, microsecond=0)
-    return now.weekday() == 6 and dt.timedelta(0) <= now - start <= dt.timedelta(minutes=150) \
-        and not due._tag_exists(f"posted-long-{now.date()}")
-
 if __name__ == "__main__":
-    if sys.argv[1:] == ["--due"]:
-        out = os.environ.get("GITHUB_OUTPUT")
-        ok = due_now()
-        print("long video due:", ok)
-        if out:
-            open(out, "a").write(f"long={'yes' if ok else ''}\n")
-        sys.exit(0)
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=dt.datetime.now(plan.IST).date().isoformat())
     ap.add_argument("--series"); ap.add_argument("--dry-run", action="store_true"); ap.add_argument("--force", action="store_true")

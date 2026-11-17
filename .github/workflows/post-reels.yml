@@ -106,7 +106,7 @@ jobs:
       - uses: actions/checkout@v4
       - id: due
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "long=yes" >> "$GITHUB_OUTPUT"; else python3 pipeline/long_video.py --due; fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "long=yes" >> "$GITHUB_OUTPUT"; else python3 pipeline/long_due.py; fi
       - if: steps.due.outputs.long == 'yes'
         uses: actions/setup-python@v5
         with:
