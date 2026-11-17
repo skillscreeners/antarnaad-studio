@@ -299,7 +299,295 @@
   "added": "2026-11-16"
  },
  {
+  "id": "ai-hi-work-c84eee2c",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "आज का विचार:",
+  "lines": [
+   "अच्छे काम के लिए,",
+   "मेहनत ही काफी नहीं,",
+   "मन का साफ होना भी,",
+   "बहुत ज़रूरी है।"
+  ],
+  "subtitle": "For good work, hard work isn't enough; having a clear mind is also essential.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-e14ac805",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "सफलता का मंत्र:",
+  "lines": [
+   "नई चीज़ें सीखते रहो,",
+   "क्योंकि रुका हुआ पानी,",
+   "और ठहरा हुआ दिमाग,",
+   "दोनों काम नहीं आते।"
+  ],
+  "subtitle": "Keep learning new things, because stagnant water and a stagnant mind are both useless.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-23133f50",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "जीवन की सीख:",
+  "lines": [
+   "वक़्त का सम्मान करो,",
+   "तो मंज़िल खुद,",
+   "तुम्हारे पास चलकर,",
+   "करीब आ जाएगी।"
+  ],
+  "subtitle": "Respect time, and your destination will come closer to you on its own.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-6f77e678",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "सच्ची बात:",
+  "lines": [
+   "जब काम में ईमानदारी हो,",
+   "तो चेहरे पर चमक,",
+   "और दिल में सुकून,",
+   "अपने आप आ जाता है।"
+  ],
+  "subtitle": "When there is honesty in work, a glow on the face and peace in the heart come naturally.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-12aecf79",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "काम की बात:",
+  "lines": [
+   "शुरुआत तो सब करते हैं,",
+   "पर जीतता वही है,",
+   "जो काम को आख़िरी,",
+   "मुकाम तक पहुँचाता है।"
+  ],
+  "subtitle": "Everyone starts, but only the one who takes the work to the final finish line wins.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-473c3bf6",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "खास संदेश:",
+  "lines": [
+   "एक ही लक्ष्य चुनो,",
+   "सारा ध्यान वहीं लगाओ,",
+   "सफलता का यही,",
+   "सबसे सरल रास्ता है।"
+  ],
+  "subtitle": "Choose one goal, focus entirely on it; this is the simplest path to success.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-e47c853d",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "ज़रूरी बात:",
+  "lines": [
+   "अनुशासन कड़वा ज़रूर है,",
+   "लेकिन इसके फल,",
+   "हमेशा सबसे ज़्यादा,",
+   "मीठे होते हैं।"
+  ],
+  "subtitle": "Discipline may be bitter, but its fruits are always the sweetest.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-af56c72d",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "मिलकर चलो:",
+  "lines": [
+   "अकेले चलना आसान है,",
+   "पर दूर तक जाने के लिए,",
+   "अपनों का साथ और,",
+   "सहयोग ज़रूरी है।"
+  ],
+  "subtitle": "Walking alone is easy, but to go far, the support and cooperation of others is necessary.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-7ea8992f",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "याद रखें:",
+  "lines": [
+   "दिखावे के लिए नहीं,",
+   "गुणवत्ता के लिए काम करो,",
+   "दुनिया तुम्हारी कदर,",
+   "खुद करने लगेगी।"
+  ],
+  "subtitle": "Work for quality, not for show; the world will start valuing you on its own.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-0a80b77c",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "प्रयास करें:",
+  "lines": [
+   "छोटे-छोटे कदम उठाओ,",
+   "बस रुकना मत,",
+   "मंज़िल एक दिन,",
+   "तुम्हारे सामने खड़ी होगी।"
+  ],
+  "subtitle": "Take small steps, just don't stop; one day the destination will be standing before you.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-4d0d68be",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "मुस्कुराहट के साथ:",
+  "lines": [
+   "हर समस्या का हल,",
+   "मेहनत और हिम्मत है,",
+   "बस खुद पर भरोसा,",
+   "बनाए रखना।"
+  ],
+  "subtitle": "The solution to every problem is hard work and courage; just keep believing in yourself.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-hi-work-3b0e3154",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "अमल करें:",
+  "lines": [
+   "बोलने से ज़्यादा,",
+   "कर दिखाने में यकीन रखो,",
+   "क्योंकि दुनिया सुनने से,",
+   "ज़्यादा देखना पसंद करती है।"
+  ],
+  "subtitle": "Believe more in doing than in speaking, because the world prefers seeing over hearing.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-17"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-17T03:30:21+00:00"
+  "updated": "2026-11-17T06:40:15+00:00"
  }
 ]
