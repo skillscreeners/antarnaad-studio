@@ -587,7 +587,315 @@
   "added": "2026-11-17"
  },
  {
+  "id": "ai-en-life-2f605ce6",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Remember this:",
+  "lines": [
+   "Trust your talent.",
+   "You have the power",
+   "to change your world."
+  ],
+  "subtitle": "अपनी काबिलियत पर भरोसा रखें। आपके पास अपनी दुनिया बदलने की शक्ति है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-8c022868",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Just wait:",
+  "lines": [
+   "Good things grow",
+   "at their own pace.",
+   "Give it time."
+  ],
+  "subtitle": "अच्छी चीज़ें अपनी गति से बढ़ती हैं। थोड़ा समय दें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-a241fc6b",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Keep going:",
+  "lines": [
+   "Even a tiny spark",
+   "can light up",
+   "the darkest room."
+  ],
+  "subtitle": "एक छोटी सी चिंगारी भी घोर अंधेरे को मिटा सकती है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-972b17ae",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Breathe in:",
+  "lines": [
+   "A quiet heart",
+   "hears the best",
+   "answers."
+  ],
+  "subtitle": "एक शांत मन ही सबसे बेहतर उत्तर सुन पाता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-8164d8e1",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Look around:",
+  "lines": [
+   "Count your blessings.",
+   "Small joys build",
+   "a happy life."
+  ],
+  "subtitle": "अपनी खुशियों को गिनें। छोटी खुशियां ही जीवन को सुखी बनाती हैं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-5426db73",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Don't forget:",
+  "lines": [
+   "A gentle word",
+   "can heal a heart.",
+   "Be kind."
+  ],
+  "subtitle": "एक मीठा शब्द किसी का दिल जीत सकता है। दयालु बनें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-a9a89d52",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Stay strong:",
+  "lines": [
+   "You are tougher",
+   "than any problem",
+   "you face today."
+  ],
+  "subtitle": "आप आज की किसी भी समस्या से अधिक मजबूत हैं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-04936b3e",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Never stop:",
+  "lines": [
+   "Each mistake is",
+   "a lesson in disguise.",
+   "Learn and grow."
+  ],
+  "subtitle": "हर गलती एक छिपा हुआ सबक है। सीखें और आगे बढ़ें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-ceb1750e",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Think simple:",
+  "lines": [
+   "Less clutter",
+   "brings more peace",
+   "to your soul."
+  ],
+  "subtitle": "कम दिखावा आपके मन को अधिक शांति देता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-668f14e1",
+  "lang": "en",
+  "theme": "life",
+  "hook": "It is okay:",
+  "lines": [
+   "Every sunset ends.",
+   "Every morning offers",
+   "a fresh start."
+  ],
+  "subtitle": "हर सूर्यास्त के बाद एक नई सुबह नई शुरुआत लाती है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-bf68f811",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Focus now:",
+  "lines": [
+   "Eyes on the goal.",
+   "The noise around",
+   "does not matter."
+  ],
+  "subtitle": "अपने लक्ष्य पर ध्यान दें। आस-पास के शोर से कोई फर्क नहीं पड़ता।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-fdc8cfbd",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Help others:",
+  "lines": [
+   "Share your light.",
+   "The world needs",
+   "your unique spark."
+  ],
+  "subtitle": "अपनी अच्छाई फैलाएं। दुनिया को आपकी चमक की जरूरत है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-d13a17a0",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Believe it:",
+  "lines": [
+   "Rivers don't rush.",
+   "They reach the sea",
+   "by flowing on."
+  ],
+  "subtitle": "नदियाँ जल्दबाजी नहीं करतीं, फिर भी सागर तक पहुँच ही जाती हैं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
+  "id": "ai-en-life-3c7422e1",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Stay steady:",
+  "lines": [
+   "A storm passes.",
+   "The mountain",
+   "stands still."
+  ],
+  "subtitle": "तूफान गुजर जाता है, लेकिन पर्वत अपनी जगह स्थिर रहता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-17"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-17T12:50:26+00:00"
+  "updated": "2026-11-17T16:00:35+00:00"
  }
 ]
