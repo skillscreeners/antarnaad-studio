@@ -85,6 +85,15 @@ def meanings(items, lang):
                 out[m["id"]] = t
     except Exception as e:
         print(f"::warning::meanings from Gemini failed, using bank text: {e}")
+        return out
+    try:   # save so the reviewed text is reused and can be edited on github.com
+        import collect_stats
+        saved, sha = collect_stats.get_file("data/long_meanings.json")
+        saved = saved or {}
+        saved.update({q["id"]: out[q["id"]] for q in items if out.get(q["id"])})
+        collect_stats.put_file("data/long_meanings.json", saved, sha, "long video meanings")
+    except Exception as e:
+        print(f"::warning::meanings not saved: {e}")
     return out
 
 def wrap(text, f, maxw):
@@ -147,6 +156,8 @@ def build(date, series_name=None, out_dir="out"):
     title = title.replace("10", str(len(items)))
     d = os.path.join(out_dir, f"long-{date}"); os.makedirs(d, exist_ok=True)
     mean = meanings(items, lang)
+    for q in items:
+        print(f"  {q['id']}: {' / '.join(q['lines'])}\n     -> {mean.get(q['id'])}")
     voice = render.VOICES[lang]
     T = TEXT[lang]
     segs = []   # (image, seconds, audio array)
