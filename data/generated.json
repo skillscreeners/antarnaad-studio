@@ -895,7 +895,293 @@
   "added": "2026-11-17"
  },
  {
+  "id": "ai-hi-life-1cf4af85",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "याद रखिये:",
+  "lines": [
+   "ठोकर गिरना नहीं सिखाती,",
+   "बल्कि संभलना सिखाती है,",
+   "उठो और फिर से कदम बढ़ाओ।"
+  ],
+  "subtitle": "Stumbling doesn't teach you how to fall, it teaches you how to steady yourself. Rise and walk again.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-65dddf3e",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "मन की बात:",
+  "lines": [
+   "छोटी सी मदद किसी का,",
+   "पूरा दिन बदल सकती है,",
+   "इंसानियत ही सबसे बड़ा धन है।"
+  ],
+  "subtitle": "A small act of help can change someone's entire day; humanity is the greatest wealth.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-9531ef00",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सीखते रहिये:",
+  "lines": [
+   "किताब हो या ज़िंदगी,",
+   "हर पन्ना नया सिखाता है,",
+   "सीखने की प्यास बनाए रखें।"
+  ],
+  "subtitle": "Be it a book or life, every page teaches something new; keep your thirst for learning alive.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-1f43b203",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "धैर्य का फल:",
+  "lines": [
+   "फल को पकने में समय लगता है,",
+   "जल्दबाज़ी में स्वाद नहीं आता,",
+   "थोड़ा सब्र ही सफलता की चाबी है।"
+  ],
+  "subtitle": "Fruit takes time to ripen; haste lacks flavor. A little patience is the key to success.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-b87b29d1",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज का विचार:",
+  "lines": [
+   "शोर में जवाब नहीं मिलते,",
+   "शांत रहकर हल तलाशिए,",
+   "ठहरा हुआ पानी ही साफ़ दिखता है।"
+  ],
+  "subtitle": "Answers aren't found in noise; seek solutions in silence. Only still water remains clear.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-f3639d6c",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "जीवन मंत्र:",
+  "lines": [
+   "जो पास है उसकी कद्र करो,",
+   "सुकून वहीं से शुरू होगा,",
+   "शुक्रिया कहना एक कला है।"
+  ],
+  "subtitle": "Value what you have; peace begins there. Saying thank you is an art.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-05d2112a",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सादगी:",
+  "lines": [
+   "ज़रूरतें कम हों तो,",
+   "खुशियाँ ज़्यादा मिलती हैं,",
+   "सादा जीवन ही सबसे सुंदर है।"
+  ],
+  "subtitle": "When needs are few, joys are many. A simple life is the most beautiful.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-b7429ff8",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "उम्मीद की किरण:",
+  "lines": [
+   "पतझड़ के बाद ही,",
+   "नई पत्तियां आती हैं,",
+   "बुरा वक्त गुज़रने का इंतज़ार करो।"
+  ],
+  "subtitle": "Only after autumn do new leaves arrive; wait for the bad times to pass.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-5de15615",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "जीत की ओर:",
+  "lines": [
+   "हारने में कोई बुराई नहीं,",
+   "हार मान लेने में बुराई है,",
+   "एक बार और कोशिश करके देखो।"
+  ],
+  "subtitle": "There is no harm in losing; the harm is in giving up. Try one more time.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-dfc518f6",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "हौसला:",
+  "lines": [
+   "चट्टान सा इरादा रखो,",
+   "लहरें आती-जाती रहेंगी,",
+   "अपनी मंज़िल पर नज़र जमाए रखो।"
+  ],
+  "subtitle": "Have a rock-solid will; waves will come and go. Keep your eyes fixed on your goal.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-4bbb039a",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "नन्हीं शुरुआत:",
+  "lines": [
+   "बूंद-बूंद से ही सागर बनता है,",
+   "छोटी मेहनत भी एक दिन,",
+   "बड़ा फल ज़रूर देती है।"
+  ],
+  "subtitle": "Drops of water make an ocean; even small efforts will definitely yield great results one day.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-c2b4a5e1",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सुकून:",
+  "lines": [
+   "मुस्कुरा कर माफ़ कर दो,",
+   "बोझ अपने मन का हल्का करो,",
+   "शांति ही सबसे बड़ी दौलत है।"
+  ],
+  "subtitle": "Forgive with a smile and lighten your heart's burden; peace is the greatest wealth.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
+  "id": "ai-hi-life-eb4af411",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "अनमोल विचार:",
+  "lines": [
+   "बाहर की दुनिया जीतने से पहले,",
+   "अपने भीतर की जंग जीतिए,",
+   "आत्मविश्वास ही असली गहना है।"
+  ],
+  "subtitle": "Before conquering the outside world, win the battle within; self-confidence is the real jewel.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-20"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-20T09:50:10+00:00"
+  "updated": "2026-11-20T12:50:11+00:00"
  }
 ]
