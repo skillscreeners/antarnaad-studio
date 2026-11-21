@@ -1181,7 +1181,337 @@
   "added": "2026-11-20"
  },
  {
+  "id": "ai-en-life-ef26f665",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Look ahead:",
+  "lines": [
+   "Last page closed.",
+   "New ink is ready.",
+   "Write a better story."
+  ],
+  "subtitle": "पिछला पन्ना बंद करो। नई स्याही तैयार है। एक बेहतर कहानी लिखो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-ad221a41",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Stop and think:",
+  "lines": [
+   "Storms don't last.",
+   "Keep your inner sky",
+   "Clear and bright."
+  ],
+  "subtitle": "तूफान हमेशा नहीं रहते। अपने मन के आकाश को साफ और उज्ज्वल रखें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-1fd58d46",
+  "lang": "en",
+  "theme": "life",
+  "hook": "A little secret:",
+  "lines": [
+   "A thankful heart",
+   "Finds gold in",
+   "Everyday moments."
+  ],
+  "subtitle": "एक आभारी मन हर रोज के पलों में सोना ढूंढ लेता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-c1a2c14f",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Keep going:",
+  "lines": [
+   "The wind may blow.",
+   "The tree bows low,",
+   "But it never breaks."
+  ],
+  "subtitle": "हवा चल सकती है। पेड़ झुकता है, लेकिन कभी टूटता नहीं है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-3ca7ecc7",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Believe this:",
+  "lines": [
+   "Your own worth",
+   "Is not decided",
+   "By others' words."
+  ],
+  "subtitle": "आपकी अपनी कीमत दूसरों के शब्दों से तय नहीं होती।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-9fbdf3f3",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Wait for it:",
+  "lines": [
+   "Flowers don't race.",
+   "They bloom when",
+   "The sun is right."
+  ],
+  "subtitle": "फूल दौड़ते नहीं हैं। वे तभी खिलते हैं जब सूरज सही होता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-61f78098",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Try this today:",
+  "lines": [
+   "Plant a seed",
+   "Of a kind word.",
+   "Watch it grow."
+  ],
+  "subtitle": "एक दयालु शब्द का बीज बोएं। इसे बढ़ते हुए देखें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-3400b08e",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Never stop:",
+  "lines": [
+   "The world is a book.",
+   "Each day is a page.",
+   "Keep reading."
+  ],
+  "subtitle": "दुनिया एक किताब है। हर दिन एक पन्ना है। पढ़ते रहें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-747aac4a",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Life tip:",
+  "lines": [
+   "Collect moments,",
+   "Not just things.",
+   "Find joy in less."
+  ],
+  "subtitle": "पल इकट्ठा करें, केवल चीज़ें नहीं। कम में खुशी ढूंढें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-eea2d4d9",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Always remember:",
+  "lines": [
+   "The night is deep,",
+   "But the dawn",
+   "Is never late."
+  ],
+  "subtitle": "रात गहरी है, लेकिन भोर कभी देर से नहीं होती।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-9772d034",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Don't give up:",
+  "lines": [
+   "Dust your knees.",
+   "Fix your crown.",
+   "Walk ahead again."
+  ],
+  "subtitle": "अपने घुटने झाड़ें। अपना ताज ठीक करें। फिर से आगे बढ़ें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-d60af3bf",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Find peace:",
+  "lines": [
+   "Quiet the noise.",
+   "Listen to your soul.",
+   "The answer is there."
+  ],
+  "subtitle": "शोर को शांत करें। अपनी आत्मा की सुनें। उत्तर वहीं है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-050a64f7",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Listen closely:",
+  "lines": [
+   "You have a rhythm.",
+   "Dance to your beat,",
+   "Not to the crowd."
+  ],
+  "subtitle": "आपकी अपनी एक लय है। अपनी धुन पर नाचें, भीड़ की धुन पर नहीं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-3138f33c",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Stay steady:",
+  "lines": [
+   "Water carves rock",
+   "Not by force,",
+   "But by persistence."
+  ],
+  "subtitle": "पानी बल से नहीं, बल्कि निरंतरता से चट्टान को तराशता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
+  "id": "ai-en-life-6ea24898",
+  "lang": "en",
+  "theme": "life",
+  "hook": "One thought:",
+  "lines": [
+   "Be the mirror",
+   "That reflects back",
+   "The good in people."
+  ],
+  "subtitle": "वो दर्पण बनें जो लोगों की अच्छाई को वापस दिखाता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-21"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-21T06:40:17+00:00"
+  "updated": "2026-11-21T09:40:18+00:00"
  }
 ]
