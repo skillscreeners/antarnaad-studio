@@ -392,12 +392,18 @@ def _still_to_bg(im, q, out_png):
     Image.fromarray(finish(arr, rng_for(q["id"]), darken=0.32)).save(out_png)
 
 PHOTO_QUERIES = {
-    "work":      ["workshop", "carpenter", "farmer field", "pottery", "blacksmith", "desk notebook", "factory worker", "construction"],
-    "uplifting": ["sunrise mountains", "sunrise", "mountain valley", "morning forest", "sunrise sea"],
-    "calm":      ["misty forest", "lake mountains", "foggy hills", "river forest", "waterfall"],
-    "rising":    ["eagle", "mountain summit", "waves rocks", "storm clouds", "lighthouse"],
-    "raga":      ["sand dunes", "desert sunset", "river sunset", "temple sunset", "lotus flower", "banyan tree"],
-    "gentle":    ["night sky", "milky way", "moon", "stars mountains", "night lake"],
+    "work":      ["workshop tools", "pottery wheel clay", "farm field sunrise", "desk notebook", "wooden workbench", "library books",
+                  "bridge construction", "harvest wheat", "loom weaving", "typewriter", "sailboat harbor", "ladder sky"],
+    "uplifting": ["sunrise mountains", "sunrise", "mountain valley", "morning forest", "sunrise sea", "sunflower field",
+                  "rainbow landscape", "golden hour meadow", "hot air balloon", "alpine lake morning"],
+    "calm":      ["misty forest", "lake mountains", "foggy hills", "river forest", "waterfall", "tea plantation",
+                  "rice terraces", "bamboo forest", "calm lake reflection", "snow forest"],
+    "rising":    ["eagle", "mountain summit", "waves rocks", "storm clouds", "lighthouse", "lightning sky",
+                  "cliff ocean", "volcano", "canyon", "glacier"],
+    "raga":      ["sand dunes", "desert sunset", "river sunset", "temple sunset", "lotus flower", "banyan tree",
+                  "himalaya", "oil lamp", "peacock", "ganga ghat"],
+    "gentle":    ["night sky", "milky way", "moon", "stars mountains", "night lake", "aurora",
+                  "fireflies forest", "crescent moon", "dew drops", "candle light"],
 }
 
 PHOTO_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "photos")
@@ -419,19 +425,44 @@ def portrait_background(q, out_png):
             return True
     return False
 
+LAST = {}   # what this render used (photo, music), recorded in data/history.json by run_slot
+
+def _history():
+    try:
+        return json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "history.json"), encoding="utf-8"))
+    except Exception:
+        return []
+
+def _least_used(cands, key):
+    """Never-used first; otherwise the one used longest ago (so repeats are as rare as possible)."""
+    last = {}
+    for i, h in enumerate(_history()):
+        if h.get(key):
+            last[h[key]] = i
+    return sorted(cands, key=lambda c: last.get(c, -1))[0] if cands else None
+
 def library_background(q, out_png):
-    """Real CC0 photo from assets/photos (filled by the 'Harvest background photos' workflow)."""
-    pool = "work" if q.get("theme") == "work" else q.get("mood", "calm")
-    folder = os.path.join(PHOTO_DIR, pool)
+    """Reviewed CC0 photo from assets/photos. Each photo is used once before any repeats: unused photos of
+    the reel's mood first, then any unused photo, then the one used longest ago."""
     rej_path = os.path.join(PHOTO_DIR, "rejected.txt")
     rejected = {l.strip() for l in open(rej_path) if l.strip() and not l.startswith("#")} if os.path.exists(rej_path) else set()
-    files = sorted(f for f in os.listdir(folder) if f.endswith(".jpg") and f[:-4] not in rejected) if os.path.isdir(folder) else []
-    if not files:
+    def photos(pool):
+        folder = os.path.join(PHOTO_DIR, pool)
+        return [f"{pool}/{f}" for f in sorted(os.listdir(folder)) if f.endswith(".jpg") and f[:-4] not in rejected] \
+            if os.path.isdir(folder) else []
+    pools = [p for p in sorted(os.listdir(PHOTO_DIR)) if os.path.isdir(os.path.join(PHOTO_DIR, p))]
+    want = "work" if q.get("theme") == "work" else q.get("mood", "calm")
+    used = {h.get("photo") for h in _history()}
+    mine = photos(want)
+    everything = [x for p in pools if p != "work" or want == "work" for x in photos(p)]
+    unused_mine = [x for x in mine if x not in used]
+    unused_any = [x for x in everything if x not in used]
+    pick = (unused_mine and unused_mine[0]) or (unused_any and unused_any[0]) or _least_used(mine or everything, "photo")
+    if not pick:
         return False
-    _, seed = _query_for(q)
-    name = files[(seed >> 4) % len(files)]
-    _still_to_bg(Image.open(os.path.join(folder, name)).convert("RGB"), q, out_png)
-    print(f"  background: library photo {pool}/{name}", flush=True)
+    _still_to_bg(Image.open(os.path.join(PHOTO_DIR, pick)).convert("RGB"), q, out_png)
+    LAST["photo"] = pick
+    print(f"  background: library photo {pick}" + ("" if pick in unused_mine + unused_any else " (all photos used once; oldest reused)"), flush=True)
     return True
 
 def openverse_background(q, out_png):
@@ -567,6 +598,28 @@ MOODS = {
     "gentle":    ([[60, 64, 67], [57, 60, 64], [53, 57, 60], [55, 59, 62]], 4.0, [72, 67, 76, 67, 74, 67, 72, 71], 1.0, None),
 }
 
+MUSIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "music")
+
+def track_music(q, path, dur):
+    """Owner-supplied tracks (e.g. YouTube Audio Library, free to use and monetize) in assets/music or
+    assets/music/<mood>/. Least recently used first. Returns False when there are none."""
+    if not os.path.isdir(MUSIC_DIR):
+        return False
+    exts = (".mp3", ".m4a", ".wav", ".ogg")
+    mood_dir = os.path.join(MUSIC_DIR, q.get("mood", ""))
+    cands = [f"{q.get('mood')}/{f}" for f in sorted(os.listdir(mood_dir)) if f.endswith(exts)] if os.path.isdir(mood_dir) else []
+    cands = cands or [f for f in sorted(os.listdir(MUSIC_DIR)) if f.endswith(exts)]
+    pick = _least_used(cands, "music")
+    if not pick:
+        return False
+    fade = max(0.0, dur - 2.0)
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", "3", "-i", os.path.join(MUSIC_DIR, pick), "-t", f"{dur:.2f}",
+                    "-af", f"afade=t=in:d=0.8,afade=t=out:st={fade:.2f}:d=2,loudnorm=I=-16:TP=-1.5",
+                    "-ar", str(SR), "-ac", "2", path], check=True)
+    LAST["music"] = pick
+    print(f"  music: {pick}", flush=True)
+    return True
+
 def music(mood, path, dur=DUR):
     chords, cl, mel, step, drone = MOODS[mood]
     buf = np.zeros(int((dur + 3) * SR))
@@ -683,6 +736,7 @@ def mix(voice, music_path, out_path):
 # ------------------------------------------------------------------ video
 def render_video(q, d, out_mp4, use_voice=True):
     os.makedirs(d, exist_ok=True)
+    LAST.clear(); LAST["voice"] = "on" if use_voice else "off"
     paths, n = build_overlays(q, d)
     bg = f"{d}/bg.png"
     tl = None
@@ -691,9 +745,13 @@ def render_video(q, d, out_mp4, use_voice=True):
             vbuf, tl = voice_track(q, d, n)
         except Exception as e:  # no internet / voice service down: keep the reel, skip narration
             print(f"  voice-over skipped for {q['id']}: {e}", flush=True)
-    if tl is None:
-        tl = {"hook": (0.2, 2.2), "lines": [1.8 + i * 1.3 for i in range(n)], "dur": DUR}
-        tl["credit"] = tl["lines"][-1] + 1.6; tl["cta"] = tl["credit"] + 2.4
+    if tl is None:   # music only: lines appear at a comfortable reading pace
+        t, lines_t = 2.4, []
+        for l in q["lines"]:
+            lines_t.append(t); t += 1.1 + 0.055 * len(l)
+        tl = {"hook": (0.2, 2.3), "lines": lines_t}
+        tl["credit"] = t + 0.4; tl["cta"] = tl["credit"] + 2.2
+        tl["dur"] = float(max(12.0, tl["cta"] + 3.8))
     dur = tl["dur"]
     bg_video = f"{d}/bg.mp4"
     # Stock video is off by default: its clips are not reviewed and can show people (see assets/photos policy).
@@ -703,7 +761,9 @@ def render_video(q, d, out_mp4, use_voice=True):
     if not use_video and not portrait_background(q, bg) and not gemini_background(q, bg) \
             and not library_background(q, bg):
         Image.fromarray(SCENES[q["scene"]](q["id"] + q.get("date", "") + q["scene"])).save(bg)
-    wav = f"{d}/music.wav"; music(q["mood"], wav, dur)
+    wav = f"{d}/music.wav"
+    if not track_music(q, wav, dur):
+        music(q["mood"], wav, dur)
     if use_voice and "vbuf" in locals():
         mixed = f"{d}/mix.wav"; mix(vbuf, wav, mixed); wav = mixed
     line_t, credit_t, cta_t = tl["lines"], tl["credit"], tl["cta"]

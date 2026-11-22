@@ -16,12 +16,20 @@ import plan, render
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "out")
 
+def voice_on(date, slot):
+    """ANTARNAAD_VOICE_MODE: off (music only, default), on, or mix (every other slot)."""
+    mode = os.environ.get("ANTARNAAD_VOICE_MODE", "off")
+    if os.environ.get("ANTARNAAD_NO_VOICE") == "1" or mode == "off":
+        return False
+    return mode == "on" or slot % 2 == 0
+
 def build(date, slot):
     q = plan.quote_for(date, slot)
     work = os.path.join(OUT, "_work", f"{date}_s{slot}"); os.makedirs(work, exist_ok=True)
     mp4 = os.path.join(OUT, f"{date}_slot{slot}_{q['id']}.mp4")
-    render.render_video(q, work, mp4, use_voice=os.environ.get("ANTARNAAD_NO_VOICE") != "1")
+    render.render_video(q, work, mp4, use_voice=voice_on(date, slot))
     meta = render.metadata(q, date)
+    meta["used"] = dict(render.LAST)
     meta["file"] = os.path.basename(mp4)
     json.dump(meta, open(mp4[:-4] + ".json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print(f"rendered slot {slot}: {q['id']} ({q['lang']}) -> {meta['file']}", flush=True)
@@ -54,7 +62,7 @@ def post(mp4, meta):
                     "".join(f"- {k}: {v}\n" for k, v in results.items()) + "\n")
     return not failed, results
 
-def record_history(date, slot, quote_id, video):
+def record_history(date, slot, quote_id, video, used=None):
     """Append this post to data/history.json in the repo (used by the feedback loop)."""
     import collect_stats
     for attempt in range(3):
@@ -97,7 +105,7 @@ def main():
     if track and str(results.get("youtube", "")).startswith("https://"):
         due.mark_posted(date, slot, os.environ.get("GITHUB_SHA", ""))
         try:
-            record_history(date, slot, meta["id"], results["youtube"].rsplit("/", 1)[-1])
+            record_history(date, slot, meta["id"], results["youtube"].rsplit("/", 1)[-1], meta.get("used"))
         except Exception as e:
             print(f"::warning::history not recorded: {e}")
     if "uploadLimitExceeded" in str(results.get("youtube", "")):
