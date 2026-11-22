@@ -121,3 +121,15 @@ Exact words from a named source only. No photos or logos; no politics, controver
 `data/special_days.json` lists dated reels that replace the normal slots that day (2–3 in the morning slots):
 `{"2026-11-14": {"name": "Children's Day", "slots": {"1": {...quote...}, "2": {"ref": "<existing quote id>"}}}}`.
 Titles become "<Name> Special | …". Filled through Jan 2027; extend it a few months ahead.
+
+## Voice and music
+- Reels are music-only by default (text appears line by line). Repo variable `ANTARNAAD_VOICE_MODE`: `off` (default),
+  `on` (Indian AI voice), `mix` (every other slot).
+- Own music: put tracks in `assets/music/` (or `assets/music/<mood>/`, moods: uplifting, calm, rising, raga, gentle).
+  Use only music you may monetize, e.g. YouTube Studio → Audio Library (no attribution needed). Never film songs:
+  Bollywood tracks get Content ID claims and the label takes the revenue. Least recently used track is picked.
+
+## Daily news reels
+`pipeline/news.py` reads India's top headlines every morning (06:00–13:00 IST), picks up to two uplifting events
+(no politics, crime, accidents, deaths, war, markets) and matches each to an unused verified quote. They post at
+14:40 and 17:40 with the headline and link in the description. Choices are stored in `data/trending.json`.
