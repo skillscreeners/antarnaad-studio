@@ -4242,5 +4242,198 @@
    "#Discipline"
   ],
   "mood": "rising"
+ },
+ {
+  "id": "nana-joinhands",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Nana Patekar on service:",
+  "lines": [
+   "Only one or two people",
+   "cannot do this work —",
+   "many have to",
+   "join hands."
+  ],
+  "subtitle": "यह काम एक-दो लोग नहीं कर सकते, कई लोगों को हाथ मिलाना होगा।",
+  "author": "Nana Patekar",
+  "author_en": "Nana Patekar",
+  "source": "Interview, Governance Now, 14 Mar 2016",
+  "topic_tags": [
+   "#NanaPatekar",
+   "#NaamFoundation",
+   "#Teamwork"
+  ],
+  "mood": "uplifting"
+ },
+ {
+  "id": "nana-joinhands-hi",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "नाना पाटेकर ने कहा:",
+  "lines": [
+   "यह काम",
+   "एक-दो लोग नहीं कर सकते,",
+   "कई लोगों को",
+   "हाथ मिलाना होगा।"
+  ],
+  "subtitle": "Only one or two people cannot do this work; many have to join hands.",
+  "author": "नाना पाटेकर",
+  "author_en": "Nana Patekar",
+  "source": "Interview, Governance Now, 14 Mar 2016 (translated)",
+  "topic_tags": [
+   "#NanaPatekar",
+   "#NaamFoundation",
+   "#Seva"
+  ],
+  "mood": "uplifting"
+ },
+ {
+  "id": "nana-selfrespect",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Nana Patekar, on farmers:",
+  "lines": [
+   "Self-respect",
+   "makes all the difference."
+  ],
+  "subtitle": "आत्मसम्मान ही सबसे बड़ा फ़र्क़ लाता है।",
+  "author": "Nana Patekar",
+  "author_en": "Nana Patekar",
+  "source": "Interview, Governance Now, 14 Mar 2016",
+  "topic_tags": [
+   "#NanaPatekar",
+   "#SelfRespect",
+   "#Farmers"
+  ],
+  "mood": "calm"
+ },
+ {
+  "id": "nana-selfrespect-hi",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "नाना पाटेकर की बात:",
+  "lines": [
+   "आत्मसम्मान ही",
+   "सबसे बड़ा",
+   "फ़र्क़ लाता है।"
+  ],
+  "subtitle": "Self-respect makes all the difference.",
+  "author": "नाना पाटेकर",
+  "author_en": "Nana Patekar",
+  "source": "Interview, Governance Now, 14 Mar 2016 (translated)",
+  "topic_tags": [
+   "#NanaPatekar",
+   "#Atmasamman",
+   "#Suvichar"
+  ],
+  "mood": "calm"
+ },
+ {
+  "id": "neeraj-heart",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Neeraj Chopra's advice:",
+  "lines": [
+   "No matter what facilities you have,",
+   "do it with your heart.",
+   "The main thing is",
+   "your dedication and hard work."
+  ],
+  "subtitle": "सुविधाएँ कैसी भी हों, दिल से करो; असली चीज़ लगन और मेहनत है।",
+  "author": "Neeraj Chopra",
+  "author_en": "Neeraj Chopra",
+  "source": "Lokmat Times, 17 Aug 2024",
+  "topic_tags": [
+   "#NeerajChopra",
+   "#HardWork",
+   "#Athletics"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "neeraj-heart-hi",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "नीरज चोपड़ा की सलाह:",
+  "lines": [
+   "सुविधाएँ कैसी भी हों,",
+   "दिल से करो।",
+   "असली चीज़ है",
+   "लगन और मेहनत।"
+  ],
+  "subtitle": "No matter what facilities you have, do it with your heart.",
+  "author": "नीरज चोपड़ा",
+  "author_en": "Neeraj Chopra",
+  "source": "Lokmat Times, 17 Aug 2024 (translated)",
+  "topic_tags": [
+   "#NeerajChopra",
+   "#Mehnat",
+   "#GoldenBoy"
+  ],
+  "mood": "rising"
+ },
+ {
+  "id": "neeraj-keepworking",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Neeraj Chopra to young athletes:",
+  "lines": [
+   "Whatever facility you have,",
+   "just keep working.",
+   "There will be a time",
+   "when you will win."
+  ],
+  "subtitle": "जो सुविधा है उसी में मेहनत करते रहो, एक दिन जीत ज़रूर होगी।",
+  "author": "Neeraj Chopra",
+  "author_en": "Neeraj Chopra",
+  "source": "Lokmat Times, 17 Aug 2024",
+  "topic_tags": [
+   "#NeerajChopra",
+   "#KeepGoing",
+   "#Javelin"
+  ],
+  "mood": "uplifting"
+ },
+ {
+  "id": "dhoni-process",
+  "lang": "en",
+  "theme": "work",
+  "hook": "MS Dhoni before the 2011 World Cup:",
+  "lines": [
+   "We have to think",
+   "of the process",
+   "more than the result."
+  ],
+  "subtitle": "नतीजे से ज़्यादा प्रक्रिया पर ध्यान दो।",
+  "author": "MS Dhoni",
+  "author_en": "MS Dhoni",
+  "source": "Press conference, Dhaka, 18 Feb 2011 (BCCI)",
+  "topic_tags": [
+   "#MSDhoni",
+   "#CaptainCool",
+   "#Process"
+  ],
+  "mood": "calm"
+ },
+ {
+  "id": "dhoni-process-hi",
+  "lang": "hi",
+  "theme": "work",
+  "hook": "धोनी का मंत्र:",
+  "lines": [
+   "नतीजे से ज़्यादा",
+   "प्रक्रिया के बारे में",
+   "सोचना होगा।"
+  ],
+  "subtitle": "We have to think of the process more than the result.",
+  "author": "महेंद्र सिंह धोनी",
+  "author_en": "MS Dhoni",
+  "source": "Press conference, Dhaka, 18 Feb 2011 (translated)",
+  "topic_tags": [
+   "#MSDhoni",
+   "#CaptainCool",
+   "#Mehnat"
+  ],
+  "mood": "calm"
  }
 ]
