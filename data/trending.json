@@ -1,1 +1,53 @@
-{}
+{
+ "2026-11-22": [
+  {
+   "id": "epictetus-nothing-great",
+   "lang": "en",
+   "hook": "NASA Voyager 1 reaches historic milestone:",
+   "lines": [
+    "No great thing",
+    "is produced",
+    "suddenly."
+   ],
+   "subtitle": "कोई भी बड़ी चीज़ रातों-रात नहीं बनती।",
+   "author": "Epictetus",
+   "author_en": "Epictetus",
+   "source": "Discourses, Book 1.15",
+   "topic_tags": [
+    "#Epictetus",
+    "#Patience",
+    "#InTheNews"
+   ],
+   "theme": "work",
+   "news": {
+    "title": "NASA Voyager 1 Spacecraft Reaches Historic One Light-Day Distance Milestone From Earth - CASRAI",
+    "source": "CASRAI",
+    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMG5UdHpfM3BRdjhiMzlxNlczVXdXcUxyM0F6RDNKLWFKaTBoQ1MzRmxBVTdOLV9MTExXNUNDSFRVUmI2a21KeUxsLWNLWlFsaUJSbHF3VDcwbGYxT0cyRTlNVFlGNFNMWVhkZzliejJrTFdPMUZZeTlJbTl6Vk93T0tqTGNCLUNCNGpqVVJRMFpZMml4UGlscmY5QUozdw?oc=5"
+   }
+  },
+  {
+   "id": "gita-3-21",
+   "lang": "hi",
+   "hook": "गोवा में इंटरनेशनल फिल्म फेस्टिवल का आगाज़:",
+   "lines": [
+    "यद्यदाचरति श्रेष्ठ:",
+    "तत्तदेवेतरो जनः।"
+   ],
+   "subtitle": "बड़े लोग जैसा करते हैं, बाकी लोग वैसा ही करते हैं।",
+   "author": "श्रीमद्भगवद्गीता 3.21",
+   "author_en": "Bhagavad Gita 3.21",
+   "source": "Bhagavad Gita, Chapter 3, Verse 21",
+   "topic_tags": [
+    "#BhagavadGita",
+    "#Leadership",
+    "#InTheNews"
+   ],
+   "theme": "work",
+   "news": {
+    "title": "‘Ramayana’ Star Sai Pallavi, Ravi Kishan’s ‘Spider-Man’ Anecdote, Grammy Winner Ricky Kej Light Up International Film Festival of India Opening in Goa - Variety",
+    "source": "Variety",
+    "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOR3BTSHAwQUF0RHU5VC1CdDFHelFINV9vWU1BVEJpVEtaaUt4NzRJbjg4NGhTU0dEaGJrV0tsQkJQUTlEYVIxUVV1Zm9qMVdmaVd4dnh4N1BiMzZrT2JCaHJqZWstTmEyVDBkR3VadFJldVU4NlQ0R2FBYnNVcFVudWZmeHBSUkhpUnVBOVBRdUZIdm1iVEZLOGg5YVY5aXJaWEtyYw?oc=5"
+   }
+  }
+ ]
+}
