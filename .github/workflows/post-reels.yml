@@ -84,6 +84,12 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python3 pipeline/refill.py
+      - name: Pick today's news reels (mornings, once a day)
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 pipeline/news.py
 
   long:
     # weekly long video (Sundays 11:00 IST): pipeline/long_video.py
@@ -142,7 +148,9 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{ github.token }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 pipeline/refill.py --force ${{ inputs.refill == 'dry' && '--dry' || '' }}
+        run: |
+          if [ "${{ inputs.refill }}" = "news" ]; then python3 pipeline/news.py --force --dry
+          else python3 pipeline/refill.py --force ${{ inputs.refill == 'dry' && '--dry' || '' }}; fi
 
   mark:
     if: ${{ github.event_name == 'workflow_dispatch' && inputs.mark_posted != '' }}

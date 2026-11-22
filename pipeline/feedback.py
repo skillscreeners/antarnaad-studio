@@ -8,7 +8,7 @@ average of their posts' scores, so "similar content" (same author, same theme) i
 Quotes that were never posted get an exploration bonus so new material is still tried, and a quote
 that was ever posted is never used again (data/generated.json keeps the supply topped up).
 """
-import datetime as dt, json, os, random
+import datetime as dt, json, os, random, re
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 COOLDOWN_DAYS = 7
@@ -86,16 +86,20 @@ def used_ids():
     used |= set(_load("legacy_used.json", []))
     return used
 
+def base_id(qid):
+    """A quote and its translation share a base id (e.g. kalam-shine / kalam-shine-hi): only one is ever posted."""
+    return re.sub(r"-(hi|en)$", "", qid or "")
+
 def pick(pool, date, slot, used_today=(), authors_today=()):
     """Choose a quote from pool for this slot, or None to fall back to the fixed rotation."""
     exp = expected_scores(pool)
     # Unique reels only: a quote that was ever posted is never chosen again.
-    used = used_ids() | set(used_today)
+    used = {base_id(u) for u in used_ids() | set(used_today)}
     crowded = {a for a in authors_today
                if list(authors_today).count(a) >= (MAX_ORIGINALS_DAY if a == "Antarnaad" else MAX_PER_AUTHOR_DAY)}
-    fresh = [q for q in pool if q["id"] not in used and q.get("author_en") not in crowded]
+    fresh = [q for q in pool if base_id(q["id"]) not in used and q.get("author_en") not in crowded]
     if not fresh:
-        fresh = [q for q in pool if q["id"] not in used]
+        fresh = [q for q in pool if base_id(q["id"]) not in used]
     if not fresh:
         print(f"::warning::no unused quote left for {pool[0]['lang']}/{pool[0].get('theme', 'life')}: repeating the oldest one")
         last_used = {}

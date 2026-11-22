@@ -812,17 +812,39 @@ def metadata(q, date):
     lang = q["lang"]
     yt_tags = [BRAND[0]] + (WORK if q.get("theme") == "work" else BROAD)[lang][:2] + q["topic_tags"][:1]
     ig_tags = BRAND + (WORK if q.get("theme") == "work" else BROAD)[lang] + q["topic_tags"]
+    # Titles lead with the words themselves (what viewers react to), then a searchable name
+    def head(n):
+        parts = []
+        for l in q["lines"][:n]:
+            l = l.strip()
+            if parts and lang == "en" and not parts[-1].endswith((".", "!", "?", ";", ":")) and l[:1].isupper() \
+                    and not l.startswith(("I ", "I'")):
+                l = l[0].lower() + l[1:]
+            parts.append(l)
+        return " ".join(parts).rstrip(",.;:।—- ")
+    def head_fit():
+        for n in (len(q["lines"]), 2, 1):
+            if len(head(n)) <= 70:
+                return head(n) + ("" if n == len(q["lines"]) else "…")
+        return head(1)[:68] + "…"
+    original = q["author_en"] == "Antarnaad"
     if lang == "hi":
-        title = f"{q['author_en']} Suvichar | {q['lines'][0].rstrip(',')} #shorts"
+        who = "Hindi Suvichar" if original else ("Kabir Ke Dohe" if "Kabir" in q["author_en"] else f"{q['author_en']} Suvichar")
+        title = f"{head_fit()} | {who} #shorts"
         ask = "क्या आप सहमत हैं? कमेंट में बताइए 👇"
     else:
-        title = f"{q['author_en']} Quote: {q['lines'][0].rstrip(',.')}… #shorts"
+        who = "Motivational Quote" if original else f"{q['author_en']} Quote"
+        title = f"{head_fit()} | {who} #shorts"
         ask = "What does this line mean to you? Comment below 👇"
     if q.get("special"):
-        title = f"{q['special']} Special | {q['lines'][0].rstrip(',.;')} – {q['author_en']} #shorts"
+        title = f"{q['special']} | {head(1)} – {q['author_en']} #shorts"
+    if q.get("news"):
+        title = f"{q['hook'].rstrip(':')} | {head(1)} #shorts"
     title = title[:95]
     other = q.get("subtitle") or ""
-    yt_desc = (f"“{quote}” — {q['author_en']}, {q['source']}\n\n" + (other + "\n\n" if other else "") +
+    news = (f"In the news: {q['news']['title']} ({q['news'].get('source', '')})\n{q['news'].get('link', '')}\n\n"
+            if q.get("news") else "")
+    yt_desc = (news + f"“{quote}” — {q['author_en']}, {q['source']}\n\n" + (other + "\n\n" if other else "") +
                f"{ask}\nSubscribe to Antarnaad for daily motivation in English & Hindi.\n\n" + " ".join(yt_tags))
     ig_caption = (("क्या आप सहमत हैं?\n\n" if lang == "hi" else "Do you agree with this?\n\n") +
                   f"“{quote}” — {q['author_en']}\n" + (f"\n{other}\n" if other else "") +

@@ -15,6 +15,10 @@ IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 _TIMES = ["07:10", "08:40", "10:10", "11:40", "13:10", "14:40", "16:10", "17:40", "19:10", "20:40"]
 SLOTS = list(range(1, len(_TIMES) + 1))
 NEWS_SLOT = 6   # "In the News": uses data/trending.json[date] when present
+NEWS_SLOTS = [6, 8]   # 14:40 and 17:40: up to two reels tied to the day's news (pipeline/news.py)
+
+def _as_list(x):
+    return x if isinstance(x, list) else [x]
 _P = ["Subah ka Vichar", "Global Greats", "Indian Icons", "Life Lessons"]
 PILLARS = {s: ("In the News" if s == NEWS_SLOT else _P[(s - 1) % len(_P)]) for s in SLOTS}
 _M = ["uplifting", "calm", "raga", "gentle", "rising"]
@@ -99,9 +103,10 @@ def quote_for_uncached(date, slot):
     special = _special(date).get(str(slot))
     if special:
         q = dict(special); q.setdefault("theme", "life"); q["special"] = q.pop("special_name", None) or _special_name(date)
-    elif slot == NEWS_SLOT and date.isoformat() in trending:
-        q = dict(trending[date.isoformat()])
-        q.setdefault("lang", "en")
+    elif slot in NEWS_SLOTS and date.isoformat() in trending and \
+            NEWS_SLOTS.index(slot) < len(_as_list(trending[date.isoformat()])):
+        q = dict(_as_list(trending[date.isoformat()])[NEWS_SLOTS.index(slot)])
+        q.setdefault("lang", "en"); q.setdefault("theme", "life")
     else:
         key = slot_pool(date, slot)
         pool = [q for q in _bank() if (q["lang"], q.get("theme", "life")) == key]
