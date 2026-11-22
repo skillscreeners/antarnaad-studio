@@ -36,7 +36,7 @@ def prompt(lang, theme, avoid):
             + " | ".join(avoid[-80:]) +
             '. Return only JSON: [{"hook": "...", "lines": ["...", "..."], "subtitle": "..."}]')
 
-CANDIDATES = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-3-flash-preview", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"]
+CANDIDATES = ["gemini-3-flash-preview", "gemini-flash-latest", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"]
 
 def ask_gemini(text):
     """Try a few text models (busy or retired models answer 503/404/429) with a short retry each."""
