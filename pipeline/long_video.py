@@ -147,6 +147,27 @@ def card(bg, header, lines, meaning, lang, meaning_label, credit):
     draw_centered(d, HANDLE, font(FONT_MED, 30), H - 70, (220, 210, 190), "en")
     return im
 
+def thumbnail(bg, title, items, lang, path):
+    """1280x720: big title, gold 'with meaning' badge, one short line from the series."""
+    im = bg.copy().resize((1280, 720)); d = ImageDraw.Draw(im)
+    title = title.replace("अर्थ सहित", "").strip()
+    words = title.split(); half = (len(words) + 1) // 2
+    rows = [" ".join(words[:half]), " ".join(words[half:])] if len(title) > 18 else [title]
+    size = 120
+    while size > 50 and any(font(FONT_BOLD, size).getlength(r) > 1180 for r in rows):
+        size -= 4
+    f = font(FONT_BOLD, size); y = 120
+    for r in rows:
+        bb = d.textbbox((0, 0), r, font=f, language=lang); x = (1280 - (bb[2] - bb[0])) / 2 - bb[0]
+        d.text((x, y), r, font=f, fill=CREAM, language=lang, stroke_width=6, stroke_fill=(10, 8, 25))
+        y += int(size * 1.25)
+    badge = "अर्थ सहित" if lang == "hi" else "Explained simply"
+    fb = font(FONT_BOLD, 58); bw = fb.getlength(badge)
+    d.rounded_rectangle(((1280 - bw) / 2 - 30, y + 20, (1280 + bw) / 2 + 30, y + 110), 24, fill=GOLD)
+    d.text(((1280 - bw) / 2, y + 28), badge, font=fb, fill=(25, 15, 5), language=lang)
+    d.text((40, 660), "ANTARNAAD • अंतर्नाद", font=font(FONT_MED, 34), fill=GOLD, language="hi")
+    im.convert("RGB").save(path, quality=92)
+
 def build(date, series_name=None, out_dir="out"):
     series = series_for(date, series_name)
     sid, lang, title, authors, en_title = series
@@ -201,6 +222,7 @@ def build(date, series_name=None, out_dir="out"):
                     "-i", f"{d}/audio.wav", "-vf", "fps=30,format=yuv420p", "-c:v", "libx264", "-preset", "veryfast",
                     "-crf", "22", "-tune", "stillimage", "-c:a", "aac", "-b:a", "160k", "-shortest", out], check=True)
 
+    thumbnail(bg0, title, items, lang, out[:-4] + "_thumb.jpg")
     names = ", ".join(dict.fromkeys(q["author_en"] for q in items))
     yt_title = (f"{title} | {en_title} | Antarnaad" if lang == "hi" else f"{title} | {en_title} | Antarnaad")[:100]
     intro = (f"{title}। हर दोहा/विचार सरल अर्थ के साथ — रोज़मर्रा की ज़िंदगी में अपनाने के लिए।" if lang == "hi"
@@ -232,4 +254,8 @@ if __name__ == "__main__":
     import publish
     vid = publish.youtube_upload(out, meta)
     print(f"youtube: https://youtu.be/{vid}")
+    try:
+        publish.youtube_thumbnail(vid, out[:-4] + "_thumb.jpg"); print("thumbnail set")
+    except Exception as e:
+        print(f"::warning::thumbnail not set: {e}")
     due._make_tag(f"posted-{tag}", os.environ.get("GITHUB_SHA", ""))

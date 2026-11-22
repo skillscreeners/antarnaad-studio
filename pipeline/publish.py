@@ -29,6 +29,19 @@ def youtube_upload(video_path, meta):
         _, resp = req.next_chunk()
     return resp["id"]
 
+def youtube_thumbnail(video_id, image_path):
+    """Custom thumbnail (needs a verified channel)."""
+    from google.oauth2.credentials import Credentials
+    from google.auth.transport.requests import Request
+    from googleapiclient.discovery import build
+    from googleapiclient.http import MediaFileUpload
+    creds = Credentials(None, refresh_token=os.environ["YT_REFRESH_TOKEN"], token_uri="https://oauth2.googleapis.com/token",
+                        client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"],
+                        scopes=["https://www.googleapis.com/auth/youtube.upload"])
+    creds.refresh(Request())
+    yt = build("youtube", "v3", credentials=creds, cache_discovery=False)
+    yt.thumbnails().set(videoId=video_id, media_body=MediaFileUpload(image_path, mimetype="image/jpeg")).execute()
+
 def instagram_publish(video_path, caption):
     token, uid = os.environ["IG_ACCESS_TOKEN"], os.environ["IG_USER_ID"]
     ver = os.environ.get("IG_GRAPH_VERSION", "v21.0")
