@@ -655,8 +655,8 @@ def music(mood, path, dur=DUR):
 # Indian neural voices (Microsoft Edge TTS, free, needs internet). Override with env vars.
 VOICES = {"hi": os.environ.get("ANTARNAAD_VOICE_HI", "hi-IN-MadhurNeural"),
           "en": os.environ.get("ANTARNAAD_VOICE_EN", "en-IN-PrabhatNeural")}
-VOICE_RATE = os.environ.get("ANTARNAAD_VOICE_RATE", "-12%")   # calm, unhurried delivery
-VOICE_PITCH = os.environ.get("ANTARNAAD_VOICE_PITCH", "-2Hz")
+VOICE_RATE = os.environ.get("ANTARNAAD_VOICE_RATE", "+5%")   # natural, lively pace (owner: -12% felt sluggish)
+VOICE_PITCH = os.environ.get("ANTARNAAD_VOICE_PITCH", "+0Hz")
 FAKE_VOICE = os.environ.get("ANTARNAAD_FAKE_VOICE") == "1"     # offline testing only
 
 def _words(text):
@@ -746,12 +746,12 @@ def render_video(q, d, out_mp4, use_voice=True):
         except Exception as e:  # no internet / voice service down: keep the reel, skip narration
             print(f"  voice-over skipped for {q['id']}: {e}", flush=True)
     if tl is None:   # music only: lines appear at a comfortable reading pace
-        t, lines_t = 2.4, []
+        t, lines_t = 1.9, []   # ~20% brisker than before (owner found the pace sluggish)
         for l in q["lines"]:
-            lines_t.append(t); t += 1.1 + 0.055 * len(l)
-        tl = {"hook": (0.2, 2.3), "lines": lines_t}
-        tl["credit"] = t + 0.4; tl["cta"] = tl["credit"] + 2.2
-        tl["dur"] = float(max(12.0, tl["cta"] + 3.8))
+            lines_t.append(t); t += 0.85 + 0.045 * len(l)
+        tl = {"hook": (0.15, 1.85), "lines": lines_t}
+        tl["credit"] = t + 0.3; tl["cta"] = tl["credit"] + 1.7
+        tl["dur"] = float(max(10.0, tl["cta"] + 3.0))
     dur = tl["dur"]
     bg_video = f"{d}/bg.mp4"
     # Stock video is off by default: its clips are not reviewed and can show people (see assets/photos policy).

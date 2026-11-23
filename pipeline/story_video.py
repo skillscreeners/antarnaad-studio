@@ -470,7 +470,10 @@ if __name__ == "__main__":
         publish.youtube_thumbnail(vid, out[:-4] + "_thumb.jpg"); print("thumbnail set")
     except Exception as e:
         print(f"::warning::thumbnail not set: {e}")
-    due._make_tag(f"posted-story-{date}", os.environ.get("GITHUB_SHA", ""))
+    try:
+        due._make_tag(f"posted-story-{date}", os.environ.get("GITHUB_SHA", ""))
+    except Exception as e:   # already tagged (a forced re-post)
+        print(f"tag not created: {e}")
     index, sha = _repo_file("data/stories.json")
     index = (index or []) + [{"date": str(date), "lang": story["lang"], "title": story["title"],
                               "title_en": story.get("title_en", ""), "video": vid, "photos": photos}]

@@ -130,6 +130,7 @@ jobs:
           ARGS=""
           [ "${{ inputs.long }}" = "dry" ] && ARGS="--dry-run"
           [ -n "${{ inputs.date }}" ] && ARGS="$ARGS --date ${{ inputs.date }}"
+          [ "${{ inputs.force }}" = "true" ] && ARGS="$ARGS --force"
           python pipeline/story_video.py $ARGS
       - if: always() && steps.due.outputs.long == 'yes'
         uses: actions/upload-artifact@v4
