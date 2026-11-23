@@ -288,19 +288,24 @@ def build(date, story, out_dir="out"):
 
     n_tts = [0]
     def say(text):
-        """Edge TTS now and then answers 'No audio was received': retry, then try the other voice."""
+        """Edge TTS throttles bursts ('No audio was received'): pause between sentences, back off and retry
+        with the same voice (one narrator for the whole story); the second voice only as a last resort."""
         import time
         n_tts[0] += 1
         err = None
-        for v in (voice, voice, BACKUP_VOICE[lang]):
+        time.sleep(0.4)
+        for k, (v, wait) in enumerate([(voice, 0), (voice, 8), (voice, 20), (voice, 45), (voice, 90), (BACKUP_VOICE[lang], 5)]):
+            time.sleep(wait)
             try:
                 a, _ = render._tts(text, v, f"{d}/t{n_tts[0]:03d}.mp3", False)
                 if len(a) > SR * 0.2:
+                    if v != voice:
+                        print(f"::warning::backup voice used for: {text[:50]}", flush=True)
                     return a
                 err = "empty audio"
             except Exception as e:
                 err = e
-            print(f"  voice retry ({v}): {err}", flush=True); time.sleep(4)
+            print(f"  voice retry {k + 1} ({v}): {err}", flush=True)
         raise RuntimeError(f"narration failed for: {text[:60]}... ({err})")
 
     # plan: list of scenes, each (photo index, [(text shown, audio)], extra overlay)
