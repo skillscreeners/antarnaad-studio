@@ -1819,7 +1819,329 @@
   "added": "2026-11-23"
  },
  {
+  "id": "ai-en-work-dac3c714",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Try this:",
+  "lines": [
+   "Keep pushing hard.",
+   "Your day is coming.",
+   "Never give up."
+  ],
+  "subtitle": "कड़ी मेहनत करते रहो। तुम्हारा दिन आ रहा है। कभी हार मत मानो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-ce64d682",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Note this:",
+  "lines": [
+   "Stay on track.",
+   "Control your mind.",
+   "Win every hour."
+  ],
+  "subtitle": "सही रास्ते पर रहो। अपने मन को काबू करो। हर घंटा जीतो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-78135445",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Hear this:",
+  "lines": [
+   "Be on time.",
+   "Show true care.",
+   "People trust you."
+  ],
+  "subtitle": "समय के पाबंद बनो। सच्ची परवाह दिखाओ। लोग आप पर भरोसा करते हैं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-09b77664",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Think here:",
+  "lines": [
+   "Block the noise.",
+   "Look right here.",
+   "Deep focus wins."
+  ],
+  "subtitle": "शोर को रोको। यहीं देखो। गहरा ध्यान जीत दिलाता है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-f9bf37d7",
+  "lang": "en",
+  "theme": "work",
+  "hook": "True fact:",
+  "lines": [
+   "Play it fair.",
+   "Do right things.",
+   "Honor your job."
+  ],
+  "subtitle": "सब कुछ ईमानदारी से करो। सही काम करो। अपने काम का सम्मान करो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-577c2841",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Action time:",
+  "lines": [
+   "Begin a task.",
+   "Stay till end.",
+   "Close it well."
+  ],
+  "subtitle": "एक काम शुरू करो। अंत तक डटे रहो। उसे अच्छे से पूरा करो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-aad81887",
+  "lang": "en",
+  "theme": "work",
+  "hook": "See this:",
+  "lines": [
+   "Make it neat.",
+   "Check it twice.",
+   "Quality shines."
+  ],
+  "subtitle": "इसे साफ-सुथरा बनाओ। दो बार जांचो। गुणवत्ता चमकती है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-736958af",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Join in:",
+  "lines": [
+   "Work as one.",
+   "Share the load.",
+   "Win together."
+  ],
+  "subtitle": "एक बनकर काम करो। बोझ बांटो। मिलकर जीत हासिल करो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-d26d30f2",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Mind this:",
+  "lines": [
+   "Rise up brisk.",
+   "Beat the clock.",
+   "Be very prompt."
+  ],
+  "subtitle": "जल्दी उठो। समय को मात दो। बहुत समय के पाबंद बनो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-5e4b4f42",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Focus here:",
+  "lines": [
+   "Block out doubt.",
+   "Lock your mind.",
+   "Aim for stars."
+  ],
+  "subtitle": "शक को दूर भगाओ। अपना मन साधो। ऊंचा लक्ष्य रखो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-4e5763e9",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Stay true:",
+  "lines": [
+   "Speak the truth.",
+   "Do pure work.",
+   "Sleep in peace."
+  ],
+  "subtitle": "सच बोलो। पवित्र काम करो। चैन की नींद सोओ।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-1feb2b5c",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Build up:",
+  "lines": [
+   "Read a page.",
+   "Try a trick.",
+   "Grow your mind."
+  ],
+  "subtitle": "एक पन्ना पढ़ो। एक नई तरकीब आजमाओ। अपना दिमाग बढ़ाओ।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-54aefc28",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Be steady:",
+  "lines": [
+   "Do not quit.",
+   "Push the line.",
+   "Cross the gate."
+  ],
+  "subtitle": "छोड़ो मत। आगे धक्का लगाओ। मंजिल पार करो।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-en-work-1ca01ec9",
+  "lang": "en",
+  "theme": "work",
+  "hook": "Final tip:",
+  "lines": [
+   "Give your best.",
+   "Leave a mark.",
+   "Smile and shine."
+  ],
+  "subtitle": "अपना सर्वश्रेष्ठ दो। अपनी छाप छोड़ो। मुस्कुराओ और चमको।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset",
+   "#WorkEthic"
+  ],
+  "added": "2026-11-23"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-23T16:10:25+00:00"
+  "updated": "2026-11-23T17:04:42+00:00"
  }
 ]
