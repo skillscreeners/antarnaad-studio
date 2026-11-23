@@ -133,3 +133,16 @@ Titles become "<Name> Special | …". Filled through Jan 2027; extend it a few m
 `pipeline/news.py` reads India's top headlines every morning (06:00–13:00 IST), picks up to two uplifting events
 (no politics, crime, accidents, deaths, war, markets) and matches each to an unused verified quote. They post at
 14:40 and 17:40 with the headline and link in the description. Choices are stored in `data/trending.json`.
+
+## Story videos (long-form)
+
+Every other day from 24 Nov 2026, at a different evening time between 18:00 and 20:30 IST
+(`python pipeline/story_due.py --schedule` lists the next ones), a 6-9 minute narrated motivational
+story is posted, alternating Hindi and English. Gemini writes an original, family-friendly story
+(rotating kinds: everyday people overcoming difficulty, retold fables, guru-and-student parables),
+which is checked and saved to `data/stories/DATE.json` — edit that file on github.com before the post
+time to change the story. Narration (Edge neural voice), reviewed people-free photos with slow
+pan/zoom, captions for every sentence, soft music and a custom thumbnail. Failed attempts are
+retried after 40 minutes (at most 3 a day) without failing the workflow. Posted stories are listed in
+`data/stories.json` so titles are never repeated. The old weekly quote compilation
+(`pipeline/long_video.py`) is no longer scheduled.
