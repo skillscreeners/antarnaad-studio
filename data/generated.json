@@ -2141,7 +2141,283 @@
   "added": "2026-11-23"
  },
  {
+  "id": "ai-hi-shayari-68e930f0",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आज की शायरी:",
+  "lines": [
+   "अंधेरे की चादर को",
+   "तुम ख़ुद ही हटाओगे",
+   "जलाकर चराग़ अपना",
+   "सवेरा भी लाओगे"
+  ],
+  "subtitle": "You will remove the darkness and bring your own dawn.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-41588b00",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "हौसला रखिए:",
+  "lines": [
+   "ज़मीं पर खड़े होकर",
+   "फ़लक को झुका देंगे",
+   "जो ठानें इरादा हम",
+   "तो दुनिया हिला देंगे"
+  ],
+  "subtitle": "Stand on earth and touch the sky with your strong will.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-41e7a9f0",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "मज़बूत बनो:",
+  "lines": [
+   "हवाओं के थपेड़ों से",
+   "ज़रा भी न घबराना",
+   "ये तूफ़ाँ तो आते हैं",
+   "तुझे जीना सिखाना"
+  ],
+  "subtitle": "Don't fear the storms; they only come to teach you how to live.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-31564a58",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आज का विचार:",
+  "lines": [
+   "वक़्त की इस रफ़्तार को",
+   "तुम ज़ाया मत करना",
+   "कल जो करना है आज",
+   "उसी की फ़िक्र करना"
+  ],
+  "subtitle": "Don't waste time; start working today for a better tomorrow.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-9b4a19f8",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "याद रखिए:",
+  "lines": [
+   "ख़ामोशी की गहराइयों में",
+   "वो ताक़त छुपी है",
+   "जो हर एक मुश्किल से",
+   "तुझे जीत दिलाती है"
+  ],
+  "subtitle": "Silent strength is the power that brings you victory over obstacles.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-e8466d1c",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "मेहनत का फल:",
+  "lines": [
+   "पसीने की बूँदों में",
+   "चमक जीत की होगी",
+   "तेरी हर एक कोशिश ही",
+   "तेरी तक़दीर बदलेगी"
+  ],
+  "subtitle": "The sweat of your hard work will pave the way to success.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-b8ed60b1",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "नई शुरुआत:",
+  "lines": [
+   "पुरानी लकीरों पर",
+   "न तुम वक़्त गँवाना",
+   "नई मंज़िलों का नया",
+   "एक रस्ता बनाना"
+  ],
+  "subtitle": "Don't follow old paths; create a new road to your destination.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-a41e5809",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "मंज़िल की ओर:",
+  "lines": [
+   "नज़र अपनी मंज़िल पे",
+   "सदा तुम टिकाए रखो",
+   "तूफ़ानों के दरमियाँ भी",
+   "उम्मीद जलाए रखो"
+  ],
+  "subtitle": "Keep your eyes on the goal and hope alive during storms.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-1fda9b84",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "साहसी बनो:",
+  "lines": [
+   "डर के साये से निकलकर",
+   "जो आगे क़दम बढ़ाए",
+   "उसी शख़्स के पीछे ही",
+   "ये सारा ज़माना आए"
+  ],
+  "subtitle": "The world follows the person who steps out of the shadow of fear.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-28892532",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "कामयाबी का राज:",
+  "lines": [
+   "मुसीबत के पत्थर को",
+   "जो सीढ़ी बना लेगा",
+   "वो बुलंदियों के शिखर",
+   "पे झंडा गाड़ देगा"
+  ],
+  "subtitle": "One who turns obstacles into steps will reach the highest peaks.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-214fa2cb",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "अपना ध्यान:",
+  "lines": [
+   "ज़माने की बातों में",
+   "न तुम ध्यान देना",
+   "सिर्फ़ अपनी मेहनत को ही",
+   "तुम पहचान देना"
+  ],
+  "subtitle": "Ignore the noise of the world and focus only on your hard work.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-shayari-98b54c05",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "सच्ची जीत:",
+  "lines": [
+   "न झुकना कभी ग़लत के",
+   "भी सामने तुम ज़रा",
+   "सच्चाई की राहों में",
+   "ही है जीत का मज़ा"
+  ],
+  "subtitle": "Never bow to what is wrong; victory lies in the path of truth.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-23"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-23T17:04:42+00:00"
+  "updated": "2026-11-23T20:31:18+00:00"
  }
 ]
