@@ -18,6 +18,9 @@ FEEDS = ["https://news.google.com/rss?hl=en-IN&gl=IN&ceid=IN:en",
 BAD = ["election", "poll", "bjp", "congress", "aap", "ncp", "shiv sena", "minister", "modi", "rahul", "protest", "riot",
        "kill", "dead", "death", "dies", "died", "murder", "rape", "attack", "accident", "crash", "flood", "fire", "war",
        "terror", "arrest", "scam", "court", "police", "suicide", "pakistan", "china", "tariff", "stock", "sensex", "nifty",
+       "cancer", "tumour", "tumor", "drug", "trial", "patient", "cure", "vaccine", "disease", "virus", "covid", "doctor",
+       "hospital", "medicine", "diabetes", "heart attack", "study finds", "health",
+       "कैंसर", "दवा", "मरीज", "बीमारी", "इलाज", "अस्पताल",
        "मौत", "हत्या", "हादसा", "चुनाव", "हमला", "गिरफ्तार", "मंत्री", "भाजपा", "कांग्रेस"]
 
 def headlines():
@@ -80,7 +83,9 @@ def main(force=False, dry=False):
             continue
         if not hook.endswith(":"):
             hook = hook.rstrip("!.। ") + ":"
-        q.update(hook=hook, news=h, topic_tags=q.get("topic_tags", [])[:2] + ["#InTheNews"])
+        # the headline is NOT put on screen or in the title (shortened headlines distort facts);
+        # the quote keeps its own lead-in and the exact headline goes in the description only
+        q.update(news=h, news_hook=hook, topic_tags=q.get("topic_tags", [])[:2] + ["#InTheNews"])
         entries.append(q)
         print(f"news: {h['title']}  ->  {q['id']}  [{hook}]")
     if not entries:

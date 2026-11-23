@@ -838,11 +838,9 @@ def metadata(q, date):
         ask = "What does this line mean to you? Comment below 👇"
     if q.get("special"):
         title = f"{q['special']} | {head(1)} – {q['author_en']} #shorts"
-    if q.get("news"):
-        title = f"{q['hook'].rstrip(':')} | {head(1)} #shorts"
     title = title[:95]
     other = q.get("subtitle") or ""
-    news = (f"In the news: {q['news']['title']} ({q['news'].get('source', '')})\n{q['news'].get('link', '')}\n\n"
+    news = (f"Inspired by today's news: {q['news']['title']} ({q['news'].get('source', '')})\n{q['news'].get('link', '')}\n\n"
             if q.get("news") else "")
     yt_desc = (news + f"“{quote}” — {q['author_en']}, {q['source']}\n\n" + (other + "\n\n" if other else "") +
                f"{ask}\nSubscribe to Antarnaad for daily motivation in English & Hindi.\n\n" + " ".join(yt_tags))
