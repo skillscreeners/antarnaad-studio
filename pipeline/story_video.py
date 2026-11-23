@@ -236,6 +236,15 @@ def title_card(title, sub, lang, path):
         y += size * 1.4
     im.save(path)
 
+def label_png(text, lang, path):
+    """Gold year/chapter tag for the top-left corner, e.g. '1995 • DDLJ'."""
+    lang = "hi" if re.search(r"[ऀ-ॿ]", text) else "en"
+    f = font(FONT_BOLD, 46); w = int(f.getlength(text)) + 70
+    im = Image.new("RGBA", (w + 10, 110), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    d.rounded_rectangle((0, 10, w, 100), 20, fill=GOLD + (235,))
+    d.text((35, 20), text, font=f, fill=(25, 15, 5), language=lang)
+    im.save(path)
+
 def thumbnail(photo_jpg, text, badge, lang, path):
     im = Image.open(photo_jpg).convert("RGB").resize((1280, 720))
     im = ImageEnhance.Brightness(im).enhance(0.8); d = ImageDraw.Draw(im)
@@ -310,7 +319,7 @@ def build(date, story, out_dir="out"):
 
     # plan: list of scenes, each (photo index, [(text shown, audio)], extra overlay)
     clips, audio_parts, t_video = [], [], 0.0
-    def add_scene(photo_i, pieces, card=None, lead=0.6, tail=0.9):
+    def add_scene(photo_i, pieces, card=None, lead=0.6, tail=0.9, label=None):
         nonlocal t_video
         src = f"{d}/p{photo_i:02d}.jpg"
         if not os.path.exists(src):
@@ -318,6 +327,9 @@ def build(date, story, out_dir="out"):
         overlays, t = [], lead
         if card:
             overlays.append((card, 0, 0, 0, 999))
+        if label:
+            lp = f"{d}/label{len(clips):02d}.png"; label_png(label, lang, lp)
+            overlays.append((lp, 50, 40, 0, 999))
         for j, (shown, audio) in enumerate(pieces):
             dur = len(audio) / SR
             audio_parts.append((t_video + t, audio))
@@ -336,12 +348,13 @@ def build(date, story, out_dir="out"):
     title = story["title"]
     tc = f"{d}/title.png"; title_card(title, "ANTARNAAD • अंतर्नाद", lang, tc)
     add_scene(0, [("", say(T["intro"].format(title=title)))], card=tc, lead=0.8, tail=1.2)
-    chapters = []
+    chapters, starts = [], []
     for i, sc in enumerate(story["scenes"]):
+        starts.append(t_video)
         if i in (0, len(story["scenes"]) // 2, len(story["scenes"]) - 2):
             chapters.append(t_video)
         pieces = [(s, say(s)) for s in sentences(sc["text"], lang)]
-        add_scene(i, pieces)
+        add_scene(i, pieces, label=sc.get("label"))
         print(f"  scene {i + 1}/{len(story['scenes'])} done ({t_video / 60:.1f} min)", flush=True)
     chapters.append(t_video)
     lc = f"{d}/lesson.png"; title_card(story["moral"], T["lesson"], lang, lc)
@@ -365,14 +378,18 @@ def build(date, story, out_dir="out"):
     thumbnail(f"{d}/p00.jpg", story["thumb"], T["badge"], lang, out[:-4] + "_thumb.jpg")
 
     names = ["शुरुआत", "मुश्किल घड़ी", "मोड़", "सीख"] if lang == "hi" else ["The beginning", "The struggle", "The turning point", "The lesson"]
+    if all(sc.get("label") for sc in story["scenes"]):   # life stories: one chapter per year/label
+        chapters, names = starts, [sc["label"] for sc in story["scenes"]]
     chap = ["0:00 " + ("परिचय" if lang == "hi" else "Intro")] + \
            [f"{int(c // 60)}:{int(c % 60):02d} {n}" for c, n in zip(chapters, names)]
-    yt_title = f"{title} | {T['kind']} | Antarnaad"[:100]
+    yt_title = story.get("yt_title") or f"{title} | {T['kind']} | Antarnaad"[:100]
     desc = "\n".join([story.get("summary", ""), "", ("सीख: " if lang == "hi" else "Lesson: ") + story["moral"], "",
                       "Chapters:"] + chap + ["",
-                      "An original story by Antarnaad. All characters are fictional. Narration uses a synthetic voice.",
+                      ("A tribute based on publicly reported facts; not affiliated with the person or their companies. "
+                       "Pictures are illustrative scenery. Narration uses a synthetic voice." if story.get("true_story") else
+                       "An original story by Antarnaad. All characters are fictional. Narration uses a synthetic voice."),
                       "Subscribe for stories and one good thought every day: https://www.youtube.com/@antarnaadin", "",
-                      "#Antarnaad #अंतर्नाद " + ("#HindiKahani #MotivationalStory #PrernaKahani" if lang == "hi"
+                      " ".join(story.get("hashtags", [])) + " #Antarnaad #अंतर्नाद " + ("#HindiKahani #MotivationalStory #PrernaKahani" if lang == "hi"
                                                   else "#MotivationalStory #MoralStory #Inspiration")])
     tags = [str(t)[:30] for t in story.get("tags", [])][:10] + \
            ["Antarnaad", "motivational story", "moral story"] + (["hindi kahani", "prerak kahani", "hindi story"] if lang == "hi" else ["inspirational story"])
