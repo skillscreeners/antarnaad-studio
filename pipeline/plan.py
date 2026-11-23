@@ -34,9 +34,13 @@ def slot_langs(day_index):
 
 WORK_SLOTS = {2, 3}   # weekdays 08:40 (English) and 10:10 (Hindi): work motivation for the start of the day
 
+SHAYARI_SLOTS = {5, 9}   # 13:10 and 19:10 (Hindi): motivational shayari
+
 def slot_pool(date, slot):
     """(language, theme) pool a slot draws from."""
     lang = slot_langs(0)[slot]
+    if slot in SHAYARI_SLOTS and lang == "hi":
+        return lang, "shayari"
     theme = "work" if (slot in WORK_SLOTS and date.weekday() < 5) else "life"
     return lang, theme
 
@@ -110,6 +114,8 @@ def quote_for_uncached(date, slot):
     else:
         key = slot_pool(date, slot)
         pool = [q for q in _bank() if (q["lang"], q.get("theme", "life")) == key]
+        if not pool:   # e.g. no shayari yet: use the general pool of that language
+            key = (key[0], "life"); pool = [q for q in _bank() if (q["lang"], q.get("theme", "life")) == key]
         pick = None
         if os.environ.get("ANTARNAAD_FEEDBACK", "1") == "1":
             import feedback
@@ -117,7 +123,8 @@ def quote_for_uncached(date, slot):
             today = {h["id"] for h in feedback.history() if h["date"] == date.isoformat()} | {e["id"] for e in earlier}
             pick = feedback.pick(pool, date, slot, used_today=today, authors_today=[e.get("author_en") for e in earlier])
         q = dict(pick or _nth(pool, _uses_before(date, slot, key), f"{key[0]}-{key[1]}"))
-    pillar = q["special"] if q.get("special") else "Work Motivation" if q.get("theme") == "work" and slot in WORK_SLOTS else PILLARS[slot]
+    pillar = q["special"] if q.get("special") else "Work Motivation" if q.get("theme") == "work" and slot in WORK_SLOTS \
+        else "Shayari" if q.get("theme") == "shayari" else PILLARS[slot]
     mood = q.get("mood") or MOODS[slot] if not (MOODS[slot] == "raga" and q["lang"] != "hi") else "gentle"
     q.update(slot=slot, pillar=pillar, mood=mood, scene=q.get("scene", SCENES[slot]), date=date.isoformat())
     return q

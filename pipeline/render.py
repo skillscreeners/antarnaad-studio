@@ -802,6 +802,7 @@ def render_video(q, d, out_mp4, use_voice=True):
 SLOTS = {"weekday": ["07:40", "10:50", "12:50", "18:40", "20:50"], "weekend": ["08:40", "11:10", "13:20", "17:40", "21:10"]}
 BRAND = ["#Antarnaad", "#अंतर्नाद"]
 BROAD = {"en": ["#Motivation", "#MotivationalQuotes", "#Inspiration"], "hi": ["#HindiMotivation", "#Suvichar", "#MotivationalQuotesHindi"]}
+SHAYARI = ["#Shayari", "#MotivationalShayari", "#HindiShayari"]
 WORK = {"en": ["#WorkMotivation", "#WorkEthic", "#Motivation"], "hi": ["#WorkMotivation", "#HindiMotivation", "#Suvichar"]}
 
 def metadata(q, date):
@@ -810,8 +811,9 @@ def metadata(q, date):
     slot_time = plan.post_time(day, q["slot"])
     quote = " ".join(q["lines"])
     lang = q["lang"]
-    yt_tags = [BRAND[0]] + (WORK if q.get("theme") == "work" else BROAD)[lang][:2] + q["topic_tags"][:1]
-    ig_tags = BRAND + (WORK if q.get("theme") == "work" else BROAD)[lang] + q["topic_tags"]
+    broad = SHAYARI if q.get("theme") == "shayari" else (WORK if q.get("theme") == "work" else BROAD)[lang]
+    yt_tags = [BRAND[0]] + broad[:2] + q["topic_tags"][:1]
+    ig_tags = BRAND + broad + q["topic_tags"]
     # Titles lead with the words themselves (what viewers react to), then a searchable name
     def head(n):
         parts = []
@@ -830,6 +832,8 @@ def metadata(q, date):
     original = q["author_en"] == "Antarnaad"
     if lang == "hi":
         who = "Hindi Suvichar" if original else ("Kabir Ke Dohe" if "Kabir" in q["author_en"] else f"{q['author_en']} Suvichar")
+        if q.get("theme") == "shayari":
+            who = "Motivational Shayari" if original else f"{q['author_en']} Shayari"
         title = f"{head_fit()} | {who} #shorts"
         ask = "क्या आप सहमत हैं? कमेंट में बताइए 👇"
     else:

@@ -4435,5 +4435,143 @@
    "#Mehnat"
   ],
   "mood": "calm"
+ },
+ {
+  "id": "iqbal-khudi",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आज की शायरी:",
+  "lines": [
+   "ख़ुदी को कर बुलंद इतना",
+   "कि हर तक़दीर से पहले",
+   "ख़ुदा बंदे से ख़ुद पूछे",
+   "बता तेरी रज़ा क्या है"
+  ],
+  "subtitle": "Raise your self so high that before every decree of fate, God himself asks you: tell me, what is your wish?",
+  "author": "अल्लामा इक़बाल",
+  "author_en": "Allama Iqbal",
+  "source": "Bal-e-Jibril",
+  "mood": "rising",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari",
+   "#Iqbal"
+  ]
+ },
+ {
+  "id": "iqbal-sitaron",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आज की शायरी:",
+  "lines": [
+   "सितारों से आगे",
+   "जहाँ और भी हैं",
+   "अभी इश्क़ के इम्तिहाँ",
+   "और भी हैं"
+  ],
+  "subtitle": "There are worlds beyond the stars; more tests of passion still await.",
+  "author": "अल्लामा इक़बाल",
+  "author_en": "Allama Iqbal",
+  "source": "Bal-e-Jibril",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari",
+   "#Iqbal"
+  ]
+ },
+ {
+  "id": "iqbal-shaheen",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आज की शायरी:",
+  "lines": [
+   "तू शाहीं है",
+   "परवाज़ है काम तेरा",
+   "तिरे सामने आसमाँ",
+   "और भी हैं"
+  ],
+  "subtitle": "You are an eagle; flying is your work. More skies lie ahead of you.",
+  "author": "अल्लामा इक़बाल",
+  "author_en": "Allama Iqbal",
+  "source": "Bal-e-Jibril",
+  "mood": "rising",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari",
+   "#Iqbal"
+  ]
+ },
+ {
+  "id": "iqbal-naummeed",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आज की शायरी:",
+  "lines": [
+   "नहीं है ना-उमीद 'इक़बाल'",
+   "अपनी किश्त-ए-वीराँ से",
+   "ज़रा नम हो तो ये मिट्टी",
+   "बहुत ज़रख़ेज़ है साक़ी"
+  ],
+  "subtitle": "Iqbal has not lost hope in his barren field; with a little moisture, this soil is very fertile.",
+  "author": "अल्लामा इक़बाल",
+  "author_en": "Allama Iqbal",
+  "source": "Bang-e-Dara",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari",
+   "#Iqbal"
+  ]
+ },
+ {
+  "id": "iqbal-amal",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आज की शायरी:",
+  "lines": [
+   "अमल से ज़िंदगी बनती है",
+   "जन्नत भी जहन्नम भी",
+   "ये ख़ाकी अपनी फ़ितरत में",
+   "न नूरी है न नारी है"
+  ],
+  "subtitle": "It is our deeds that make life heaven or hell; by nature, man is neither of light nor of fire.",
+  "author": "अल्लामा इक़बाल",
+  "author_en": "Allama Iqbal",
+  "source": "Bang-e-Dara",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari",
+   "#Iqbal"
+  ]
+ },
+ {
+  "id": "ghalib-ranj",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आज की शायरी:",
+  "lines": [
+   "रंज से ख़ूगर हुआ इंसाँ",
+   "तो मिट जाता है रंज",
+   "मुश्किलें मुझ पर पड़ीं इतनी",
+   "कि आसाँ हो गईं"
+  ],
+  "subtitle": "When a person gets used to sorrow, sorrow fades; so many hardships fell on me that they became easy.",
+  "author": "मिर्ज़ा ग़ालिब",
+  "author_en": "Mirza Ghalib",
+  "source": "Diwan-e-Ghalib",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari",
+   "#Ghalib"
+  ]
  }
 ]

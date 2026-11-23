@@ -16,7 +16,17 @@ BLOCK = ["love", "kiss", "sex", "romance", "girlfriend", "boyfriend", "death", "
          "war", "hate", "revenge", "betray", "alcohol", "drunk", "party", "religion", "caste", "modi", "gandhi", "congress",
          "bjp", "प्यार", "इश्क", "मोहब्बत", "मौत", "मरना", "खून", "धोखा", "नफ़रत", "नफरत", "बेवफ़ा", "बदला", "शराब", "जाति",
          "महबूब", "आशिक", "दिल टूट"]
-TOPICS = {"life": "self-belief, patience, hope, calm mind, gratitude, kindness, resilience, learning, simple living, starting again",
+SHAYARI_PROMPT = (
+    "Create {n} ORIGINAL motivational Hindi-Urdu shayari for a family-friendly Indian YouTube Shorts channel, in the "
+    "spirit of classic inspirational sher: hope after hardship, courage, self-respect, never giving up, the value of "
+    "time, the journey being worth it, rising after falling, quiet strength. Each item is one sher (two misre) with "
+    "rhythm and a rhyme (qafiya/radeef), written in Devanagari with natural Urdu words (use nukta: ज़, ख़, फ़). Split each "
+    "misra into two short lines, so 'lines' has exactly 4 lines of at most 26 characters. 'hook' is 'आज की शायरी:' or a "
+    "similar short lead-in; 'subtitle' is a simple English meaning. Strictly no romance, love, heartbreak, wine, "
+    "betrayal, death, religion or politics. Do NOT reuse or paraphrase any famous poet's lines (Ghalib, Iqbal, Faiz, "
+    "Rahat Indori, Gulzar, Bashir Badr, Dushyant Kumar or anyone); every sher must be new. Avoid these existing ones: ")
+TOPICS = {"shayari": "motivational shayari",
+          "life": "self-belief, patience, hope, calm mind, gratitude, kindness, resilience, learning, simple living, starting again",
           "work": "hard work, discipline, punctuality, focus, honesty at work, skill-building, finishing what you start, quality, teamwork"}
 
 def _norm(s):
@@ -95,16 +105,19 @@ def main(force=False, dry=False):
     seen = {_norm("".join(q["lines"])) for q in quotes}
     added = 0
     for lang in ("hi", "en"):
-        for theme in ("life", "work"):
+        for theme in (("life", "work", "shayari") if lang == "hi" else ("life", "work")):
             pool = [q for q in quotes if (q["lang"], q.get("theme", "life")) == (lang, theme)]
             unused = [q for q in pool if q["id"] not in used]
             if len(unused) >= LOW and not force:
                 continue
             try:
-                items = ask_gemini(prompt(lang, theme, [" / ".join(q["lines"]) for q in pool]))
+                avoid = [" / ".join(q["lines"]) for q in pool]
+                items = ask_gemini(SHAYARI_PROMPT.format(n=BATCH) + " | ".join(avoid[-80:]) +
+                                   '. Return only JSON: [{"hook": "...", "lines": ["...", "...", "...", "..."], "subtitle": "..."}]'
+                                   if theme == "shayari" else prompt(lang, theme, avoid))
             except Exception as e:
                 print(f"::warning::refill {lang}/{theme} failed: {e}"); continue
-            moods = ["uplifting", "calm", "rising", "gentle"] + (["raga"] if lang == "hi" else [])
+            moods = ["raga", "gentle", "calm"] if theme == "shayari" else ["uplifting", "calm", "rising", "gentle"] + (["raga"] if lang == "hi" else [])
             for it in items if isinstance(items, list) else []:
                 v = valid(it, lang, seen)
                 if not v:
@@ -114,7 +127,8 @@ def main(force=False, dry=False):
                 gen.append({"id": qid, "lang": lang, "theme": theme, "hook": hook, "lines": lines, "subtitle": sub,
                             "author": "अंतर्नाद" if lang == "hi" else "Antarnaad", "author_en": "Antarnaad",
                             "source": "Antarnaad original", "mood": moods[int(qid[-2:], 16) % len(moods)],
-                            "topic_tags": (["#Suvichar", "#HindiQuotes", "#Motivation"] if lang == "hi" else
+                            "topic_tags": ["#Shayari", "#MotivationalShayari", "#HindiShayari"] if theme == "shayari" else
+                                          (["#Suvichar", "#HindiQuotes", "#Motivation"] if lang == "hi" else
                                            ["#MotivationalQuotes", "#DailyMotivation", "#Mindset"]) + (["#WorkEthic"] if theme == "work" else []),
                             "added": now.date().isoformat()})
                 added += 1
