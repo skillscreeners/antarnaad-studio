@@ -97,7 +97,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     concurrency:
-      group: antarnaad-long
+      group: antarnaad-long-${{ github.event_name }}   # manual runs are never displaced by the 10-minute ticks
       cancel-in-progress: false
     env:
       TZ: Asia/Kolkata
