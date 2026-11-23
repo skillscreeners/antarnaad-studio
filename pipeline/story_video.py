@@ -21,6 +21,7 @@ import plan, render, story_due
 from render import SR, font, FONT_BOLD, FONT_MED, GOLD, CREAM, HANDLE
 
 W, H, FPS = 1920, 1080, 30
+BACKUP_VOICE = {"hi": "hi-IN-SwaraNeural", "en": "en-IN-NeerjaNeural"}
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 PHOTO_DIR = os.path.join(ROOT, "assets", "photos")
 MOODS = ["calm", "gentle", "uplifting", "rising", "raga", "work"]
@@ -287,9 +288,20 @@ def build(date, story, out_dir="out"):
 
     n_tts = [0]
     def say(text):
+        """Edge TTS now and then answers 'No audio was received': retry, then try the other voice."""
+        import time
         n_tts[0] += 1
-        a, _ = render._tts(text, voice, f"{d}/t{n_tts[0]:03d}.mp3", False)
-        return a
+        err = None
+        for v in (voice, voice, BACKUP_VOICE[lang]):
+            try:
+                a, _ = render._tts(text, v, f"{d}/t{n_tts[0]:03d}.mp3", False)
+                if len(a) > SR * 0.2:
+                    return a
+                err = "empty audio"
+            except Exception as e:
+                err = e
+            print(f"  voice retry ({v}): {err}", flush=True); time.sleep(4)
+        raise RuntimeError(f"narration failed for: {text[:60]}... ({err})")
 
     # plan: list of scenes, each (photo index, [(text shown, audio)], extra overlay)
     clips, audio_parts, t_video = [], [], 0.0
