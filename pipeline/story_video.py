@@ -297,24 +297,44 @@ def build(date, story, out_dir="out"):
 
     n_tts = [0]
     def say(text):
-        """Edge TTS throttles bursts ('No audio was received'): pause between sentences, back off and retry
-        with the same voice (one narrator for the whole story); the second voice only as a last resort."""
+        """Edge TTS sometimes answers 'No audio was received' (bursts, or a voice choking on one sentence).
+        Keep one narrator: retry, then the same words without commas, then the sentence in two halves;
+        the second voice only as a last resort."""
         import time
         n_tts[0] += 1
-        err = None
+        base = f"{d}/t{n_tts[0]:03d}"
+        def one(t, v, tag):
+            a, _ = render._tts(t, v, f"{base}{tag}.mp3", False)
+            if len(a) < SR * 0.2:
+                raise RuntimeError("empty audio")
+            return a
+        def halves(t, v):
+            w = t.split(); m = len(w) // 2
+            for k in range(len(w) // 2):   # prefer a comma near the middle
+                for j in (m - k, m + k):
+                    if 0 < j < len(w) and w[j - 1].endswith(","):
+                        m = j; break
+                else:
+                    continue
+                break
+            a1 = one(" ".join(w[:m]), v, "a"); time.sleep(1); a2 = one(" ".join(w[m:]), v, "b")
+            return np.concatenate([a1, np.zeros(int(0.12 * SR)), a2])
+        plain = re.sub(r"\s*[,;:]\s*", " ", text)
+        tries = [(lambda: one(text, voice, ""), 0), (lambda: one(text, voice, ""), 8), (lambda: one(plain, voice, "p"), 3),
+                 (lambda: halves(text, voice), 3), (lambda: one(text, voice, ""), 40),
+                 (lambda: one(text, BACKUP_VOICE[lang], "x"), 3)]
         time.sleep(0.4)
-        for k, (v, wait) in enumerate([(voice, 0), (voice, 8), (voice, 20), (voice, 45), (voice, 90), (BACKUP_VOICE[lang], 5)]):
+        err = None
+        for k, (fn, wait) in enumerate(tries):
             time.sleep(wait)
             try:
-                a, _ = render._tts(text, v, f"{d}/t{n_tts[0]:03d}.mp3", False)
-                if len(a) > SR * 0.2:
-                    if v != voice:
-                        print(f"::warning::backup voice used for: {text[:50]}", flush=True)
-                    return a
-                err = "empty audio"
+                a = fn()
+                if k == len(tries) - 1:
+                    print(f"::warning::backup voice used for: {text[:50]}", flush=True)
+                return a
             except Exception as e:
                 err = e
-            print(f"  voice retry {k + 1} ({v}): {err}", flush=True)
+                print(f"  voice retry {k + 1}: {err}", flush=True)
         raise RuntimeError(f"narration failed for: {text[:60]}... ({err})")
 
     # plan: list of scenes, each (photo index, [(text shown, audio)], extra overlay)
