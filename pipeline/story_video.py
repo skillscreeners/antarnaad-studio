@@ -181,7 +181,9 @@ def prepare_photo(rel, path):
     im = im.resize((int(im.width * sc) + 1, int(im.height * sc) + 1), Image.LANCZOS)
     l, t = (im.width - BW) // 2, (im.height - BH) // 2
     im = im.crop((l, t, l + BW, t + BH))
-    im = ImageEnhance.Brightness(im).enhance(0.78)
+    im = ImageEnhance.Color(im).enhance(1.18)
+    im = ImageEnhance.Contrast(im).enhance(1.08)
+    im = ImageEnhance.Brightness(im).enhance(1.02)
     im.save(path, quality=93)
 
 # ------------------------------------------------------------------ captions and cards
@@ -247,7 +249,7 @@ def label_png(text, lang, path):
 
 def thumbnail(photo_jpg, text, badge, lang, path):
     im = Image.open(photo_jpg).convert("RGB").resize((1280, 720))
-    im = ImageEnhance.Brightness(im).enhance(0.8); d = ImageDraw.Draw(im)
+    im = ImageEnhance.Color(im).enhance(1.25); d = ImageDraw.Draw(im)
     size = 150
     rows = wrap(text, font(FONT_BOLD, size), 1180, lang)
     while size > 60 and (len(rows) > 2 or any(font(FONT_BOLD, size).getlength(r) > 1180 for r in rows)):
@@ -274,7 +276,7 @@ def scene_clip(photo, dur, overlays, out, k):
     """photo (1.5x frame) with a slow zoom/pan, overlays = [(png, x, y, t0, t1)]."""
     frames = max(1, round(dur * FPS))
     zin = k % 2 == 0
-    z = f"1.0+0.12*on/{frames}" if zin else f"1.12-0.12*on/{frames}"
+    z = f"1.0+0.18*on/{frames}" if zin else f"1.18-0.18*on/{frames}"
     fx, fy = [(0.5, 0.5), (0.2, 0.4), (0.8, 0.6), (0.4, 0.2), (0.6, 0.8)][k % 5]
     fc = [f"[0:v]zoompan=z='{z}':x='(iw-iw/zoom)*{fx}':y='(ih-ih/zoom)*{fy}':d=1:s={W}x{H}:fps={FPS},format=yuv420p[v0]"]
     args = ["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-framerate", str(FPS), "-t", f"{frames / FPS:.3f}", "-i", photo]
@@ -292,8 +294,18 @@ def build(date, story, out_dir="out"):
     voice = render.VOICES[lang]
     index, _ = _repo_file("data/stories.json")
     recent = {p for e in (index or [])[-4:] for p in e.get("photos", [])}
-    photos = pick_photos(story["scenes"], recent)
-    print("photos:", ", ".join(photos))
+    # lively pacing: natural-speed narration, a new picture every two sentences
+    render.VOICE_RATE = os.environ.get("ANTARNAAD_STORY_RATE", "+5%")
+    render.VOICE_PITCH = os.environ.get("ANTARNAAD_STORY_PITCH", "+0Hz")
+    groups = []   # (scene index, [sentences]) - one picture each
+    for i, sc in enumerate(story["scenes"]):
+        ss = sentences(sc["text"], lang)
+        k = 0
+        while k < len(ss):
+            n = 1 if words(ss[k]) >= 22 else 2
+            groups.append((i, ss[k:k + n])); k += n
+    photos = pick_photos([story["scenes"][i] for i, _ in groups], recent)
+    print(f"{len(groups)} pictures:", ", ".join(photos))
 
     n_tts = [0]
     def say(text):
@@ -359,7 +371,7 @@ def build(date, story, out_dir="out"):
                 png = f"{d}/c{len(clips):02d}_{j:02d}_{c_i}.png"
                 caption_png(c, lang, png)
                 overlays.append((png, 0, H - 300, t + c_i * share, t + (c_i + 1) * share + (0.25 if c_i == len(caps) - 1 else 0)))
-            t += dur + 0.35
+            t += dur + 0.18
         length = t + tail
         out = f"{d}/clip{len(clips):02d}.mp4"
         length = scene_clip(src, length, overlays, out, len(clips))
@@ -367,26 +379,30 @@ def build(date, story, out_dir="out"):
 
     title = story["title"]
     tc = f"{d}/title.png"; title_card(title, "ANTARNAAD • अंतर्नाद", lang, tc)
-    add_scene(0, [("", say(T["intro"].format(title=title)))], card=tc, lead=0.8, tail=1.2)
+    add_scene(0, [("", say(T["intro"].format(title=title)))], card=tc, lead=0.4, tail=0.6)
     chapters, starts = [], []
-    for i, sc in enumerate(story["scenes"]):
-        starts.append(t_video)
-        if i in (0, len(story["scenes"]) // 2, len(story["scenes"]) - 2):
-            chapters.append(t_video)
-        pieces = [(s, say(s)) for s in sentences(sc["text"], lang)]
-        add_scene(i, pieces, label=sc.get("label"))
-        print(f"  scene {i + 1}/{len(story['scenes'])} done ({t_video / 60:.1f} min)", flush=True)
+    n_sc = len(story["scenes"])
+    for g, (i, ss) in enumerate(groups):
+        first = g == 0 or groups[g - 1][0] != i
+        if first:
+            starts.append(t_video)
+            if i in (0, n_sc // 2, n_sc - 2):
+                chapters.append(t_video)
+        pieces = [(x, say(x)) for x in ss]
+        add_scene(g, pieces, label=story["scenes"][i].get("label"), lead=0.25, tail=0.35)
+        if g == len(groups) - 1 or groups[g + 1][0] != i:
+            print(f"  scene {i + 1}/{n_sc} done ({t_video / 60:.1f} min)", flush=True)
     chapters.append(t_video)
     lc = f"{d}/lesson.png"; title_card(story["moral"], T["lesson"], lang, lc)
-    add_scene(len(photos) - 1, [("", say(f"{T['lesson']}: {story['moral']}"))], card=lc, lead=0.8, tail=1.5)
+    add_scene(len(photos) - 1, [("", say(f"{T['lesson']}: {story['moral']}"))], card=lc, lead=0.4, tail=1.0)
     oc = f"{d}/outro.png"; title_card(T["cta"], HANDLE, lang, oc)
-    add_scene(0, [("", say(T["outro"]))], card=oc, lead=0.5, tail=2.5)
+    add_scene(0, [("", say(T["outro"]))], card=oc, lead=0.3, tail=2.0)
 
     total = t_video
     vbuf = np.zeros(int((total + 1) * SR))
     for start, a in audio_parts:
         render.place(vbuf, a, start)
-    render.music("raga" if lang == "hi" else "calm", f"{d}/music.wav", dur=total + 1)
+    render.music("uplifting", f"{d}/music.wav", dur=total + 1)
     render.mix(vbuf, f"{d}/music.wav", f"{d}/audio.wav")
     with open(f"{d}/clips.txt", "w") as f:
         for c in clips:
