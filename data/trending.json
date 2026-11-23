@@ -49,5 +49,57 @@
     "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOR3BTSHAwQUF0RHU5VC1CdDFHelFINV9vWU1BVEJpVEtaaUt4NzRJbjg4NGhTU0dEaGJrV0tsQkJQUTlEYVIxUVV1Zm9qMVdmaVd4dnh4N1BiMzZrT2JCaHJqZWstTmEyVDBkR3VadFJldVU4NlQ0R2FBYnNVcFVudWZmeHBSUkhpUnVBOVBRdUZIdm1iVEZLOGg5YVY5aXJaWEtyYw?oc=5"
    }
   }
+ ],
+ "2026-11-23": [
+  {
+   "id": "antarnaad-hi-work-00",
+   "lang": "hi",
+   "theme": "work",
+   "hook": "ऋषभ पंत ने टेस्ट क्रिकेट में रचा इतिहास:",
+   "lines": [
+    "काम ऐसा करो",
+    "कि नाम खुद बोले।"
+   ],
+   "subtitle": "Work so well that your name speaks for itself.",
+   "author": "अंतर्नाद",
+   "author_en": "Antarnaad",
+   "source": "Antarnaad original",
+   "mood": "uplifting",
+   "topic_tags": [
+    "#Suvichar",
+    "#HindiQuotes",
+    "#InTheNews"
+   ],
+   "news": {
+    "title": "Rishabh Pant creates history! India star climbs to all-time No. 2 in Test cricket record - The Times of India",
+    "source": "The Times of India",
+    "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPOTJFZVl6LWtuUHZDcVB4Y3FlaDRDMDY4Ym5kaWwwOV8yWmVJMnN4eURGeWRPekc3b3lYVVptdUhqd3BSbUZtYmV4SmU4MEtYRmE5el9BY3V6S3hKT202azJCY19tUEl0MWhhQVhId3loaEIwQkNoc0pIbVZtWG5sRWJKOVB6T2ZJTHJJRUhDUXRyWlZMYlNUVVYwczV3TXZLaERTZ281M19jQ3Y0cXBNSHdFd0xKbjBEY1l5U2NYU1RwQW1heFlPWU5XRkZUYml6eFlXTTdqOFNobjhpRmNXbnZEa0tnRl8yaGg0RVYzZVhQTHpIekVldnBuYTZtVmNlaXNSQVBSRzMtYldXWnBpQXhR?oc=5"
+   }
+  },
+  {
+   "id": "antarnaad-en-life-11",
+   "lang": "en",
+   "theme": "life",
+   "hook": "New drug halts tumor growth in 90% patients:",
+   "lines": [
+    "Hope is a small seed.",
+    "Water it daily."
+   ],
+   "subtitle": "उम्मीद एक छोटा बीज है, रोज़ सींचो।",
+   "author": "Antarnaad",
+   "author_en": "Antarnaad",
+   "source": "Antarnaad original",
+   "mood": "uplifting",
+   "topic_tags": [
+    "#MotivationalQuotes",
+    "#DailyMotivation",
+    "#InTheNews"
+   ],
+   "news": {
+    "title": "Trial Shows New Pancreatic Cancer Drug Halts Tumour Growth In 90% Of Patients - NDTV",
+    "source": "NDTV",
+    "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxONTFGU0labmdZSnNrajhydEpCSUkyYUVSV1JPNFNkdTdvakVsWXZhT3VVdG93NnJQdTJnMnR1T2Itbm5pWHZyUGd0cUhFd0dtTG1seFRDQTRoVHptemt5Q3Z2aVhIbmRWbkNPRmNib3UtaWNpNnl6b3pSRk1KbWxPUEh0MjFfMmFxZWxxWldDZFdjTEswTGRUM21kYmlCWlJDRGJHQ1Q1V3NwalZYOER0Ujc4aHc1TE1PczBHWDg2cVpzZEpjU3U0?oc=5"
+   }
+  }
  ]
 }
