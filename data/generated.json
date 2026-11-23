@@ -1511,7 +1511,315 @@
   "added": "2026-11-21"
  },
  {
+  "id": "ai-hi-life-79a84683",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "आज का विचार:",
+  "lines": [
+   "नन्हीं चींटी भी चलती है,",
+   "तो मंज़िल पा लेती है,",
+   "तुम बस कदम बढ़ाना सीखो।"
+  ],
+  "subtitle": "Even a tiny ant reaches its destination by walking; you just learn to take the first step.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-ecc6eaa9",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सच्ची बात:",
+  "lines": [
+   "मौसम बदलेगा ज़रूर,",
+   "बस ज़रा इंतज़ार करो,",
+   "हर कली फूल बनेगी।"
+  ],
+  "subtitle": "The season will surely change, just wait a little; every bud will become a flower.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-892c858e",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "ज़रूरी बात:",
+  "lines": [
+   "ग़लती से डरो मत,",
+   "उसे एक सबक बनाओ,",
+   "कल और बेहतर बनो।"
+  ],
+  "subtitle": "Don't fear mistakes, make them a lesson and become even better tomorrow.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-c75c76f1",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "मन की बात:",
+  "lines": [
+   "मन का शोर कम करो,",
+   "शांति में ही हल मिलेंगे,",
+   "भीतर झाँकना ज़रूरी है।"
+  ],
+  "subtitle": "Reduce the noise of the mind; solutions are found in silence. It's important to look within.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-ccf83b2d",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "अनमोल वचन:",
+  "lines": [
+   "जो मिला है उसे सराहो,",
+   "खुशियाँ वहीं छिपी हैं,",
+   "दिल से धन्यवाद कहो।"
+  ],
+  "subtitle": "Appreciate what you have; happiness is hidden there. Say thank you from the heart.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-80388fc6",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "नई सोच:",
+  "lines": [
+   "सूरज डूबता है तो क्या,",
+   "सुबह फिर से आएगी,",
+   "नई शुरुआत करो।"
+  ],
+  "subtitle": "So what if the sun sets? Morning will come again. Make a fresh start.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-2d1be7fe",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "पते की बात:",
+  "lines": [
+   "पत्थर पर पानी गिरे,",
+   "तो निशान छोड़ देता है,",
+   "निरंतरता में शक्ति है।"
+  ],
+  "subtitle": "When water falls on stone, it leaves a mark; there is power in consistency.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-356acf7f",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "जीवन मंत्र:",
+  "lines": [
+   "ख्वाहिशें कम रखो,",
+   "बोझ हल्का रहेगा,",
+   "सुकून से जी पाओगे।"
+  ],
+  "subtitle": "Keep your desires few, the burden will remain light, and you will be able to live peacefully.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-af3f2899",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "प्रेरणा:",
+  "lines": [
+   "अपनी ताकत पहचानो,",
+   "तुम मिट्टी नहीं सोना हो,",
+   "चमकना तुम्हारा काम है।"
+  ],
+  "subtitle": "Recognize your strength; you are gold, not dust. Shining is your job.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-14f7739c",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "एक उम्मीद:",
+  "lines": [
+   "उम्मीद का दीया जलाओ,",
+   "अंधेरा खुद भाग जाएगा,",
+   "विश्वास ही रोशनी है।"
+  ],
+  "subtitle": "Light the lamp of hope; darkness will flee on its own. Faith is the light.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-691a1cab",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "शुभ विचार:",
+  "lines": [
+   "नेकी का बीज बोओ,",
+   "दुआओं की फसल मिलेगी,",
+   "निस्वार्थ भाव से चलो।"
+  ],
+  "subtitle": "Sow the seed of kindness; you will harvest blessings. Walk with a selfless spirit.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-ea0f54e8",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "हौसला:",
+  "lines": [
+   "एक हार आखिरी नहीं,",
+   "खेल अभी बाकी है,",
+   "फिर से मैदान में उतरो।"
+  ],
+  "subtitle": "One defeat isn't the end; the game is still on. Get back into the field again.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-f52020ba",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सत्य मार्ग:",
+  "lines": [
+   "सच की राह चुनो,",
+   "थोड़ा मुश्किल होगा,",
+   "पर मन खुश रहेगा।"
+  ],
+  "subtitle": "Choose the path of truth; it might be a bit difficult, but your mind will remain happy.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
+  "id": "ai-hi-life-ba6b6778",
+  "lang": "hi",
+  "theme": "life",
+  "hook": "सीखने की बात:",
+  "lines": [
+   "झुकना कमज़ोरी नहीं,",
+   "विनम्रता का गुण है,",
+   "सागर हमेशा नीचे होता है।"
+  ],
+  "subtitle": "Bowing down isn't weakness; it's a virtue of humility. The ocean is always at the lowest point.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#Suvichar",
+   "#HindiQuotes",
+   "#Motivation"
+  ],
+  "added": "2026-11-23"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-23T13:00:51+00:00"
+  "updated": "2026-11-23T16:10:25+00:00"
  }
 ]
