@@ -332,8 +332,11 @@ def build(date, story, out_dir="out"):
             a1 = one(" ".join(w[:m]), v, "a"); time.sleep(1); a2 = one(" ".join(w[m:]), v, "b")
             return np.concatenate([a1, np.zeros(int(0.12 * SR)), a2])
         plain = re.sub(r"\s*[,;:]\s*", " ", text)
+        # some spellings make the Hindi voice return nothing: chandrabindu -> anusvara, drop nukta
+        simple = re.sub("[\u093C]", "", plain.replace("\u0901", "\u0902"))
         tries = [(lambda: one(text, voice, ""), 0), (lambda: one(text, voice, ""), 8), (lambda: one(plain, voice, "p"), 3),
-                 (lambda: halves(text, voice), 3), (lambda: one(text, voice, ""), 40),
+                 (lambda: halves(text, voice), 3), (lambda: one(simple, voice, "s"), 3),
+                 (lambda: halves(simple, voice), 3), (lambda: one(text, voice, ""), 40),
                  (lambda: one(text, BACKUP_VOICE[lang], "x"), 3)]
         time.sleep(0.4)
         err = None
@@ -467,7 +470,7 @@ if __name__ == "__main__":
         sys.exit(0)
     print(f"youtube: https://youtu.be/{vid}")
     try:
-        publish.youtube_thumbnail(vid, out[:-4] + "_thumb.jpg"); print("thumbnail set")
+        publish.youtube_thumbnail(vid, out[:-4] + "_thumb.jpg"); print("thumbnail set", flush=True)
     except Exception as e:
         print(f"::warning::thumbnail not set: {e}")
     try:
