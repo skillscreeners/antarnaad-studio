@@ -12,7 +12,7 @@ def _cfg():
 
 def line(author_en="", lang="en", theme="", kind=""):
     """'📚 <label>: <link>\n<disclosure>' for the first matching rule, or '' when no tag is configured."""
-    tag = os.environ.get("AMAZON_TAG", "").strip()
+    tag = (os.environ.get("AMAZON_TAG") or _cfg().get("tag") or "").strip()
     if not tag:
         return ""
     for r in _cfg()["rules"]:
