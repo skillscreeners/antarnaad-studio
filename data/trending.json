@@ -101,5 +101,60 @@
     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxONTFGU0labmdZSnNrajhydEpCSUkyYUVSV1JPNFNkdTdvakVsWXZhT3VVdG93NnJQdTJnMnR1T2Itbm5pWHZyUGd0cUhFd0dtTG1seFRDQTRoVHptemt5Q3Z2aVhIbmRWbkNPRmNib3UtaWNpNnl6b3pSRk1KbWxPUEh0MjFfMmFxZWxxWldDZFdjTEswTGRUM21kYmlCWlJDRGJHQ1Q1V3NwalZYOER0Ujc4aHc1TE1PczBHWDg2cVpzZEpjU3U0?oc=5"
    }
   }
+ ],
+ "2026-11-24": [
+  {
+   "id": "hitopadesha-udyam",
+   "lang": "hi",
+   "hook": "मेहनत का मंत्र",
+   "lines": [
+    "उद्यमेन हि सिध्यन्ति",
+    "कार्याणि न मनोरथैः।"
+   ],
+   "subtitle": "काम मेहनत से पूरे होते हैं, केवल इच्छा करने से नहीं।",
+   "author": "हितोपदेश",
+   "author_en": "Hitopadesha",
+   "source": "Hitopadesha, Mitralabha",
+   "topic_tags": [
+    "#Sanskrit",
+    "#HardWork",
+    "#InTheNews"
+   ],
+   "theme": "work",
+   "news": {
+    "title": "Carlos Alcaraz powers past Alexander Zverev to win maiden ATP Finals title - Rediff.com",
+    "source": "Rediff.com",
+    "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNbU8xSDBURUp4ekpNcTFIeWxfSGV4NGltb1ZIRy11bGx5NGpDUDA5c2xGaS14MEZnNDFyMTNBQUZqRnFsMHA0OXlhSktYS0NZeTZDaG5kMXYxcFJobjJBQmtuNV9OWDFuYVpUZFVWOWxYWUNBYWJSZlFlajBlSTNjNVF4WnZka19TVjB6cFppVmdNZkh0NEVkeFlFQTNOb2ZtRXBmeEFKUjB4ZXNYNU9wYnZFVTNueUhFejNxd2xzSdIBxAFBVV95cUxNZlF4cTVWR3dzckdPaWFKNXRmSmNVSHdSYTdOZ0tpTmdLamdDSmV4cmFGZGktUDBNdmRMSFAzQ3FMd1ZkM1R0U0pSaXJndi00Ul9naWh0eV9ERkJZY1lwT084aFk2WEo3ZUVoWmFLb3FFNTMxWHFxOE9fU2hkajQ1aDk4V1Z4UnhFdUZmc2NnTmxISGtXQ3dZNkcyTm5zWlVOM0lMQ0c4eUZETVE5UU9wMlQ0NTBCQ3FqakQtWEtGaC1QcjBs?oc=5"
+   },
+   "news_hook": "कार्लोस अल्काराज़ ने जीता एटीपी फाइनल्स:"
+  },
+  {
+   "id": "iqbal-sitaron",
+   "lang": "hi",
+   "theme": "shayari",
+   "hook": "आज की शायरी:",
+   "lines": [
+    "सितारों से आगे",
+    "जहाँ और भी हैं",
+    "अभी इश्क़ के इम्तिहाँ",
+    "और भी हैं"
+   ],
+   "subtitle": "There are worlds beyond the stars; more tests of passion still await.",
+   "author": "अल्लामा इक़बाल",
+   "author_en": "Allama Iqbal",
+   "source": "Bal-e-Jibril",
+   "mood": "calm",
+   "topic_tags": [
+    "#Shayari",
+    "#MotivationalShayari",
+    "#InTheNews"
+   ],
+   "news": {
+    "title": "NASA’s Voyager 1 Just Made History One Light-Day From Earth - SciTechDaily",
+    "source": "SciTechDaily",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVzdkTElNUDk4ODZ1dmtyNTN2ZmNMVm1uTXZaX19HazVfenF2Wk1FMTVyRzVJTlVIREVWNGN5MDJHU29JN2hmaFpzMWFKVUVKS2tBVDllTG9TVzZDdlhLOXJFQmphb0F2aFNpUjBFbUtBS2NhTjhyZGxVVlgwSjdJdWsyaXZKenNhOGNodw?oc=5"
+   },
+   "news_hook": "नासा के वॉयेजर 1 ने रचा इतिहास:"
+  }
  ]
 }
