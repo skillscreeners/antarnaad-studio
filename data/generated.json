@@ -2417,7 +2417,329 @@
   "added": "2026-11-23"
  },
  {
+  "id": "ai-hi-shayari-3eb5fc4d",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आज की शायरी:",
+  "lines": [
+   "उठेंगे फिर से हम ऐसे",
+   "कि दुनिया देखती होगी",
+   "नए सूरज की किरणें भी",
+   "हमें ही चूमती होंगी"
+  ],
+  "subtitle": "We will rise again such that the whole world watches.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-b519ffc3",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "कामयाबी का मंत्र:",
+  "lines": [
+   "लकीरों पर न जा अपने",
+   "तू हाथों को जगा अपने",
+   "सफ़र के मोड़ पर गहरे",
+   "इरादों को सजा अपने"
+  ],
+  "subtitle": "Don't rely on palm lines; awaken the power of your own hands.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-475de4a9",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "ख़ुद्दारी की बात:",
+  "lines": [
+   "किसी के दर पे झुक जाना",
+   "गँवारा हम को है ही नहीं",
+   "ज़मीर अपना बचा रखना",
+   "बड़ी दौलत है और कहीं"
+  ],
+  "subtitle": "Bowing at someone's door is unacceptable; self-respect is the true wealth.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-18721d1d",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "वक़्त की क़ीमत:",
+  "lines": [
+   "गुज़रता वक़्त कहता है",
+   "सम्भलना सीख ले बंदे",
+   "सुनहरी जीत पाने का",
+   "तू रस्ता ढूँढ ले बंदे"
+  ],
+  "subtitle": "Passing time tells you to be cautious and find your path to victory.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-1ed3cd6c",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "ख़ामोशी की ताक़त:",
+  "lines": [
+   "ख़ामोशी ज़ोर रखती है",
+   "ज़माने को हिलाने का",
+   "इसी में दम छुपा है अब",
+   "नया परचम उठाने का"
+  ],
+  "subtitle": "Silence holds the power to shake the world and raise a new flag.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-28f9c6e3",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "हौसला रखें:",
+  "lines": [
+   "पहाड़ों सी ये मुश्किलें",
+   "झुका पाएँगी क्या तुझको",
+   "चट्टानों से बड़े हौसले",
+   "ज़रा तू देख ले ख़ुद को"
+  ],
+  "subtitle": "Can mountain-like hurdles bow you? Look at your rock-solid courage.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-fc7c7855",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "मंज़िल की ओर:",
+  "lines": [
+   "कदम जो चल पड़े हैं अब",
+   "तो पीछे मुड़ना कैसा है",
+   "सितारों को जो छूना है",
+   "तो डरना-रुकना कैसा है"
+  ],
+  "subtitle": "If the journey has begun, why look back? If you want the stars, don't fear.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-72f0679f",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "नयी उम्मीद:",
+  "lines": [
+   "अँधेरी रात के पीछे",
+   "उजाला मुस्कुराता है",
+   "जो गिर कर उठना जाने",
+   "वही बाज़ी लगाता है"
+  ],
+  "subtitle": "Light smiles behind every dark night; he who rises after falling wins.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-50acb135",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "मेहनत का फल:",
+  "lines": [
+   "बिना कोशिश के दुनिया में",
+   "कहाँ कुछ हाथ आता है",
+   "पसीने की ही बूँदों से",
+   "मुक़द्दर जगमगाता है"
+  ],
+  "subtitle": "Nothing is gained without effort; destiny shines through drops of sweat.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-0a2aeb33",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "आत्मनिर्भर बनें:",
+  "lines": [
+   "सहारा ढूँढने वालों",
+   "ज़रा तुम होश में आओ",
+   "अपने पैरों पे चलने का",
+   "नया एक हौसला पाओ"
+  ],
+  "subtitle": "O seekers of support, wake up and find the courage to walk on your own.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-cae00f7d",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "अंदरूनी रोशनी:",
+  "lines": [
+   "चराग़ों की ज़रूरत क्या",
+   "जहाँ हिम्मत चमकती है",
+   "अँधेरों में भी राहों की",
+   "वहाँ सूरत चमकती है"
+  ],
+  "subtitle": "Where courage shines, no lamps are needed to see the path in the dark.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-6165e04c",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "पक्का इरादा:",
+  "lines": [
+   "नज़र हो सिर्फ़ मंज़िल पर",
+   "डगर आसान हो जाए",
+   "इरादे गर हों फ़ौलादी",
+   "तो हर मुश्किल भी खो जाए"
+  ],
+  "subtitle": "Focus on the goal to ease the path; with iron will, obstacles disappear.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-6f334f4b",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "नयी शुरुआत:",
+  "lines": [
+   "पुरानी हार को भूलें",
+   "नया आफ़्ताब लाएँगे",
+   "ज़मीं की कोख से हम भी",
+   "नया गुलशन खिलाएँगे"
+  ],
+  "subtitle": "Forget old defeats; we will bring a new sun and bloom a new garden.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "raga",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
+  "id": "ai-hi-shayari-fb389d28",
+  "lang": "hi",
+  "theme": "shayari",
+  "hook": "उड़ान भरें:",
+  "lines": [
+   "परों को खोल ऐ पंछी",
+   "कि ये ऊँचाई तेरी है",
+   "खुली जो आँख तो देखा",
+   "कि ये दुनिया ही तेरी है"
+  ],
+  "subtitle": "Spread your wings, bird; this height and this entire world belong to you.",
+  "author": "अंतर्नाद",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#Shayari",
+   "#MotivationalShayari",
+   "#HindiShayari"
+  ],
+  "added": "2026-11-24"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-23T20:31:18+00:00"
+  "updated": "2026-11-24T00:30:17+00:00"
  }
 ]
