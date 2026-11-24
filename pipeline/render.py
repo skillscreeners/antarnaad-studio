@@ -846,7 +846,10 @@ def metadata(q, date):
     other = q.get("subtitle") or ""
     news = (f"Inspired by today's news: {q['news']['title']} ({q['news'].get('source', '')})\n{q['news'].get('link', '')}\n\n"
             if q.get("news") else "")
+    import affiliate
+    aff = affiliate.line(q.get("author_en", ""), lang, q.get("theme", ""))
     yt_desc = (news + f"“{quote}” — {q['author_en']}, {q['source']}\n\n" + (other + "\n\n" if other else "") +
+               (aff + "\n\n" if aff else "") +
                f"{ask}\nSubscribe to Antarnaad for daily motivation in English & Hindi.\n\n" + " ".join(yt_tags))
     ig_caption = (("क्या आप सहमत हैं?\n\n" if lang == "hi" else "Do you agree with this?\n\n") +
                   f"“{quote}” — {q['author_en']}\n" + (f"\n{other}\n" if other else "") +

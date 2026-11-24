@@ -1,0 +1,31 @@
+{
+ "_note": "Amazon.in search links added to descriptions when the AMAZON_TAG repository variable is set. First matching rule wins; 'author' matches author_en, 'kind' matches story kind/true_story keywords.",
+ "disclosure": "As an Amazon Associate, Antarnaad earns from qualifying purchases.",
+ "rules": [
+  {"author": "Kabir", "label": "कबीर के दोहे (अर्थ सहित) – किताब", "query": "Kabir ke dohe arth sahit book"},
+  {"author": "Rahim", "label": "रहीम के दोहे – किताब", "query": "Rahim ke dohe book"},
+  {"author": "Tulsidas", "label": "रामचरितमानस / तुलसीदास – किताब", "query": "Tulsidas Ramcharitmanas book"},
+  {"author": "Iqbal", "label": "Allama Iqbal shayari – book", "query": "Allama Iqbal shayari book Hindi"},
+  {"author": "Ghalib", "label": "Mirza Ghalib shayari – book", "query": "Mirza Ghalib shayari book Hindi"},
+  {"author": "Tagore", "label": "Rabindranath Tagore – Gitanjali", "query": "Gitanjali Rabindranath Tagore book"},
+  {"author": "Franklin", "label": "The Autobiography of Benjamin Franklin", "query": "Autobiography of Benjamin Franklin book"},
+  {"author": "Marcus Aurelius", "label": "Meditations – Marcus Aurelius", "query": "Meditations Marcus Aurelius book"},
+  {"author": "Epictetus", "label": "Epictetus – Discourses / Enchiridion", "query": "Epictetus Enchiridion book"},
+  {"author": "Seneca", "label": "Letters from a Stoic – Seneca", "query": "Letters from a Stoic Seneca book"},
+  {"author": "Vivekananda", "label": "Swami Vivekananda – books", "query": "Swami Vivekananda books"},
+  {"author": "Kalam", "label": "Wings of Fire – A. P. J. Abdul Kalam", "query": "Wings of Fire Abdul Kalam book"},
+  {"author": "Lao Tzu", "label": "Tao Te Ching – Lao Tzu", "query": "Tao Te Ching book"},
+  {"author": "Helen Keller", "label": "The Story of My Life – Helen Keller", "query": "Story of My Life Helen Keller book"},
+  {"author": "Hitopadesha", "label": "Hitopadesha stories – book", "query": "Hitopadesha stories book"},
+  {"author": "Bhagavad Gita", "label": "Bhagavad Gita (with meaning)", "query": "Bhagavad Gita with meaning book"},
+  {"author": "Gandhi", "label": "My Experiments with Truth – Gandhi", "query": "My Experiments with Truth book"},
+  {"kind": "Shah Rukh Khan", "label": "Shah Rukh Khan – biography book", "query": "Shah Rukh Khan biography book"},
+  {"kind": "Panchatantra", "label": "पंचतंत्र की कहानियाँ – किताब", "query": "Panchatantra stories book Hindi"},
+  {"kind": "Jataka", "label": "Jataka tales – book", "query": "Jataka tales book"},
+  {"kind": "Aesop", "label": "Aesop's Fables – book", "query": "Aesop fables book"},
+  {"kind": "guru", "label": "Zen and guru stories – book", "query": "zen stories book"},
+  {"lang": "hi", "theme": "shayari", "label": "प्रेरक शायरी – किताब", "query": "motivational shayari book Hindi"},
+  {"lang": "hi", "label": "प्रेरक हिंदी किताबें", "query": "motivational books in Hindi"},
+  {"lang": "en", "label": "Best motivational books", "query": "best motivational books"}
+ ]
+}

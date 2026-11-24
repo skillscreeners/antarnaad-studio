@@ -428,6 +428,8 @@ def build(date, story, out_dir="out"):
                        "Pictures are illustrative scenery. Narration uses a synthetic voice." if story.get("true_story") else
                        "An original story by Antarnaad. All characters are fictional. Narration uses a synthetic voice."),
                       "Subscribe for stories and one good thought every day: https://www.youtube.com/@antarnaadin", "",
+                      __import__("affiliate").line("", lang, "", " ".join([story.get("kind", ""), story.get("title_en", ""),
+                                                                             " ".join(story.get("tags", []))])), "",
                       " ".join(story.get("hashtags", [])) + " #Antarnaad #अंतर्नाद " + ("#HindiKahani #MotivationalStory #PrernaKahani" if lang == "hi"
                                                   else "#MotivationalStory #MoralStory #Inspiration")])
     tags = [str(t)[:30] for t in story.get("tags", [])][:10] + \
