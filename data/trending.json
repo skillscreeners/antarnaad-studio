@@ -156,5 +156,63 @@
    },
    "news_hook": "नासा के वॉयेजर 1 ने रचा इतिहास:"
   }
+ ],
+ "2026-11-25": [
+  {
+   "id": "iqbal-khudi",
+   "lang": "hi",
+   "theme": "shayari",
+   "hook": "आज की शायरी:",
+   "lines": [
+    "ख़ुदी को कर बुलंद इतना",
+    "कि हर तक़दीर से पहले",
+    "ख़ुदा बंदे से ख़ुद पूछे",
+    "बता तेरी रज़ा क्या है"
+   ],
+   "subtitle": "Raise your self so high that before every decree of fate, God himself asks you: tell me, what is your wish?",
+   "author": "अल्लामा इक़बाल",
+   "author_en": "Allama Iqbal",
+   "source": "Bal-e-Jibril",
+   "mood": "rising",
+   "topic_tags": [
+    "#Shayari",
+    "#MotivationalShayari",
+    "#InTheNews"
+   ],
+   "news": {
+    "title": "Sooryavanshi, 15, blasts 204 off 53 balls for India A - Reuters",
+    "source": "Reuters",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPekZyYkNiWlh4RzFIOW9BRkFJaHdTSzhxcERlbmlkZS1NSzdqS3R6WmwxWEJzd21adkE4MEJKMTA5aG0zUVZUT1NxNmdXX2NqR2p4SHV1emRMYXdyaHI5ekYyTFlWelZyb1B4M2hGQkZtUUh5VGVJRWRrU1pCRnRjYTNiM213MTAzQVhWeVFhNERSZnQtc0dEUVNMTGg?oc=5"
+   },
+   "news_hook": "15 साल के Sooryavanshi ने बनाए 204 रन:"
+  },
+  {
+   "id": "iqbal-shaheen",
+   "lang": "hi",
+   "theme": "shayari",
+   "hook": "आज की शायरी:",
+   "lines": [
+    "तू शाहीं है",
+    "परवाज़ है काम तेरा",
+    "तिरे सामने आसमाँ",
+    "और भी हैं"
+   ],
+   "subtitle": "You are an eagle; flying is your work. More skies lie ahead of you.",
+   "author": "अल्लामा इक़बाल",
+   "author_en": "Allama Iqbal",
+   "source": "Bal-e-Jibril",
+   "mood": "rising",
+   "topic_tags": [
+    "#Shayari",
+    "#MotivationalShayari",
+    "#InTheNews"
+   ],
+   "news": {
+    "title": "Voyager 1 Reaches One Light-Day Distance from Earth - Drishti IAS",
+    "source": "Drishti IAS",
+    "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUTlDbno5LTBxX2pwOHJKQzdRd09HdFJ3RktrbDdCVWVwUlc3aVFSMll4WGNDNHZOaV81a3FxeXphR3NtbjVkWi1jalhBMDFnYnllQk93WkNRTWFqdmFKNmxtc1hKYUJodUl1WDVxVnl1czFNTXlJTGxGSWVfMGFFTGZ4N1dvMHpDdmsyZ3M0NW93RGx0V2UtekdTb1R0Y2lLbFc0aFV6azJHRUw4bngxMFZR?oc=5"
+   },
+   "news_hook": "Voyager 1 पहुँचा एक प्रकाश-दिन की दूरी पर:"
+  }
  ]
 }
