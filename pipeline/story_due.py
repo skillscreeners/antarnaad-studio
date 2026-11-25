@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Standard-library check: is a story video due now?
 
-Story videos post every other day (from 24 Nov 2026) at a different evening time each time,
+Story videos post every day (every other day until 25 Nov 2026) at a different evening time each time,
 between 18:00 and 20:30 IST, when Indian viewers watch longer videos. The time comes from a hash
 of the date, so every check in the day agrees on it. Tags: posted-story-DATE when done,
 story-fail-DATE-HHMM after a failed attempt (wait 40 minutes, at most 3 attempts a day).
@@ -15,10 +15,17 @@ EVENING = (18, 0)          # earliest post time
 SPREAD_MIN = 150           # ... up to 20:30 (checks run until 22:00, leaving time to retry)
 RETRY_MIN, MAX_TRIES = 40, 3
 
+DAILY_FROM = dt.date(2026, 11, 25)   # owner asked for a story every day
+
 def is_story_day(date):
+    if date >= DAILY_FROM:
+        return True
     return date >= FIRST_DAY and (date - FIRST_DAY).days % 2 == 0
 
 def story_index(date):
+    """0, 1, 2 ... one per story day (language alternates hi/en with it)."""
+    if date >= DAILY_FROM:
+        return 1 + (date - DAILY_FROM).days
     return (date - FIRST_DAY).days // 2
 
 def story_time(date):
