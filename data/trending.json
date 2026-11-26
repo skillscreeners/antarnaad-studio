@@ -214,5 +214,60 @@
    },
    "news_hook": "Voyager 1 पहुँचा एक प्रकाश-दिन की दूरी पर:"
   }
+ ],
+ "2026-11-26": [
+  {
+   "id": "tulsi-sakal-padarath",
+   "lang": "hi",
+   "hook": "मेहनत का सच",
+   "lines": [
+    "सकल पदारथ हैं जग माहीं।",
+    "करमहीन नर",
+    "पावत नाहीं॥"
+   ],
+   "subtitle": "दुनिया में सब कुछ है, पर मेहनत न करने वाले को कुछ नहीं मिलता।",
+   "author": "गोस्वामी तुलसीदास",
+   "author_en": "Goswami Tulsidas",
+   "source": "Ramcharitmanas",
+   "topic_tags": [
+    "#Tulsidas",
+    "#HardWork",
+    "#InTheNews"
+   ],
+   "theme": "work",
+   "news": {
+    "title": "‘Butcher’s job in surgeon’s gown’: Delhi's Priyansh Arya hits T20 record-breaking 181 | Cricket - Hindustan Times",
+    "source": "Hindustan Times",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZDh4VTFPZjlBQVVCc3M5anc2Y1U4WjA5M0JZeDFoWk0weTlsR25LVGh2SU44cWFTbDU4aTFyY0NmT21SN0VVREVONFJUOWJ2Q2dxZHNZZGtyd3pxelhRelZxOEJWaDNZZEFnUmhsSk9DZHBWYVJTYzROLWstek5CTy15ZENfaE43eUxkNHRsNFpfd2Y2dkhBeVRPbHV6ZkhVZEV6RlJCblFMLUwtSGJsWXVIbC03bmVVSmZLX1JJbnVkTUMwekExYno0NzJEQVc0VGxRVENjc9IB3AFBVV95cUxOMkJuOE9iR3FTdnVHaTRTVHhzQklPN1ZsNjFqV0F2YVlJTVBuWEdnNmxDN1BRemNSX2E1SGRzR0swb0xUdTI5TzdrX0ROaXczV2QxQ0pfeVVfRG4zVUd1UG0yVl9SUWJ5c0s3SUM3TUVhRjMweUNqVW16WXpza0s2NUwxUExTcHM2TDhMbEkwQmx4TXpDMXdRVkxSNXdId0dhVUQtNmh2V0NPRHEyS1ZhWjVQSWpTS09OWGlXWmdZSC1mczg0VTF4U0pydC0yUE4xekk2WXFiektoc0lw?oc=5"
+   },
+   "news_hook": "प्रियांश आर्य ने बनाया टी20 रिकॉर्ड:"
+  },
+  {
+   "id": "booker-obstacles",
+   "lang": "en",
+   "hook": "Booker T. Washington, 1901:",
+   "lines": [
+    "Success is measured",
+    "not so much by the position",
+    "one has reached",
+    "as by the obstacles overcome."
+   ],
+   "subtitle": "सफलता पद से नहीं, पार की गई मुश्किलों से नापी जाती है।",
+   "author": "Booker T. Washington",
+   "author_en": "Booker T. Washington",
+   "source": "Up From Slavery, 1901",
+   "topic_tags": [
+    "#BookerTWashington",
+    "#Success",
+    "#InTheNews"
+   ],
+   "theme": "work",
+   "news": {
+    "title": "BepiColombo Reaches Mercury Orbit After Eight-Year Journey - Gadget Review",
+    "source": "Gadget Review",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOVNTUVRhU0RhbmwwY2FoUjlEdFVRTERXVFh2WGxhUThmeFYyUXZ4TFc2TDhySm1ITGFMWjFYcEpHSDIyM19Cd2V1TmxCX0VPNDJock5id1pyS1JJbVFscHlKRDRyQ3FMZTVPWGVjeS1MSFFhREFIRjRlMmZXRGlIM3B5bDUyMURCZWgzUVlPb1o?oc=5"
+   },
+   "news_hook": "BepiColombo reaches Mercury orbit:"
+  }
  ]
 }
