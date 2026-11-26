@@ -42,11 +42,15 @@ BAD = ["suicide", "kill", "murder", "blood", "rape", "sex", "kiss", "drunk", "al
        "bomb", "politic", "election", "minister", "modi", "hindu-muslim", "caste", "cancer", "disease",
        "आत्महत्या", "हत्या", "ख़ून", "खून", "शराब", "बंदूक", "चुनाव", "मंत्री", "जाति"]
 TEXT = {
-    "hi": {"intro": "नमस्कार, अंतर्नाद में आपका स्वागत है। आज की कहानी है: {title}",
+    "hi": {"intro": "अंतर्नाद में आज की कहानी: {title}",
+           "like_mid": "अगर कहानी अब तक अच्छी लग रही है, तो वीडियो को लाइक ज़रूर कीजिए, इससे यह कहानी और लोगों तक पहुँचती है।",
+           "sub_pill": "सब्सक्राइब करें", "like_pill": "लाइक करें", "ask": "कमेंट में ज़रूर बताइए",
            "lesson": "इस कहानी की सीख", "outro": "अगर कहानी अच्छी लगी हो, तो वीडियो को लाइक करें, शेयर करें, "
                                                 "और ऐसी ही कहानियों के लिए अंतर्नाद को सब्सक्राइब करें।",
            "badge": "प्रेरक कहानी", "kind": "Hindi Motivational Story", "cta": "लाइक • शेयर • सब्सक्राइब"},
-    "en": {"intro": "Welcome to Antarnaad. Today's story is: {title}",
+    "en": {"intro": "On Antarnaad today: {title}",
+           "like_mid": "If you are enjoying this story so far, tap the like button. It helps this story reach more people.",
+           "sub_pill": "SUBSCRIBE", "like_pill": "LIKE", "ask": "Tell us in the comments",
            "lesson": "The lesson", "outro": "If this story touched you, like it, share it with someone who needs it, "
                                             "and subscribe to Antarnaad for more stories.",
            "badge": "STORY", "kind": "Motivational Story", "cta": "Like • Share • Subscribe"},
@@ -108,13 +112,15 @@ def write_story(date):
            "Language: " + ("simple, warm spoken Hindi in Devanagari script (Hindustani words people use every day)"
                            if lang == "hi" else "simple, warm Indian English") + ".\n"
            f"Kind of story: {kind}.\n"
-           "Write it to be read aloud by one narrator: 900-1200 words in 10-14 scenes, each scene 60-100 words, "
+           "Write it to be read aloud by one narrator: 800-1000 words in 10-13 scenes, each scene 60-90 words, "
            "short clear sentences, no dialogue labels, no stage directions, no headings. A clear beginning, a real "
            "struggle, a turning point and a hopeful ending. All characters are fictional with ordinary Indian names. "
            "Do not mention real people, celebrities, politicians, brands, real news, religion-based conflict, "
            "violence, anyone dying, romance, alcohol, medical or money-making claims.\n"
            + ("Do not repeat these earlier stories: " + "; ".join(earlier) + "\n" if earlier else "") +
-           'Return only JSON: {"title": "catchy title, at most 60 characters, in the story language", '
+           'Return only JSON: {"title": "a curiosity title (makes people want to know what happened), at most 60 characters, in the story language", '
+           '"hook": "one gripping sentence (max 22 words) teasing the most dramatic moment without revealing the ending, story language", '
+           '"question": "one short question asking viewers what they would have done or felt, story language", '
            '"title_en": "English title", "thumb": "2-4 word thumbnail text in the story language", '
            '"moral": "the lesson in one sentence, story language", "summary": "2 sentences for the video description, '
            'story language", "tags": ["8 short English tags"], '
@@ -247,6 +253,26 @@ def label_png(text, lang, path):
     d.text((35, 20), text, font=f, fill=(25, 15, 5), language=lang)
     im.save(path)
 
+def pill_png(text, lang, path, color=(204, 0, 0), icon="bell"):
+    """YouTube-red call-to-action pill (top-right) with a simple drawn icon (no emoji fonts needed)."""
+    f = font(FONT_BOLD, 44); tw = int(f.getlength(text))
+    w, h = tw + 150, 96
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    d.rounded_rectangle((0, 0, w - 1, h - 1), 48, fill=color + (240,))
+    cx, cy = 52, h // 2
+    if icon == "bell":
+        d.pieslice((cx - 20, cy - 24, cx + 20, cy + 16), 180, 360, fill="white")
+        d.rectangle((cx - 20, cy - 4, cx + 20, cy + 10), fill="white")
+        d.polygon([(cx - 26, cy + 14), (cx + 26, cy + 14), (cx + 20, cy + 6), (cx - 20, cy + 6)], fill="white")
+        d.ellipse((cx - 6, cy + 14, cx + 6, cy + 24), fill="white")
+    else:   # thumbs-up
+        d.rectangle((cx - 24, cy - 4, cx - 12, cy + 24), fill="white")
+        d.rounded_rectangle((cx - 8, cy - 6, cx + 26, cy + 24), 6, fill="white")
+        d.polygon([(cx - 8, cy - 4), (cx + 2, cy - 28), (cx + 12, cy - 26), (cx + 8, cy - 4)], fill="white")
+    d.text((92, (h - 56) // 2), text, font=f, fill="white", language=lang)
+    im.save(path)
+    return w
+
 def thumbnail(photo_jpg, text, badge, lang, path):
     im = Image.open(photo_jpg).convert("RGB").resize((1280, 720))
     im = ImageEnhance.Color(im).enhance(1.25); d = ImageDraw.Draw(im)
@@ -354,7 +380,7 @@ def build(date, story, out_dir="out"):
 
     # plan: list of scenes, each (photo index, [(text shown, audio)], extra overlay)
     clips, audio_parts, t_video = [], [], 0.0
-    def add_scene(photo_i, pieces, card=None, lead=0.6, tail=0.9, label=None):
+    def add_scene(photo_i, pieces, card=None, lead=0.6, tail=0.9, label=None, pill=None):
         nonlocal t_video
         src = f"{d}/p{photo_i:02d}.jpg"
         if not os.path.exists(src):
@@ -365,6 +391,9 @@ def build(date, story, out_dir="out"):
         if label:
             lp = f"{d}/label{len(clips):02d}.png"; label_png(label, lang, lp)
             overlays.append((lp, 50, 40, 0, 999))
+        if pill:   # (text, icon): call-to-action pill, top right, for the whole clip
+            pp = f"{d}/pill{len(clips):02d}.png"; pw = pill_png(pill[0], lang, pp, icon=pill[1])
+            overlays.append((pp, W - pw - 50, 40, 0.3, 999))
         for j, (shown, audio) in enumerate(pieces):
             dur = len(audio) / SR
             audio_parts.append((t_video + t, audio))
@@ -381,8 +410,12 @@ def build(date, story, out_dir="out"):
         clips.append(out); t_video += length
 
     title = story["title"]
+    # cold open: the most gripping line first (viewers decide in the first seconds), then the title
+    if story.get("hook"):
+        add_scene(len(groups) // 2, [(story["hook"], say(story["hook"]))], lead=0.3, tail=0.5)
     tc = f"{d}/title.png"; title_card(title, "ANTARNAAD • अंतर्नाद", lang, tc)
-    add_scene(0, [("", say(T["intro"].format(title=title)))], card=tc, lead=0.4, tail=0.6)
+    add_scene(0, [("", say(T["intro"].format(title=title)))], card=tc, lead=0.3, tail=0.5)
+    mid_g = next((g for g, (i, _) in enumerate(groups) if i == len(story["scenes"]) // 2 + 1), len(groups) // 2)
     chapters, starts = [], []
     n_sc = len(story["scenes"])
     for g, (i, ss) in enumerate(groups):
@@ -391,15 +424,19 @@ def build(date, story, out_dir="out"):
             starts.append(t_video)
             if i in (0, n_sc // 2, n_sc - 2):
                 chapters.append(t_video)
+        if g == mid_g:   # ask for the like after the turning point, when viewers are invested
+            add_scene(max(g - 1, 0), [(T["like_mid"], say(T["like_mid"]))], lead=0.2, tail=0.4, pill=(T["like_pill"], "like"))
         pieces = [(x, say(x)) for x in ss]
-        add_scene(g, pieces, label=story["scenes"][i].get("label"), lead=0.25, tail=0.35)
+        add_scene(g, pieces, label=story["scenes"][i].get("label"), lead=0.25, tail=0.35,
+                  pill=(T["sub_pill"], "bell") if g in (1, 2) else None)
         if g == len(groups) - 1 or groups[g + 1][0] != i:
             print(f"  scene {i + 1}/{n_sc} done ({t_video / 60:.1f} min)", flush=True)
     chapters.append(t_video)
     lc = f"{d}/lesson.png"; title_card(story["moral"], T["lesson"], lang, lc)
     add_scene(len(photos) - 1, [("", say(f"{T['lesson']}: {story['moral']}"))], card=lc, lead=0.4, tail=1.0)
     oc = f"{d}/outro.png"; title_card(T["cta"], HANDLE, lang, oc)
-    add_scene(0, [("", say(T["outro"]))], card=oc, lead=0.3, tail=2.0)
+    outro = [(story["question"], say(story["question"]))] if story.get("question") else []
+    add_scene(0, outro + [("", say(T["outro"]))], card=oc, lead=0.3, tail=2.0, pill=(T["sub_pill"], "bell"))
 
     total = t_video
     vbuf = np.zeros(int((total + 1) * SR))
@@ -422,8 +459,12 @@ def build(date, story, out_dir="out"):
     chap = ["0:00 " + ("परिचय" if lang == "hi" else "Intro")] + \
            [f"{int(c // 60)}:{int(c % 60):02d} {n}" for c, n in zip(chapters, names)]
     yt_title = story.get("yt_title") or f"{title} | {T['kind']} | Antarnaad"[:100]
-    desc = "\n".join([story.get("summary", ""), "", ("सीख: " if lang == "hi" else "Lesson: ") + story["moral"], "",
-                      "Chapters:"] + chap + ["",
+    more = [f"▶ {e['title']}: https://youtu.be/{e['video']}" for e in (index or [])[::-1]
+            if e.get("video") and e.get("date") != str(date)][:4]
+    desc = "\n".join(([f"💬 {story['question']} {T['ask']} 👇", ""] if story.get("question") else []) +
+                     [story.get("summary", ""), "", ("सीख: " if lang == "hi" else "Lesson: ") + story["moral"], "",
+                      "Chapters:"] + chap + [""] +
+                     ((["और कहानियाँ:" if lang == "hi" else "More stories:"] + more + [""]) if more else []) + [
                       ("A tribute based on publicly reported facts; not affiliated with the person or their companies. "
                        "Pictures are illustrative scenery. Narration uses a synthetic voice." if story.get("true_story") else
                        "An original story by Antarnaad. All characters are fictional. Narration uses a synthetic voice."),

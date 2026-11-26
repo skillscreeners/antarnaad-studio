@@ -24,6 +24,14 @@ def voice_on(date, slot):
     return mode == "on" or slot % 2 == 0
 
 def build(date, slot):
+    if slot == plan.TEASER_SLOT and os.environ.get("ANTARNAAD_TEASERS", "1") == "1":
+        try:
+            import teaser_short
+            r = teaser_short.build(date, OUT)
+            if r:
+                return r
+        except Exception as e:
+            print(f"::warning::story teaser skipped, posting a normal reel: {e}", flush=True)
     q = plan.quote_for(date, slot)
     work = os.path.join(OUT, "_work", f"{date}_s{slot}"); os.makedirs(work, exist_ok=True)
     mp4 = os.path.join(OUT, f"{date}_slot{slot}_{q['id']}.mp4")

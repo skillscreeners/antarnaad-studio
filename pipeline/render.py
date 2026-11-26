@@ -805,6 +805,16 @@ BROAD = {"en": ["#Motivation", "#MotivationalQuotes", "#Inspiration"], "hi": ["#
 SHAYARI = ["#Shayari", "#MotivationalShayari", "#HindiShayari"]
 WORK = {"en": ["#WorkMotivation", "#WorkEthic", "#Motivation"], "hi": ["#WorkMotivation", "#HindiMotivation", "#Suvichar"]}
 
+def latest_story(lang=None):
+    """Most recent posted story video (prefer the same language) from data/stories.json, or None."""
+    try:
+        st = [e for e in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
+                                                     "stories.json"), encoding="utf-8")) if e.get("video")]
+    except Exception:
+        return None
+    same = [e for e in st[-3:] if e.get("lang") == lang]
+    return (same or st[-1:] or [None])[-1]
+
 def metadata(q, date):
     day = datetime.date.fromisoformat(date)
     import plan
@@ -848,7 +858,10 @@ def metadata(q, date):
             if q.get("news") else "")
     import affiliate
     aff = affiliate.line(q.get("author_en", ""), lang, q.get("theme", ""))
-    yt_desc = (news + f"“{quote}” — {q['author_en']}, {q['source']}\n\n" + (other + "\n\n" if other else "") +
+    story = latest_story(lang)
+    story_line = (("▶ आज की पूरी कहानी देखें: " if lang == "hi" else "▶ Watch today's full story: ") +
+                  f"{story['title']} https://youtu.be/{story['video']}\n\n") if story else ""
+    yt_desc = (story_line + news + f"“{quote}” — {q['author_en']}, {q['source']}\n\n" + (other + "\n\n" if other else "") +
                (aff + "\n\n" if aff else "") +
                f"{ask}\nSubscribe to Antarnaad for daily motivation in English & Hindi.\n\n" + " ".join(yt_tags))
     ig_caption = (("क्या आप सहमत हैं?\n\n" if lang == "hi" else "Do you agree with this?\n\n") +

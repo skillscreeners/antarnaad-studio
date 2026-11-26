@@ -32,6 +32,7 @@ def slot_langs(day_index):
     """Odd slots Hindi, even slots English (5 + 5 a day)."""
     return {s: ("hi" if s % 2 == 1 else "en") for s in SLOTS}
 
+TEASER_SLOT = 4   # 11:40: trailer Short for the latest story video (pipeline/teaser_short.py), else a normal reel
 WORK_SLOTS = {2, 3}   # weekdays 08:40 (English) and 10:10 (Hindi): work motivation for the start of the day
 
 SHAYARI_SLOTS = {5, 9}   # 13:10 and 19:10 (Hindi): motivational shayari
