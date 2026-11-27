@@ -269,5 +269,61 @@
    },
    "news_hook": "BepiColombo reaches Mercury orbit:"
   }
+ ],
+ "2026-11-27": [
+  {
+   "id": "neeraj-heart-hi",
+   "lang": "hi",
+   "theme": "work",
+   "hook": "नीरज चोपड़ा की सलाह:",
+   "lines": [
+    "सुविधाएँ कैसी भी हों,",
+    "दिल से करो।",
+    "असली चीज़ है",
+    "लगन और मेहनत।"
+   ],
+   "subtitle": "No matter what facilities you have, do it with your heart.",
+   "author": "नीरज चोपड़ा",
+   "author_en": "Neeraj Chopra",
+   "source": "Lokmat Times, 17 Aug 2024 (translated)",
+   "topic_tags": [
+    "#NeerajChopra",
+    "#Mehnat",
+    "#InTheNews"
+   ],
+   "mood": "rising",
+   "news": {
+    "title": "Indian women's hockey team climbs to world No. 4 for highest-ever FIH ranking - Olympics",
+    "source": "Olympics",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdGlORndYd25JMnlIZXlRVGpWTVFlaUJCcTJBRWRfdGd1SWd0dkdVYlhYZlc1bUtEMkN0alNiNzZON3FRbS1ZeEFXM0JFcjVtZGVGamw0VlljRWpEeFVJVEoxR0FfQkxKN2dtRmxRY24yMjliZ0JHUjVhRUozMGg4VWk1X1B0UTBKcTNRTmRKTUtINHVHVDlpcQ?oc=5"
+   },
+   "news_hook": "भारतीय महिला हॉकी टीम बनी वर्ल्ड नंबर 4:"
+  },
+  {
+   "id": "antarnaad-hi-life-03",
+   "lang": "hi",
+   "theme": "life",
+   "hook": "दिल से एक बात:",
+   "lines": [
+    "छोटी शुरुआत से मत डरो,",
+    "हर पेड़ एक बीज से उगता है।"
+   ],
+   "subtitle": "Don't fear small beginnings; every tree grows from a seed.",
+   "author": "अंतर्नाद",
+   "author_en": "Antarnaad",
+   "source": "Antarnaad original",
+   "mood": "gentle",
+   "topic_tags": [
+    "#Suvichar",
+    "#HindiQuotes",
+    "#InTheNews"
+   ],
+   "news": {
+    "title": "Prototype of Chandrayaan-5/LUPEX rover unveiled - The Hindu",
+    "source": "The Hindu",
+    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOTmZ1eWV2MTFsd3RFWmhOanlkY016QjJNZ2JBbWl1dlo5YVFORExoRy1TU3lKdXZMYjh0UlRTSlFtc05RZjljN2JGalM2VVp1T0FQNzhJMElrMmVYdFY2dmkydzRLNWZNRVdEcHp3RTdOcjI0LVhOcHJnTk9sLXpvYmxPVHhpNEtRZkp5Y0lId242bDNlU2tZbUtyVVM1MkJLUjMtUlJkNEd2LXJPWXdmVzZBc2Njd9IBvAFBVV95cUxPbmI3aEVQVHhhTUk2WW1RNXF1OVF2RVNhazFmUWllM3FqTXVqZDYybU9CQ2llMDByeTBmYUstNTQ4cDBmMi1oal9hRGgzUC1iZFpsaWpxYmJxRnVSbkw1aFNJNWw2MUxYTHZJVHM0cm5JZlVjX2piMzhiUkpGNFZ5WS1RV1pqZllxSS1XeFFpVHg3RFlhU3h5QWh1TkdOMjRIQXVTVmJ3SnFPaXhobmphQTQ1Z2tScDQzZXhjeA?oc=5"
+   },
+   "news_hook": "चंद्रयान-5 रोवर का प्रोटोटाइप पेश हुआ:"
+  }
  ]
 }
