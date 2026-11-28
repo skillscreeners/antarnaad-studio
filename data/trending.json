@@ -325,5 +325,59 @@
    },
    "news_hook": "चंद्रयान-5 रोवर का प्रोटोटाइप पेश हुआ:"
   }
+ ],
+ "2026-11-28": [
+  {
+   "id": "antarnaad-hi-work-03",
+   "lang": "hi",
+   "theme": "work",
+   "hook": "याद रखना:",
+   "lines": [
+    "रोज़ थोड़ा-थोड़ा करो,",
+    "बड़ा काम भी हो जाएगा।"
+   ],
+   "subtitle": "Do a little every day and big work gets done.",
+   "author": "अंतर्नाद",
+   "author_en": "Antarnaad",
+   "source": "Antarnaad original",
+   "mood": "gentle",
+   "topic_tags": [
+    "#Suvichar",
+    "#HindiQuotes",
+    "#InTheNews"
+   ],
+   "news": {
+    "title": "49 years after launch, Nasa's Voyager first human-made object 1 light-day away from Earth - Telegraph India",
+    "source": "Telegraph India",
+    "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPUGk2Vnc0Q045ZW1HYkVTRUh2RkxDd1RGV1d1TjJuOG00STFFT1Vmdkx3S1hZQzJ0OHB1Qnl3QmljclozLWFjRV9SR08xRkhzV0E1TF80VkRscFFSd1dJZUJMMWNqcXhhOEs0Q0Ytbnc3WDNudVRZaF9HclM3RzQ0TFQ2aldPVWszaXNkbGlQeXhsbHBmc204eDVtZEtiSUJfcXNINjR5SE9vYjczRVhOTXBxdEV3TXczUUtqT28tVDY3SHhHcEF3YnZ1eDcwZDJEakFlWEJnaXnSAd4BQVVfeXFMTVRJb3FfNmtQSmZMSFNOUTVXcXFaOWVONHNSd2ZqZFdRWERYN1FqQ0RKSVUwdk9fWXhYeVNaLWVpUHA3Yjg4bUZ4Q20zYXh3LTJ4N1poQWJkTUo0amo5Zm0zeXRvNFEzVy0yNDNDeGR1UjNWd3N1NWZvcWw1dWo3ME5oMmNkQkgzSllnUGotSnNOSWN3QUx4aXFFc0picFU5Ul9PS0p3cjMwckF3bnZtY2dQeEZmRHd3WDVXbHE5bVdyUlB0M2NmczhsbFVNc0lNNjZRTWdCQkpBck5UenN3?oc=5"
+   },
+   "news_hook": "पृथ्वी से एक प्रकाश-दिन दूर पहुँचा Voyager:"
+  },
+  {
+   "id": "antarnaad-hi-life-26",
+   "lang": "hi",
+   "theme": "life",
+   "hook": "याद रखना:",
+   "lines": [
+    "वक़्त सबका आता है,",
+    "तैयारी पहले करनी पड़ती है।"
+   ],
+   "subtitle": "Everyone's time comes; preparation comes first.",
+   "author": "अंतर्नाद",
+   "author_en": "Antarnaad",
+   "source": "Antarnaad original",
+   "mood": "calm",
+   "topic_tags": [
+    "#Suvichar",
+    "#HindiQuotes",
+    "#InTheNews"
+   ],
+   "news": {
+    "title": "Virender Sehwag's Son Vedant Takes 7 Wickets, Grabs The Limelight In Cooch Behar Trophy - NDTV Sports",
+    "source": "NDTV Sports",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQNWVqNlZaWlJZcnkySWRkNTNvN181WWpKUUlXQzhrN2RVS3A2dXlYTmZ2eG5zcDRPT1d4cXQteTlFWUgxWEw2b1BqZG1nWHdwT2xMdkFlV3BMTEpiNlNJa3ZDbnBobzlLeFM4cEtjajgtZnFWamEtUEN5RWQwX0loWDdhd0pYVWxYME13WjFkaEVLUWVsa2dXVXNwZ0JKV3FJQTcxZHBTd2V2bkhpaUZMNU9WSDVmRktQbnZ2eHN3OGo2dDl4d3owSg?oc=5"
+   },
+   "news_hook": "वेदांत सहवाग ने लिए शानदार 7 विकेट:"
+  }
  ]
 }
