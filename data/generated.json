@@ -2739,7 +2739,315 @@
   "added": "2026-11-24"
  },
  {
+  "id": "ai-en-life-d3a2f510",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Note this:",
+  "lines": [
+   "Trust your inner voice.",
+   "You hold the map.",
+   "Keep walking on."
+  ],
+  "subtitle": "अपनी अंतरात्मा पर भरोसा रखें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-45b58d54",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Keep in mind:",
+  "lines": [
+   "Good things wait.",
+   "Let time work.",
+   "Stay calm inside."
+  ],
+  "subtitle": "अच्छी चीज़ों के लिए धैर्य रखें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-3bf4e16c",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Think about this:",
+  "lines": [
+   "Keep a bright hope.",
+   "Darkness fades out.",
+   "Morning is near."
+  ],
+  "subtitle": "अपने दिल में हमेशा उम्मीद रखें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-8cc96c7d",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Remember this:",
+  "lines": [
+   "Breathe in deep peace.",
+   "Let go of rush.",
+   "Find your center."
+  ],
+  "subtitle": "लंबी सांस लें और शांत रहें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-700930da",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Look closer:",
+  "lines": [
+   "Notice small joys.",
+   "Say thanks today.",
+   "Life feels fuller."
+  ],
+  "subtitle": "छोटी-छोटी खुशियों के लिए आभारी रहें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-b2bedfce",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Stay strong:",
+  "lines": [
+   "Bend like green grass.",
+   "Do not snap off.",
+   "Rise back tall."
+  ],
+  "subtitle": "मुश्किल समय में भी मजबूत बने रहें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-e3f94dbc",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Learn daily:",
+  "lines": [
+   "Every small test",
+   "Gives a new tool.",
+   "Use it well."
+  ],
+  "subtitle": "हर गलती से कुछ नया सीखें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-9086b094",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Live simply:",
+  "lines": [
+   "Drop heavy wants.",
+   "Free your hands up.",
+   "Light steps ahead."
+  ],
+  "subtitle": "सादा जीवन और स्पष्ट सोच अपनाएं।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "uplifting",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-9e27558b",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Fresh start:",
+  "lines": [
+   "Wipe the slate clean.",
+   "Try once more now.",
+   "You are ready."
+  ],
+  "subtitle": "बिना डरे फिर से शुरुआत करें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-683b5f57",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Listen up:",
+  "lines": [
+   "You are unique.",
+   "No need to rush.",
+   "Shine in your way."
+  ],
+  "subtitle": "खुद पर पूरा विश्वास रखें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-6d85a0e7",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Pay attention:",
+  "lines": [
+   "Quiet the mind.",
+   "Answers will come.",
+   "Trust the process."
+  ],
+  "subtitle": "शांत मन से सही फैसले लें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "gentle",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-83be6676",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Take note:",
+  "lines": [
+   "Hold on to hope.",
+   "Sunlight returns.",
+   "Night must pass."
+  ],
+  "subtitle": "आशा की किरण को कभी न बुझने दें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-0b3bfbd2",
+  "lang": "en",
+  "theme": "life",
+  "hook": "Keep going:",
+  "lines": [
+   "Tiny drops fall",
+   "To fill the pool.",
+   "Do your bit."
+  ],
+  "subtitle": "निरंतर प्रयास से सब संभव है।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "rising",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
+  "id": "ai-en-life-084d7fe1",
+  "lang": "en",
+  "theme": "life",
+  "hook": "End note:",
+  "lines": [
+   "Cherish now here.",
+   "Peace lives inside.",
+   "Smile and glow."
+  ],
+  "subtitle": "वर्तमान पल में आनंद ढूंढें।",
+  "author": "Antarnaad",
+  "author_en": "Antarnaad",
+  "source": "Antarnaad original",
+  "mood": "calm",
+  "topic_tags": [
+   "#MotivationalQuotes",
+   "#DailyMotivation",
+   "#Mindset"
+  ],
+  "added": "2026-11-28"
+ },
+ {
   "_meta": true,
-  "updated": "2026-11-28T03:30:19+00:00"
+  "updated": "2026-11-28T06:30:23+00:00"
  }
 ]
